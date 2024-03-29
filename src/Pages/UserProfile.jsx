@@ -46,7 +46,7 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
 
   return (
     <div className="userprofile-container">
-      <img id="profilelogo" src={profilePic} alt="Profile Image" />
+      <img src={profilePic} alt="Profile Image" />
       <div className="profile-header">
         <h5>
           {profiles.firstname} {profiles.lastname}
@@ -86,14 +86,14 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Completed
         </button>
       </div>
-      <div className="goals">
-        {!selectedGoals ? (
-          <Goals user={user} token={token} />
-        ) : (
-          <span>List of Completed Goals</span>
-        )}
-      </div>
+      {/* <div className="goals"> */}
+      {!selectedGoals ? (
+        <Goals user={user} token={token} />
+      ) : (
+        <span>List of Completed Goals</span>
+      )}
     </div>
+    // </div>
   );
 };
 

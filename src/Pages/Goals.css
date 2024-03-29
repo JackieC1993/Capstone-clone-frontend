@@ -1,5 +1,36 @@
 .goals-container {
+  grid-area: g;
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 5%;
+  /* border: 1px solid orange; */
+  grid-template-columns: auto;
+  row-gap: 5%;
+}
+.goalcard {
+  border: 1px solid #ccc;
+  height: 50px;
+  width: 92%;
+  padding: 0 10px;
+  /* overflow: hidden; */
+}
+.goal-expand {
+  height: fit-content;
+  margin-bottom: 20%;
+}
+
+.goalcard-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.goalcard-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.goalcard-buttons button {
+  padding: 3px;
 }

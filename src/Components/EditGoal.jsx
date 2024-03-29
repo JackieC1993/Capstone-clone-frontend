@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./EditGoal.css";
 
 const EditGoal = ({ user, token, goalID, onCancel }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -25,8 +26,11 @@ const EditGoal = ({ user, token, goalID, onCancel }) => {
     setGoalForm({ ...goalForm, [event.target.id]: event.target.value });
   };
 
+  // console.log(goalID)
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(goalForm.target_date);
     fetch(`${API}/profiles/${user.userprofile_id}/goals/${goalID}`, {
       method: "PUT",
       body: JSON.stringify(goalForm),
@@ -39,24 +43,9 @@ const EditGoal = ({ user, token, goalID, onCancel }) => {
       .then((res) => {
         console.log(res);
         setGoalForm(res);
-        window.location.reload();
+        // window.location.reload();
       })
       .catch((error) => console.log(error));
-  };
-
-  const handleDelete = () => {
-    fetch(`${API}/profiles/${user.userprofile_id}/goals/${goalID}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: token,
-      },
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        // console.log(res);
-        // navigate("/userProfile");
-      })
-      .catch((err) => console.log(err));
   };
 
   const getGoal = () => {
@@ -89,78 +78,75 @@ const EditGoal = ({ user, token, goalID, onCancel }) => {
     getInterests();
   }, []);
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="form-container">
-        <div className="form-field">
-          <label htmlFor="name">Goal Name:</label>
-          <input
-            value={goalForm.name}
-            onChange={handleInputChange}
-            type="text"
-            id="name"
-            placeholder="Name Your Goal"
-            required
-          />
-        </div>
+    <form onSubmit={handleSubmit} className="form-container">
+      <div className="form-field">
+        <label htmlFor="name">Goal Name:</label>
+        <input
+          value={goalForm.name}
+          onChange={handleInputChange}
+          type="text"
+          id="name"
+          placeholder="Name Your Goal"
+          required
+        />
+      </div>
+      <br />
+      <div className="form-field">
+        <label htmlFor="interests">Select an Interest:</label>
         <br />
-        <div className="form-field">
-          <label htmlFor="interests">Select an Interest:</label>
-          <br />
-          <select
-            value={goalForm.interest_id}
-            onChange={handleInputChange}
-            id="interest_id"
-            required
-          >
-            <option value="">Select an Interests</option>
-            {interests.map(({ interest_id, name }) => {
-              return (
-                <option key={interest_id} value={interest_id}>
-                  {name}
-                </option>
-              );
-            })}
-          </select>
-        </div>
+        <select
+          value={goalForm.interest_id}
+          onChange={handleInputChange}
+          id="interest_id"
+          required
+        >
+          <option value="">Select an Interests</option>
+          {interests.map(({ interest_id, name }) => {
+            return (
+              <option key={interest_id} value={interest_id}>
+                {name}
+              </option>
+            );
+          })}
+        </select>
+      </div>
+
+      <br />
+
+      <div className="form-field">
+        <label htmlFor="tartgetDate">Target Date:</label>
         <br />
-        <div className="form-field">
-          <label htmlFor="tartgetDate">Target Date:</label>
-          <br />
-          <input
-            type="date"
-            value={goalForm.target_date.slice(0, 10)}
-            onChange={handleInputChange}
-            id="target_date"
-            required
-          />
-        </div>
+        <input
+          type="date"
+          value={goalForm.target_date.slice(0, 10)}
+          onChange={handleInputChange}
+          id="target_date"
+          required
+        />
+      </div>
+
+      <br />
+
+      <div className="form-field">
+        <label htmlFor="description">Goal Description:</label>
         <br />
-        <div className="form-field">
-          <label htmlFor="description">Goal Description:</label>
-          <br />
-          <textarea
-            value={goalForm.description}
-            onChange={handleInputChange}
-            id="description"
-          />
-        </div>
-        <br />
-        <div className="form-buttons">
-          <button type="submit">Submit</button>
-          <button
-            type="button"
-            onClick={() => {
-              handleDelete();
-            }}
-          >
-            Delete
-          </button>
-          <button type="button" onClick={() => onCancel()}>
-            Cancel
-          </button>
-        </div>
-      </form>
-    </div>
+        <textarea
+          value={goalForm.description}
+          onChange={handleInputChange}
+          id="description"
+        />
+      </div>
+
+      <br />
+
+      <div className="form-buttons">
+        <button type="submit">Submit</button>
+
+        <button type="button" onClick={() => onCancel()}>
+          Cancel
+        </button>
+      </div>
+    </form>
   );
 };
 
