@@ -9,7 +9,7 @@
     margin: 0 auto;
   }
 
-  form {
+  .newProfile-form {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;

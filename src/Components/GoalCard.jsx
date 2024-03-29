@@ -2,10 +2,28 @@ import React, { useState } from "react";
 import EditGoal from "../Components/EditGoal";
 
 const GoalCard = ({ user, token, goal }) => {
+  const API = import.meta.env.VITE_BASE_URL;
   const [editGoal, setEditGoal] = useState(false);
+  const [expandedGoal, setExpandedGoal] = useState(false);
 
   const onCancel = () => {
     setEditGoal(false);
+  };
+
+  const handleDelete = (goalId) => {
+    console.log(goalId)
+    fetch(`${API}/profiles/${user.userprofile_id}/goals/${goalId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        window.location.reload();
+        // console.log(res);
+      })
+      .catch((err) => console.log(err));
   };
 
   if (editGoal) {
@@ -19,14 +37,32 @@ const GoalCard = ({ user, token, goal }) => {
     );
   }
   return (
-    <div className="goalcard">
-      <h6>
-        <strong>{goal.name}</strong>
-      </h6>
+    <div
+      className={!expandedGoal ? "goalcard" : "goalcard goal-expand"}
+      onClick={() => {
+        setExpandedGoal(!expandedGoal);
+      }}
+    >
+      <div className="goalcard-header">
+        <h6>
+          <strong>{goal.name}</strong>
+        </h6>
+        <span>Target Date: {goal.target_date.slice(0, 10)}</span>
+      </div>
       <p>{goal.description}</p>
-      <p>Target Date: {goal.target_date.slice(0, 10)}</p>
-      <button onClick={() => setEditGoal(true)}>edit</button>
-      <button>Completed</button>
+
+      <div className="goalcard-buttons">
+        <button onClick={() => setEditGoal(true)}>✏️</button>
+        <button>Completed</button>
+        <button
+          type="button"
+          onClick={() => {
+            handleDelete(goal.goal_id);
+          }}
+        >
+          Delete
+        </button>
+      </div>
     </div>
   );
 };

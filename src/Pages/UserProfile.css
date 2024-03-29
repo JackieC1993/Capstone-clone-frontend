@@ -20,7 +20,7 @@
     gap: 10px;
   }
 
-  #profilelogo {
+  .userprofile-container img {
     margin-top: 30px;
     grid-area: i;
     width: 125px;
@@ -35,14 +35,7 @@
     margin: 0 auto;
     position: relative;
   }
-  /*  
-  .profile-header,
-  .stats {
-    flex: 1 1 50%; 
-    padding: 20px;
-    box-sizing: border-box;
-  }
-*/
+
   .profile-header {
     grid-area: p;
     align-items: center;
@@ -64,9 +57,9 @@
     grid-area: c;
   }
 
-  .goals {
+  /* .goals-container {
     grid-area: g;
-  }
+  } */
 }
 
 /* Adjustments for responsive layout */
