@@ -177,6 +177,7 @@ const [filteredUsers, setFilteredUsers] = useState([])
 
 
   useEffect(() => {
+    console.log(API)
     const fetchData = async () => {
       try {
         const response = await fetch(`${API}/profiles`);
