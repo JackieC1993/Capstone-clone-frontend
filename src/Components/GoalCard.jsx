@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EditGoal from "../Components/EditGoal";
 
-const GoalCard = ({ user, token, goal }) => {
+const GoalCard = ({ user, token, goal, onEdit }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const [editGoal, setEditGoal] = useState(false);
   const [expandedGoal, setExpandedGoal] = useState(false);
@@ -11,7 +11,7 @@ const GoalCard = ({ user, token, goal }) => {
   };
 
   const handleDelete = (goalId) => {
-    console.log(goalId)
+    console.log(goalId);
     fetch(`${API}/profiles/${user.userprofile_id}/goals/${goalId}`, {
       method: "DELETE",
       headers: {
@@ -20,7 +20,8 @@ const GoalCard = ({ user, token, goal }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        window.location.reload();
+        onEdit()
+        // window.location.reload();
         // console.log(res);
       })
       .catch((err) => console.log(err));
@@ -29,7 +30,8 @@ const GoalCard = ({ user, token, goal }) => {
   if (editGoal) {
     return (
       <EditGoal
-        onCancel={onCancel}
+        onEdit={onEdit}
+        onClose={onCancel}
         user={user}
         token={token}
         goalID={goal.goal_id}
@@ -53,7 +55,7 @@ const GoalCard = ({ user, token, goal }) => {
 
       <div className="goalcard-buttons">
         <button onClick={() => setEditGoal(true)}>✏️</button>
-        <button>Completed</button>
+        <button onClick={() => {}}>Completed</button>
         <button
           type="button"
           onClick={() => {

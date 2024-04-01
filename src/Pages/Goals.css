@@ -1,8 +1,8 @@
 .goals-container {
   grid-area: g;
-  display: grid;
+  /* display: grid; */
   /* border: 1px solid orange; */
-  grid-template-columns: auto;
+  /* grid-template-columns: auto; */
   row-gap: 5%;
 }
 .goalcard {
@@ -10,6 +10,7 @@
   height: 50px;
   width: 92%;
   padding: 0 10px;
+  margin-bottom: 20px;
   /* overflow: hidden; */
 }
 .goal-expand {
