@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import "./UserProfile.css";
 import Goals from "./Goals";
 import profilePic from "../assets/profile-male-blue.png";
+import { FaPlusCircle } from "react-icons/fa";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -92,6 +93,9 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
       ) : (
         <span>List of Completed Goals</span>
       )}
+      <Link to="/goals/new" className="newgoal-button">
+        <FaPlusCircle className="newgoal-icon" />
+      </Link>
     </div>
     // </div>
   );

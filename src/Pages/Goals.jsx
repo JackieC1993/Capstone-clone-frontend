@@ -31,14 +31,14 @@ const Goals = ({ user, token }) => {
   useEffect(() => {
     fetchData();
   }, []);
-
+console.log(goals)
   return (
     <div className="goals-container">
       {/* <h1>The Goals Page</h1> */}
 
       {goals.map((goal) => {
         return (
-          <GoalCard key={goal.goal_id} user={user} token={token} goal={goal} />
+          <GoalCard key={goal.goal_id} onEdit={fetchData} user={user} token={token} goal={goal} />
         );
       })}
     </div>

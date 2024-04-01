@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./EditGoal.css";
 
-const EditGoal = ({ user, token, goalID, onCancel }) => {
+const EditGoal = ({ user, token, goalID, onClose, onEdit }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const [interests, setInterests] = useState([]);
   const [goalForm, setGoalForm] = useState({
@@ -42,7 +42,9 @@ const EditGoal = ({ user, token, goalID, onCancel }) => {
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        setGoalForm(res);
+        // setGoalForm(res);
+        onEdit();
+        onClose();
         // window.location.reload();
       })
       .catch((error) => console.log(error));
@@ -142,7 +144,7 @@ const EditGoal = ({ user, token, goalID, onCancel }) => {
       <div className="form-buttons">
         <button type="submit">Submit</button>
 
-        <button type="button" onClick={() => onCancel()}>
+        <button type="button" onClick={() => onClose()}>
           Cancel
         </button>
       </div>

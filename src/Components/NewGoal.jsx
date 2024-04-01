@@ -10,6 +10,7 @@ const NewGoal = ({ user, token }) => {
     name: "",
     target_date: "",
     description: "",
+    completed: false,
     userprofile_id: user.userprofile_id,
     interest_id: user.interest_id,
   });
@@ -37,7 +38,7 @@ const NewGoal = ({ user, token }) => {
       .then((res) => res.json())
       .then((res) => {
         setInterests(res);
-        console.log(res);
+        // console.log(res);
       })
       .catch((error) => console.log(error));
   };
