@@ -13,6 +13,7 @@ import NewGoal from "./Components/NewGoal";
 import HiveChat from "./Pages/HiveChat";
 // import FindBuddy from "./Pages/FindBuddy";
 import GoalProfile from "./Components/GoalProfile";
+import SingleProfile from "./Pages/SingleProfile";
 
 //Components
 import NavBar from "./Components/NavBar";
@@ -27,7 +28,7 @@ import Feed from "./Pages/Feed";
 import GetCurrentGoals from "./Pages/CurrentGoals";
 import FriendRequest from "./Pages/Friends";
 
-function App() {
+function App({userprofile_id}) {
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("user")) || null
   );
@@ -72,7 +73,7 @@ function App() {
           {/* <Route path="/findbuddy" element={<FindBuddy />} /> */}
           <Route path="/accountsettings" element={<AccountSettings />} />
           <Route
-            path="/userProfile"
+            path="/UserProfile"
             element={
               <ProtectedRoute
                 element={UserProfile}
@@ -135,15 +136,15 @@ function App() {
 
           <Route path="/" element={<Dash />} />
           <Route path="/feed" element={<Feed />} />
-          <Route path="/currentgoals" element={<GetCurrentGoals />} />
-          <Route path="/friendrequests" element={<FriendRequest />} />
-
+          <Route path="/currentgoals" element={<GetCurrentGoals user={user} />} />
+          <Route path="/friendrequests"   element={<FriendRequest user={user} />} />
+          <Route path="/profile/:userprofile_id" element={<SingleProfile userprofile_id={userprofile_id} user={user}/>}/>
           <Route
             path="/findbuddy"
             element={<GoalProfile />}
-            // isAuthenticated={!!user && !!token}
-            // user={user}
-            // token={token}
+            isAuthenticated={!!user && !!token}
+            user={user}
+            token={token}
           />
         </Routes>
       </Router>

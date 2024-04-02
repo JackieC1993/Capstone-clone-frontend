@@ -272,6 +272,7 @@ const [filteredUsers, setFilteredUsers] = useState([])
       <div className="carousel" {...(hasUsers ? handlers : {})}>
         {filteredUsers.map((user, index) => {
           const isCurrentCard = index === currentIndex;
+          const path = `/profile/${user.userprofile_id}`;
           return (
             <div
               className={`user-card${isCurrentCard ? " active" : ""}`}
@@ -281,8 +282,8 @@ const [filteredUsers, setFilteredUsers] = useState([])
               <div className="tbg">
                 <div className="tbgwrap">
                   <TiArrowSortedUp className="uparrow" />
-                    <Link to="/profiles/:user.userprofile_id">
 
+                    <Link to= {path}>
                   <div className="tphoto">
                     <img
                       src={user.profile_img}
@@ -333,7 +334,8 @@ const [filteredUsers, setFilteredUsers] = useState([])
   
   return (
     <>
-      <div className="carousel-container">
+      <div className="carousel-container"{...handlers}
+      >
         <h1>Find a Buddy</h1>
         <form>
           <label>Search by Interest</label>
