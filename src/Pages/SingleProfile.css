@@ -1,0 +1,33 @@
+#single-pic {
+  width: 100px;
+}
+
+.singleprofile-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  justify-content: left;
+  text-align: left;
+  align-items: left;
+  justify-content: c;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#profile-add {
+  background-color: var(--GHGreen);
+  width: 75%;
+  height: 75px;
+  border-radius: 15px;
+  font-weight: bolder;
+  border: 2px solid var(--GHBlue);
+}
+#profile-add :hover {
+  background-color: var(--GHBlue);
+}
+
+#add-container {
+  display: flex;
+  justify-content: center;
+  padding-left: 90px;
+}
