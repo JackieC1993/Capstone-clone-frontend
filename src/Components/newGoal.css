@@ -1,0 +1,76 @@
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .new-goal-container {
+    font-size: small;
+    min-height: 85vh;
+    margin: auto;
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-width: 0;
+    margin-top: 25px;
+  }
+
+  .new-goal-container h4 {
+    color: #3f7cac;
+    font-weight: bolder;
+    margin-left: 20px;
+  }
+
+  .form-container label {
+    color: #3f7cac;
+    font-weight: bold;
+  }
+
+  .form-container {
+    max-width: 400px;
+  }
+
+  .form-container input {
+    background: #3f7cac;
+    color: #fffcff;
+  }
+
+  .form-container select {
+    background: #3f7cac;
+    color: #fffcff;
+  }
+
+  .form-container textarea {
+    background: #3f7cac;
+    color: #fffcff;
+  }
+
+  #name.form-container {
+    color: #fffcff;
+  }
+
+  .css-button-3d--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #8fe779;
+    box-shadow: 0 5px #57cc99;
+  }
+  .css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+  .css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+}
