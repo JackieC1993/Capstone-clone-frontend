@@ -35,6 +35,10 @@
     color: #fffcff;
   }
 
+  .form-container input::placeholder {
+    color: #fffcff;
+  }
+
   .form-container select {
     background: #3f7cac;
     color: #fffcff;
