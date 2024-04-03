@@ -1,79 +1,59 @@
 import React from "react";
 import LineBar from "../Components/LineBar";
 import { Link } from "react-router-dom";
-import logo from "../assets/GH_Logo.png"
-import "../Pages/Dash.css"
-
+import logo from "../assets/GH_Logo.png";
+import "../Pages/Dash.css";
 
 const Dash = () => {
+  return (
+    <div className="dashboard-container">
+      <div className="scroll">
+        {/* <h1 id="topbar">Goal Hive</h1> */}
 
+        {/* < img id="dash-logo2" src={logo}/> */}
 
+        <header>
+          <h1>GoalHive Dashboard</h1>
+        </header>
 
-    return (<>
-        <div className="scroll">
-            {/* <h1 id="topbar">Goal Hive</h1> */}
-          
-           < img id="dash-logo2" src={logo}/>
-            
-     
-           
-            <header><h1>Goal Hive Dash</h1></header>
+        <button id="create-goal">CREATE GOAL</button>
+        <h2></h2>
 
+        <strong>@John54</strong>
 
+        <h2>
+          <img id="single-photo" src={"profile1.png"} />
+        </h2>
+        {/* <div id="p-card" className="col"> */}
+        <div id="user-card">
+          <div className="row">
+            <div className="col">{/* {<LineBar/>} */}</div>
+          </div>
+        </div>
 
-            <button id="create-goal">CREATE GOAL</button>
-            <h2>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div id="dash-logo">
+          <Link to="/feed">
+            <button id="feed">Feed</button>
+          </Link>
+          <br></br>
 
-            </h2>
+          <Link to="/friendrequests">
+            <button id="requests">Friends/Request</button>
+          </Link>
+          <br></br>
 
-            <strong>@John54</strong>
+          <Link to="/currentgoals">
+            <button id="active-goals">Active Goals</button>
+          </Link>
+        </div>
+      </div>
+      {/* </div> */}
+    </div>
+  );
+};
 
-            <h2><img id="single-photo" src={'profile1.png'} /></h2>
-            {/* <div id="p-card" className="col"> */}
-                <div id="user-card">
-                    <div className="row">
-                        <div className="col">
-                            {/* {<LineBar/>} */}
-                        </div>
-                    </div>
-                </div>
-
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-                    <div id="dash-logo" >
-                        <Link to="/feed">
-                            <button id="feed">Feed</button>
-                        </Link>
-                        <br></br>
-
-                        <Link to="/friendrequests">
-
-                            <button id="requests">Friends/Request</button>
-
-                        </Link>
-                        <br></br>
-
-                        <Link to="/currentgoals">
-
-                            <button id="active-goals">Active Goals</button>
-                        </Link>
-
-
-                    </div>
-              
-
-
-            </div>
-        {/* </div> */}
-
-
-
-
-    </>)
-
-}
-
-export default Dash
-
+export default Dash;
