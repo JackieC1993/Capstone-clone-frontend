@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import GoalHive from "../assets/gh_colorful_icon.png";
 import ProfileIcon from "../assets/profile_icon.png";
 import HiveChat from "../assets/chat_icon.png";
@@ -8,38 +8,50 @@ import CreateGoal from "../assets/goals_icon.png";
 import "./Navbar2.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-function NavBar() {
+const NavBar = ({ navBar, setNavBar }) => {
+  const location = useLocation();
+  // console.log(location);
+
+  const showNavBar =
+    location.pathname !== "/signup" && location.pathname !== "/login";
+
+  useEffect(() => {
+    setNavBar(showNavBar);
+  }, [location.pathname]);
+
   return (
-    <div className="nav">
-      <nav className="navbar fixed-bottom bg-body-tertiary">
-        <Link className="navbar-link" to="/">
-          <img id="goalhive-icon" src={GoalHive} alt="icon" />
-          <span>Home</span>
-        </Link>
-        <Link className="navbar-link" to="/findbuddy">
-          <img src={Buddies} alt="" />
-          <span>Find Buddy</span>
-        </Link>
-        <Link className="navbar-link" to="/goals/new">
-          <img src={CreateGoal} alt="" />
-          <span>New Goal</span>
-        </Link>
-        <Link className="navbar-link" to="/hivechat">
-          <img src={HiveChat} alt="" />
-          <span>HiveChat</span>
-        </Link>
-        <Link className="navbar-link" to="/userprofile">
-          <img src={ProfileIcon} alt="" />
-          <span>My Profile</span>
-        </Link>
-      </nav>
-    </div>
+    showNavBar && (
+      <div className="nav">
+        <nav className="navbar fixed-bottom bg-body-tertiary">
+          <Link className="navbar-link" to="/">
+            <img id="goalhive-icon" src={GoalHive} alt="icon" />
+            <span>Home</span>
+          </Link>
+          <Link className="navbar-link" to="/findbuddy">
+            <img src={Buddies} alt="" />
+            <span>Find Buddy</span>
+          </Link>
+          <Link className="navbar-link" to="/goals/new">
+            <img src={CreateGoal} alt="" />
+            <span>New Goal</span>
+          </Link>
+          <Link className="navbar-link" to="/hivechat">
+            <img src={HiveChat} alt="" />
+            <span>HiveChat</span>
+          </Link>
+          <Link className="navbar-link" to="/userprofile">
+            <img src={ProfileIcon} alt="" />
+            <span>My Profile</span>
+          </Link>
+        </nav>
+      </div>
+    )
   );
-}
+};
 
 export default NavBar;
-{
-  /* <div className="navbar fixed-bottom bg-body-tertiary" data-bs-theme="blue">
+// {
+/* <div className="navbar fixed-bottom bg-body-tertiary" data-bs-theme="blue">
       <div className="container-fluid" data-bs-theme="blue">
         <a className="navbar-brand" href="#">
           <img
@@ -158,4 +170,4 @@ const NavBar = ({ navBar, setNavBar }) => {
 };
 
 export default NavBar; */
-}
+// }

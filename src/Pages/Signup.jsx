@@ -51,9 +51,10 @@ const Signup = ({ setUser, setToken }) => {
   };
 
   return (
-    <div className="signup">
-      <img className="logo" src={logo} />
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="signup-container">
+      <img className="signup-logo" src={logo} />
+      <br />
+      <form className="signup-css" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter Username"
@@ -61,6 +62,7 @@ const Signup = ({ setUser, setToken }) => {
           value={formData.username}
           onChange={handleInputChange}
           required
+          id="username"
         />
         <br />
         <br />
@@ -71,6 +73,7 @@ const Signup = ({ setUser, setToken }) => {
           value={formData.email}
           onChange={handleInputChange}
           required
+          id="email"
         />
         <br />
         <br />
@@ -81,10 +84,13 @@ const Signup = ({ setUser, setToken }) => {
           value={formData.password_hash}
           onChange={handleInputChange}
           required
+          id="password"
         />
         <br />
         <br />
-        <button type="submit">CREATE ACCOUNT</button>
+        <button id="signup-create" type="submit">
+          CREATE ACCOUNT
+        </button>
       </form>
       <p>
         Already have an account? <Link to="/login">Login</Link>

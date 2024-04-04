@@ -1,23 +1,61 @@
-.signup {
-  grid-area: m;
-  /* border: 1px solid green; */
-  display: grid;
-  justify-content: center;
+.signup-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 40px;
   height: 100vh;
-  align-self: center;
-  align-content: center;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(white);
+  /* padding-bottom: 60px; */
+  /* justify-content: space-between; */
+
+  padding-top: 100px;
 }
 
-/* .signup img { */
-/* height: 50px; */
-/* width: 20%; */
-/* } */
+form > input#username {
+  width: 220px;
+}
 
-/* .signup p {
-  align-self: flex-end;
-} */
+.signup-css {
+  margin-top: 75px;
+}
 
-.form {
-  padding-top: 10px;
+#username {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid;
+  width: 200px;
+}
+
+#email {
+  margin-top: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid;
+}
+#password {
+  margin-top: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid;
+}
+
+.signup-logo {
+  width: 200px;
+  height: 300px;
+}
+
+.signup-create {
+  background-color: var(--GHGreen);
+  width: 225px;
+  height: 75px;
+  margin-top: 100px;
+  border-radius: 40px;
+  font-weight: bolder;
+  border: 1px solid var(--GHBlue);
 }

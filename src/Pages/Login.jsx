@@ -75,7 +75,7 @@ const Login = ({ setUser, setToken, user, token }) => {
     <div className="login">
       <img id="login-logo" src={logo} style={{ width: 300, height: 400 }} />
 
-      <Form className="form" onSubmit={handleLogin}>
+      <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="username">
           <Form.Label>Username</Form.Label>
           <Form.Control
