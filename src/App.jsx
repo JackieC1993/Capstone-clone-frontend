@@ -14,6 +14,7 @@ import HiveChat from "./Pages/HiveChat";
 // import FindBuddy from "./Pages/FindBuddy";
 import GoalProfile from "./Components/GoalProfile";
 import SingleProfile from "./Pages/SingleProfile";
+import ShowPost from "./Pages/ShowPost";
 
 //Components
 import NavBar from "./Components/NavBar";
@@ -23,8 +24,7 @@ import EditGoal from "./Components/EditGoal";
 
 import "./App.css";
 import InterFace from "./Pages/InterFace";
-import Dash from "./Pages/DashBoard";
-import Feed from "./Pages/Feed";
+// import Dash from "./Pages/DashBoard";
 import GetCurrentGoals from "./Pages/CurrentGoals";
 import FriendRequest from "./Pages/Friends";
 
@@ -49,7 +49,7 @@ function App({userprofile_id}) {
           {/* <Route path="/" element={<Home user={user} token={token} />} /> */}
           {/* <Route path="/profile" element={<UserProfile />} /> */}
 
-          <Route path="/" element={<Dash user={user} token={token} />} />
+          <Route path="/" element={<Home user={user} token={token} />} />
 
           <Route
             path="/login"
@@ -67,11 +67,21 @@ function App({userprofile_id}) {
             element={<Signup setUser={setUser} setToken={setToken} />}
           />
           {/* <Route path="/goals" element={<Goals />} /> */}
-          <Route path="/settings" element={<ProfileSettings />} />
+          {/* <Route path="/settings" element={<ProfileSettings />} /> */}
           <Route path="/hivechat" element={<HiveChat />} />
           {/* <Route path="/goalprofile" element={<GoalProfile />} /> */}
           {/* <Route path="/findbuddy" element={<FindBuddy />} /> */}
-          <Route path="/accountsettings" element={<AccountSettings />} />
+          {/* <Route path="/accountsettings" element={<AccountSettings />} /> */}
+          <Route path="/interface" element={<InterFace />} />
+          {/* <Route path="/" element={<Dash />} /> */}
+          <Route path="/currentgoals" element={<GetCurrentGoals />} />
+          <Route path="/friendrequests" element={<FriendRequest />} />
+
+          <Route
+            path="/feed/:index"
+            element={<ShowPost user={user} token={token} />}
+          />
+
           <Route
             path="/UserProfile"
             element={
