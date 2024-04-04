@@ -6,14 +6,14 @@
     min-height: 85vh;
     margin: 0 auto;
     background-color: #fffcff;
-    padding: 25px 20px;
+    padding: 10px 20px;
     grid-template-areas:
       "i p l"
       "b b b"
-      "a c c"
+      "a c n"
       "g g g";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 300px 50px auto;
+    grid-template-rows: 180px 260px 50px auto;
     gap: 10px;
     width: 100%;
     max-width: 100%;
@@ -32,15 +32,13 @@
     grid-area: i;
   }
 
+  Link.newgoal-button {
+    grid-area: n;
+  }
   .newgoal-icon {
     height: auto;
     width: 40px;
     color: var(--GHGreen);
-  }
-  .newgoal-button {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
   }
 
   .goalcard {
@@ -84,11 +82,10 @@
     text-align: left;
   }
 
-  /* Apply background color to the wrapper inside the bio section */
   .bio .bio-wrapper {
     background-color: #3f7cac; /* Background color for the bio section */
     color: #fffcff; /* Text color for the bio section */
-    padding: 15px 20px; /* Add padding to the wrapper */
+    padding: 15px 20px;
     border-radius: 3%;
     border-width: 5px;
     border-color: #0f314b;
@@ -169,8 +166,111 @@
 /* Adjustments for responsive layout */
 @media (min-width: 768px) {
   .userprofile-container {
-    padding: 20px;
+    width: 750px;
     font-size: medium;
+    display: grid;
+    min-height: 85vh;
+    margin: 0 auto;
+    background-color: #fffcff;
+    padding: 25px 20px;
+    grid-template-areas:
+      "i p l"
+      "b b b"
+      "a c c"
+      "g g g";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 270px 250px 50px auto;
+    gap: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #profile-image {
+    margin-top: 30px;
+
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  .profile-picture {
+    grid-area: i;
+  }
+
+  .newgoal-icon {
+    height: auto;
+    width: 40px;
+    color: var(--GHGreen);
+  }
+  .newgoal-button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .goalcard {
+    width: 125px;
+    height: 350px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .profile-header {
+    padding-top: 25px;
+    font-size: small;
+    grid-area: p;
+    align-items: center;
+  }
+
+  .profile-header h4 {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  .profile-header h6 {
+    font-size: 18px;
+  }
+
+  .logout-button {
+    padding-top: 26px;
+    grid-area: l;
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    font-size: smaller;
+  }
+
+  .bio {
+    grid-area: b;
+    padding: 20px;
+    background-color: #3f7cac;
+    color: #fffcff;
+    text-align: left;
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border: 2px solid #224661;
+  }
+
+  .active {
+    grid-area: a;
+  }
+
+  .completed {
+    grid-area: c;
+  }
+
+  .goals-container {
+    grid-area: g;
+  }
+
+  p.bold {
+    font-weight: bolder;
+  }
+
+  p.ital-bio {
+    font-style: italic;
   }
 
   .logout {
