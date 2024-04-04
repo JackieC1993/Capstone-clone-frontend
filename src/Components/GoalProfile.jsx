@@ -341,7 +341,7 @@ const GoalProfile = () => {
   return (
     <>
       <div className="carousel-container" {...handlers}>
-        <h1>Find a Buddy</h1>
+        <h2>Find a Buddy</h2>
         <form>
           <label>Search by Interest</label>
           <select

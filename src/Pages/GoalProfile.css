@@ -8,6 +8,18 @@
   width: 30px;
   height: 100px;
 }
+
+.carousel-container h2 {
+  padding-top: 20px;
+  color: var(--GHBlue);
+}
+
+.carousel-container form label {
+  font-size: medium;
+  padding-left: 15px;
+  color: var(--GHBlue);
+}
+
 .uparrow,
 .downarrow {
   height: 75px;
@@ -142,10 +154,16 @@ path {
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
-  background-color: var(--GHBlue);
+  /* background-color: var(--GHBlue); */
+  background-color: #fffcff;
   border: 1px solid var(--GHGreen);
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+form select {
+  background: #3f7cac;
+  color: #fffcff;
 }
 
 .user-card {
