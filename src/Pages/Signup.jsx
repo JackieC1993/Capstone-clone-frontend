@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/GH_Logo.png";
+import logo from "../assets/gh_text_logo.png";
 import "./Signup.css";
 
 const Signup = ({ setUser, setToken }) => {
@@ -52,12 +52,16 @@ const Signup = ({ setUser, setToken }) => {
 
   return (
     <div className="signup-container">
-      <img className="signup-logo" src={logo} />
+      <img
+        className="signup-logo"
+        src={logo}
+        style={{ width: 300, height: 350 }}
+      />
       <br />
       <form className="signup-css" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter Username"
+          placeholder="...create a username"
           name="username"
           value={formData.username}
           onChange={handleInputChange}
@@ -65,10 +69,9 @@ const Signup = ({ setUser, setToken }) => {
           id="username"
         />
         <br />
-        <br />
         <input
           type="email"
-          placeholder="Enter Email"
+          placeholder="...enter your email"
           name="email"
           value={formData.email}
           onChange={handleInputChange}
@@ -76,10 +79,9 @@ const Signup = ({ setUser, setToken }) => {
           id="email"
         />
         <br />
-        <br />
         <input
           type="password"
-          placeholder="Enter Password"
+          placeholder="...create a password"
           name="password_hash"
           value={formData.password_hash}
           onChange={handleInputChange}
@@ -87,8 +89,11 @@ const Signup = ({ setUser, setToken }) => {
           id="password"
         />
         <br />
-        <br />
-        <button id="signup-create" type="submit">
+        <button
+          className="css-button-3d--green"
+          id="signup-create"
+          type="submit"
+        >
           CREATE ACCOUNT
         </button>
       </form>

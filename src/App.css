@@ -138,7 +138,7 @@ img.quote {
 
   margin-top: 100px;
 
-  background-color: rgb(18, 180, 180);
+  background-color: var(--GHBlue);
 }
 
 .create:hover {
@@ -157,7 +157,7 @@ img.quote {
   margin-bottom: 50px;
   margin-left: 125px;
   width: 150px;
-  background-color: rgb(34, 129, 202);
+  background-color: var(--GHBlue);
 }
 
 .frame .text-wrapper-5 {
@@ -176,7 +176,7 @@ img.quote {
 }
 
 /* .login {
-  background-color: rgb(98, 231, 171);
+  background-color: var(--GHGreen);
 } */
 
 #about {
@@ -266,7 +266,7 @@ header#chat.header {
 }
 
 #submit {
-  background-color: rgba(22, 192, 135, 0.692);
+  background-color: var(--GHGreen);
 }
 
 #user1 {
@@ -290,7 +290,7 @@ header#chat.header {
   height: 50px;
   margin-bottom: 20px;
   width:385px;
-  color: rgb(33, 170, 33);
+  color: var(--GHGreen);
   background-color:black;
   border-radius: 15px;
 
@@ -302,7 +302,7 @@ header#chat.header {
   height: 50px;
   margin-top:10px;
   width:385px;
-  color: rgb(0, 153, 255);
+  color: var(--GHBlue);
   background-color: white;
   border-radius: 15px;
 
@@ -324,7 +324,7 @@ header#chat.header {
   height: 200px;
   width: 300px;
   overflow: auto;
-  background-color: rgb(33, 115, 173);
+  background-color: var(--GHBlue);
   margin-left: 10px;
   border-radius: 15px;
 }
@@ -344,23 +344,23 @@ div#container {
 }
 
 div.chat-background {
-  background-color: rgb(0, 0, 255);
+  background-color: var(--GHBlue);
 }
 
 #user1-send {
   margin-left: 300px;
 }
 div.chat-background {
-  background-color: rgb(0, 0, 255);
+  background-color: var(--GHBlue);
 }
 #user1-send {
   margin-left: 300px;
 
-  background-color: rgb(33, 105, 220);
+  background-color: var(--GHBlue);
 }
 
 #user2-send {
-  background-color: rgb(49, 235, 49);
+  background-color: var(--GHGreen);
   margin-top: 5px;
 }
 
@@ -387,7 +387,7 @@ div.chat-background {
 }
 
 .user1-message {
-  color: blue;
+  color: var(--GHBlue);
   /* background-color:aliceblue; */
 }
 
@@ -419,12 +419,12 @@ div.chat-background {
 }
 
 .custom-progress::-webkit-progress-value {
-  background-color: #3f51b5;
+  background-color: var(--GHBlue);
   border-radius: 10px;
 }
 
 .custom-progress::-moz-progress-bar {
-  background-color: #3f51b5;
+  background-color: var(--GHBlue);
   border-radius: 10px;
 }
 
@@ -595,7 +595,7 @@ form#form-2 {
   height: 80px;
   width: 265px;
   border-radius: 15px;
-  background-color: rgb(26, 221, 19);
+  background-color: var(--GHGreen);
   margin-top: 40px;
 }
 
@@ -614,7 +614,7 @@ form#form-2 {
   margin-left: 90px;
   border-radius: 20px;
   background-color: white;
-  border: 2px solid rgb(0, 191, 255);
+  border: 2px solid var(--GHBlue);
 }
 
 #feed {
@@ -634,11 +634,10 @@ form#form-2 {
     "n n m m m "
     "n n m m m ";
 
-    padding-bottom: 60px;
-   max-height: 100vh;
-   width: 100vw;
-   margin: 0;
-
+  padding-bottom: 60px;
+  max-height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
 .nav {
@@ -648,7 +647,7 @@ form#form-2 {
 .home {
   grid-area: m;
   text-align: center;
-  height: fit-content
+  height: fit-content;
 }
 
 img#single-photo {
@@ -680,7 +679,7 @@ img#single-photo {
 .bar {
   flex: 1;
   margin-right: 10px;
-  background: linear-gradient(to top, #00b8ff, #0077c2);
+  background: linear-gradient(to top, var(--GHBlue), var(--GHGreen));
   transition: height 0.5s ease;
   height: var(--my-number);
   animation: animateBar 1s ease-in-out forwards;
@@ -689,7 +688,7 @@ img#single-photo {
 .bar2 {
   flex: 1;
   margin-right: 10px;
-  background: linear-gradient(to top, hsl(197, 100%, 50%), rgb(176, 255, 58));
+  background: linear-gradient(to top, var(--GHBlue), var(--GHGreen));
   transition: height 0.5s ease;
   height: 40%;
   animation: animateBar 1s 0.3s ease-in-out forwards;
@@ -737,12 +736,12 @@ img#single-photo {
   height: 100px;
 
   border-bottom: 2px solid black;
-  border-top: 2px solid #7ed957;
+  border-top: 2px solid var(--GHGreen);
   background-color: white;
   font-size: larger;
   border-radius: 15px;
   font-size: x-small;
-  /* background-color: #7ED957; */
+  /* background-color: var(--GHGreen); */
 }
 
 #each-goal:hover {

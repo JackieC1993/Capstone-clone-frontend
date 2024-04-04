@@ -62,10 +62,10 @@ path {
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
   -ms-border-radius: 10px;
-  border: 1px solid #c0c0c0;
+  border: 5px solid var(--GHBlue);
   padding-bottom: 60px;
-  background-color: var(--GHGreen);
-  box-shadow: 2px 2px 2px var(--GHGreen);
+  background-color: #fffcff;
+  box-shadow: 2px 2px 2px #051c2e;
 }
 
 .tphoto img {
@@ -162,7 +162,8 @@ path {
 }
 
 form select {
-  background: #3f7cac;
+  background: var(--GHBlue);
+
   color: #fffcff;
 }
 
@@ -263,7 +264,7 @@ body {
 /* .ti .fa-info {
   font-size: 23px;
   padding: 15px 20px;
-  color: #398beb;
+  color: var(--GHBlue);
 } */
 
 /* .tyes {

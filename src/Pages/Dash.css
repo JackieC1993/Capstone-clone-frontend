@@ -26,7 +26,7 @@
     color: white;
     padding: 10px; */
     text-align: center;
-    background-color: #3f7cac;
+    background-color: var(--GHBlue);
   }
 
   header {
@@ -34,7 +34,7 @@
     color: white;
     /* padding: 20px; */
     text-align: center;
-    background-color: #3f7cac;
+    background-color: var(--GHBlue);
     padding: 30px 0 20px 0;
     width: 100%;
     border-radius: 3%;
@@ -109,4 +109,3 @@
     height: 80px;
   }
 }
-

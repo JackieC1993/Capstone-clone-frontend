@@ -34,7 +34,7 @@
 
   input[type="submit"] {
     width: 100%;
-    background-color: #80b192;
+    background-color: var(--GHGreen);
     color: #fff;
     border: none;
     padding: 10px 0;
@@ -43,7 +43,7 @@
   }
 
   input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: var(--GHBlue);
   }
 
   label {
@@ -63,7 +63,7 @@
 
   form h2 {
     text-align: center;
-    color: #0056b3;
+    color: var(--GHBlue);
   }
 }
 /* .form {
