@@ -8,6 +8,42 @@
     /* justify-content: center; */
     align-items: center;
     height: 100vh;
+    width: 300px;
+    margin: 45px auto;
+  }
+
+  Label {
+    color: var(--GHBlue);
+  }
+
+  /* .login img { */
+  /* height: 50px; */
+  /* width: 20%; */
+  /* } */
+
+  .login p {
+    align-self: flex-end;
+  }
+
+  .form {
+    padding-top: 100%;
+  }
+
+  #login-logo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+/* Adjustments for responsive layout */
+@media (min-width: 768px) {
+  .login {
+    /* border: 1px solid green; */
+    /* justify-content: center; */
+    width: 30%;
+    margin: 45px auto;
+    align-items: center;
+    height: 100vh;
   }
 
   /* .login img { */

@@ -155,8 +155,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
-import { TiArrowSortedDown } from "react-icons/ti";
-import { TiArrowSortedUp } from "react-icons/ti";
+// import { TiArrowSortedDown } from "react-icons/ti";
+// import { TiArrowSortedUp } from "react-icons/ti";
 import "../Pages/GoalProfile.css";
 
 const GoalProfile = () => {
@@ -167,16 +167,14 @@ const GoalProfile = () => {
   const { id } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userSelect, setUserSelect] = useState("");
-const [filteredUsers, setFilteredUsers] = useState([])
-
+  const [filteredUsers, setFilteredUsers] = useState([]);
 
   const handleSelectChange = (event) => {
     setUserSelect(event.target.value);
   };
 
-
-
   useEffect(() => {
+    console.log(API);
     const fetchData = async () => {
       try {
         const response = await fetch(`${API}/profiles`);
@@ -218,8 +216,8 @@ const [filteredUsers, setFilteredUsers] = useState([])
         }
         const data = await response.json();
         setInterest(data);
-        console.log("Interest")
-        console.log(data)
+        console.log("Interest");
+        console.log(data);
       } catch (error) {
         console.error("Fetch error:", error);
       }
@@ -228,12 +226,16 @@ const [filteredUsers, setFilteredUsers] = useState([])
   }, []);
 
   useEffect(() => {
-    const filteredUsers = allusers.filter(user => {
+    const filteredUsers = allusers.filter((user) => {
       // If no interest is selected, return true to include all users
       if (!userSelect) return true;
 
       // Check if the user has the selected interest
-      return interests.some(interest => interest.interest_id === user.userprofile_id && interest.name === userSelect);
+      return interests.some(
+        (interest) =>
+          interest.interest_id === user.userprofile_id &&
+          interest.name === userSelect
+      );
     });
 
     setFilteredUsers(filteredUsers);
@@ -248,7 +250,7 @@ const [filteredUsers, setFilteredUsers] = useState([])
       prevIndex > 0 ? prevIndex - 1 : allusers.length - 1
     );
   };
-  
+
   const goToNextCard = () => {
     if (allusers.length === 0) {
       setCurrentIndex(0); // Reset to the first position
@@ -271,6 +273,7 @@ const [filteredUsers, setFilteredUsers] = useState([])
       <div className="carousel" {...(hasUsers ? handlers : {})}>
         {filteredUsers.map((user, index) => {
           const isCurrentCard = index === currentIndex;
+          const path = `/profile/${user.userprofile_id}`;
           return (
             <div
               className={`user-card${isCurrentCard ? " active" : ""}`}
@@ -279,41 +282,46 @@ const [filteredUsers, setFilteredUsers] = useState([])
             >
               <div className="tbg">
                 <div className="tbgwrap">
-                  <TiArrowSortedUp className="uparrow" />
-                    <Link to="/profiles/:user.userprofile_id">
+                  {/* <TiArrowSortedUp className="uparrow" /> */}
 
-                  <div className="tphoto">
-                    <img
-                      src={user.profile_img}
-                      title="tphoto"
-                      alt="Tinder Photo"
+                  <Link to={path}>
+                    <div className="tphoto">
+                      <img
+                        src={user.profile_img}
+                        title="tphoto"
+                        alt="Tinder Photo"
                       />
-                    <div className="tname">
-                      <h1>{user.username}</h1>{" "}
-                      <span className="age">
-                        <h3>Age: {user.age}</h3>
-                      </span>
-                      {goals
-                        .filter((goal) => goal.goal_id === user.userprofile_id)
-                        .map((goal, goalIndex) => (
-                          <p key={goalIndex}> Goal: {goal.description}</p>
+                      <div className="tname">
+                        <h1>{user.username}</h1>{" "}
+                        <span className="age">
+                          <h3>Age: {user.age}</h3>
+                        </span>
+                        {goals
+                          .filter(
+                            (goal) => goal.goal_id === user.userprofile_id
+                          )
+                          .map((goal, goalIndex) => (
+                            <p key={goalIndex}> Goal: {goal.description}</p>
                           ))}
-                      {interests
-                        .filter(
-                          (interest) =>
-                          interest.interest_id === user.userprofile_id
+                        {interests
+                          .filter(
+                            (interest) =>
+                              interest.interest_id === user.userprofile_id
                           )
                           .map((interest, interestIndex) => (
-                            <p key={interestIndex}> Interest: {interest.name}</p>
-                            ))}
+                            <p key={interestIndex}>
+                              {" "}
+                              Interest: {interest.name}
+                            </p>
+                          ))}
+                      </div>
                     </div>
-                  </div>
-                            </Link>
+                  </Link>
                   <div className="tcontrols">
                     <div className="tno">
                       <i className="fa fa-times" aria-hidden="true"></i>
                     </div>
-                    <TiArrowSortedDown className="downarrow" />
+                    {/* <TiArrowSortedDown className="downarrow" /> */}
                     <div className="tyes">
                       <i className="fa fa-heart" aria-hidden="true"></i>
                     </div>
@@ -329,10 +337,10 @@ const [filteredUsers, setFilteredUsers] = useState([])
       </div>
     );
   };
-  
+
   return (
     <>
-      <div className="carousel-container">
+      <div className="carousel-container" {...handlers}>
         <h1>Find a Buddy</h1>
         <form>
           <label>Search by Interest</label>
@@ -341,7 +349,7 @@ const [filteredUsers, setFilteredUsers] = useState([])
             name="interests"
             onChange={handleSelectChange}
             value={userSelect}
-            >
+          >
             <option value="">Please select an interest</option>
             <option value="Tech"> Tech</option>
             <option value="Hiking">Hiking</option>
@@ -354,7 +362,6 @@ const [filteredUsers, setFilteredUsers] = useState([])
             <option value="Crypto">Crypto</option>
             <option value="Art">Art</option>
             <option value="Music">Music</option>
-            
           </select>
         </form>
         <SwipeableComponent />

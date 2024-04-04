@@ -1,20 +1,21 @@
-#profile{
- height: 100px;
- border-radius: 300px;
- width: 100px;
+#profile {
+  height: 100px;
+  border-radius: 300px;
+  width: 100px;
 }
-.goalstairs{
+.goalstairs {
   color: var(--GHGreen);
   width: 30px;
   height: 100px;
 }
-.uparrow, .downarrow{
- height: 75px;
- width: 100px;
- align-items: center;
- color: var(--GHGreen)
+.uparrow,
+.downarrow {
+  height: 75px;
+  width: 100px;
+  align-items: center;
+  color: var(--GHGreen);
 }
-path{
+path {
   width: 30px;
   height: 100px;
 }
@@ -23,17 +24,14 @@ path{
   padding: 10px;
 }
 
-
-
 .theader {
   height: 75px;
   border-bottom: 1px solid #c0c0c0;
 }
 
-
 .tlogo {
   width: 50px;
-  margin-right: 55px ;
+  margin-right: 55px;
   align-items: center;
 }
 
@@ -54,7 +52,7 @@ path{
   -ms-border-radius: 10px;
   border: 1px solid #c0c0c0;
   padding-bottom: 60px;
-  background-color:  var(--GHGreen) ;
+  background-color: var(--GHGreen);
   box-shadow: 2px 2px 2px var(--GHGreen);
 }
 
@@ -69,7 +67,7 @@ path{
 .tname {
   padding: 15px;
   font-size: 20px;
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Open Sans", sans-serif;
   float: left;
 }
 
@@ -78,7 +76,7 @@ path{
 }
 
 .tinfo {
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* .tinfo .fa-users,
@@ -129,11 +127,11 @@ path{
 }
 
 .carousel {
-  display: flex; 
-   flex-direction: column; 
-   align-items: center; 
-   height: 932px;
-   display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 932px;
+  display: inline-block;
 }
 
 .carousel-container {
@@ -202,11 +200,13 @@ path{
   cursor: pointer;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: calibri;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -285,6 +285,6 @@ body {
   color: #c0c0c0;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: italic;
 } */
