@@ -20,10 +20,10 @@ function NavBar() {
           <img src={Buddies} alt="" />
           <span>Find Buddy</span>
         </Link>
-        <Link className="navbar-link" to="/goals/new">
+        {/* <Link className="navbar-link" to="/goals/new">
           <img src={CreateGoal} alt="" />
           <span>New Goal</span>
-        </Link>
+        </Link> */}
         <Link className="navbar-link" to="/hivechat">
           <img src={HiveChat} alt="" />
           <span>HiveChat</span>

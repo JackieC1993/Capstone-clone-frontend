@@ -107,9 +107,9 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
         <span>List of Completed Goals</span>
       )}
       {/* </div> */}
-      {/* <Link to="/goals/new" className="newgoal-button">
+      <Link to="/goals/new" className="newgoal-button">
         <FaPlusCircle className="newgoal-icon" />
-      </Link> */}
+      </Link>
     </div>
   );
 };
