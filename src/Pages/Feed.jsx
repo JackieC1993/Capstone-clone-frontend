@@ -1,123 +1,41 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import Post from "../Components/Post";
+import "./Feed.css"
 
+const Feed = ({ user, token }) => {
+  const API = import.meta.env.VITE_BASE_URL;
+  const [feed, setFeed] = useState([]);
 
-const Feed = () => {
-
-  const API = import.meta.env.VITE_BASE_URL
-console.log(`${API}`)
-  const [users, setUsers] = useState([]);
-  const [allgoals, setAllGoals] = useState([]);
-  const [showCommentSection, setShowCommentSection] = useState([]);
-
-  const toggleCommentSection = (userId) => {
-    setShowCommentSection((prevState) => ({
-      ...prevState,
-      [userId]: !prevState[userId]
-    }));
-  };
-
-  const likePost = (userId) => {
-    setUsers((prevState) => {
-      const updatedUsers = prevState.map((user) => {
-        if (user.userprofile_id === userId) {
-          const newLikeCount = (user.likeCount || 0) + 1;
-
-        
-          sessionStorage.setItem(`likeCount_${userId}`, newLikeCount.toString());
-
-          return {
-            ...user,
-            likeCount: newLikeCount
-          };
-        }
-        return user;
-      });
-
-      return updatedUsers;
-    });
+  const fetchData = () => {
+    fetch(`${API}/posts`, {
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res);
+        setFeed(res);
+      })
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${API}/profiles`);
-        console.log(response)
-        if (!response.ok) {
-          throw new Error(`Request failed with status: ${response.status}`);
-        }
-        const data = await response.json();
-       console.log(data);
-        
-        const updatedData = data.map((user) => ({
-          ...user,
-          likeCount: parseInt(sessionStorage.getItem(`likeCount_${user.userprofile_id}`), 10) || 0
-        }));
-
-        setUsers(updatedData);
-      } catch (error) {
-        console.error('Fetch error:', error);
-      }
-    };
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const fetchGoals = async () => {
-      try {
-        const response = await fetch(`${API}/allgoals`);
-        if (!response.ok) {
-          throw new Error(`Request failed with status: ${response.status}`);
-        }
-        const data = await response.json();
-        setAllGoals(data);
-        console.log(allgoals)
-      } catch (error) {
-        console.error('Fetch error:', error);
-      }
-    };
-    fetchGoals();
-  }, []);
-
+  console.log("This is the feed array: ", feed);
+  // console.log(user)
   return (
-    <>
-      <div className="scroll2">
-      <div className="bee-container">
-  <img id="feed-logo"src="/GH_Logo.png" alt="Bee" className="bee" />
-</div>
-   <h1>Community Feed</h1>
-        {users.map((user, index) => {
-          const isCommentSectionShown = !!showCommentSection[user.userprofile_id];
-          const currentLikeCount = user.likeCount || 0;
+    <div className="feed">
+      {/* <h2>This is the feed</h2> */}
 
-          return (
-            <div className="user" id={user.userprofile_id} key={index}>
-              <p>
-                {user.firstname + ' ' + user.lastname}
-              </p>
-
-              <img id="feed" src={`${user.profile_img}`} />
-
-              {allgoals
-                .filter((goal) => goal.goal_id === user.userprofile_id)
-                .map((goal, goalIndex) => (
-                  <p key={goalIndex}>〉{goal.description}</p>
-                ))}
-
-              <p>
-                <button onClick={() => likePost(user.userprofile_id)}>👍</button> Likes {currentLikeCount}
-              <p onClick={() => toggleCommentSection(user.userprofile_id)}>➕ Comment</p>
-              </p>
-              {isCommentSectionShown && (
-                <div className={`comment-section ${showCommentSection[user.userprofile_id] ? 'visible' : 'hidden'}`}>
-                  <textarea></textarea>
-                  <button className="comment">Add Comment</button>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </>
+      {feed.map((posts) => {
+        return (
+          <Post key={posts.post_id} user={user} token={token} post={posts}/>
+        );
+      })}
+    </div>
   );
 };
 

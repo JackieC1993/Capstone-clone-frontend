@@ -1,9 +1,5 @@
 import React  from "react";
 import GoalHive from "../assets/GH_Nobg.png";
-import ProfileIcon from "../assets/profile_icon.png";
-import HiveChat2 from "../assets/hivechat_icon.png";
-import Buddies from "../assets/find_a_buddy_icon.png";
-import CreateGoal from "../assets/GH_create_goal.png";
 import  { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import LineBar from "../Components/LineBar";
