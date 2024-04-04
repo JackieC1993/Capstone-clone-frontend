@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import React from "react";
 import toggle from "../assets/toggle.png";
-import logo from "../assets/GH_Nobg.png";
+import logo from "../assets/gh_text_logo.png";
 import quote from "../assets/quote.png";
 
 import "./login.css";
@@ -76,7 +76,7 @@ const Login = ({ setUser, setToken, user, token }) => {
       <img id="login-logo" src={logo} style={{ width: 300, height: 400 }} />
 
       <Form onSubmit={handleLogin}>
-        <Form.Group className="mb-3" controlId="username">
+        <Form.Group controlId="username">
           <Form.Label>Username</Form.Label>
           <Form.Control
             type="text"
@@ -88,8 +88,8 @@ const Login = ({ setUser, setToken, user, token }) => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
+        <Form.Group controlId="password">
+          <Form.Label id="password-label">Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter your password"
@@ -97,12 +97,13 @@ const Login = ({ setUser, setToken, user, token }) => {
             value={formData.password_hash}
             onChange={handleInputChange}
             required
+            className="form-control-sm"
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <button className="css-button-3d--green" type="submit">
           Log in
-        </Button>
+        </button>
       </Form>
 
       {/* <form className="form" onSubmit={handleLogin}>

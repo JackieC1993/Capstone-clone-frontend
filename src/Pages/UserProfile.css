@@ -77,13 +77,13 @@
   .bio {
     grid-area: b;
     padding: 0;
-    /* background-color: #3f7cac;
+    /* background-color: var(--GHBlue);
     color: #fffcff; */
     text-align: left;
   }
 
   .bio .bio-wrapper {
-    background-color: #3f7cac; /* Background color for the bio section */
+    background-color: var(--GHBlue); /* Background color for the bio section */
     color: #fffcff; /* Text color for the bio section */
     padding: 15px 20px;
     border-radius: 3%;
@@ -159,7 +159,7 @@
   }
 
   body {
-    background-color: #3f7cac;
+    background-color: var(--GHBlue);
   }
 }
 
@@ -244,7 +244,7 @@
   .bio {
     grid-area: b;
     padding: 20px;
-    background-color: #3f7cac;
+    background-color: var(--GHBlue);
     color: #fffcff;
     text-align: left;
     border-radius: 12px 12px 12px 12px;

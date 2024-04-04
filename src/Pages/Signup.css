@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
@@ -10,24 +9,31 @@
   background-color: var(white);
   /* padding-bottom: 60px; */
   /* justify-content: space-between; */
-
-  padding-top: 100px;
+  padding-top: 45px;
 }
 
 form > input#username {
   width: 220px;
 }
 
-.signup-css {
-  margin-top: 75px;
+.signup-css input {
+  padding-top: 15px;
 }
 
+.signup-css {
+  margin-top: 35px;
+}
 #username {
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid;
   width: 200px;
+}
+
+button.css-button-3d--green {
+  margin-top: 40px;
+  margin-bottom: 25px;
 }
 
 #email {
