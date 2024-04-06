@@ -27,6 +27,7 @@
   }
 
   .form-container {
+    border-width: 0px;
     max-width: 400px;
   }
 
@@ -46,6 +47,10 @@
   .form-container textarea {
     background: var(--GHBlue);
     color: #fffcff;
+    width: 340px;
+    border-color: rgb(0, 26, 56);
+    border-radius: 10px;
+    border-width: 2px;
   }
 
   #name.form-container {

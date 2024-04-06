@@ -49,7 +49,7 @@ const NewProfile = ({ user, token }) => {
   };
 
   return (
-    <div className="new-profile">
+    <div id="new-profile" className="new-profile">
       <form className="newProfile-form" onSubmit={handleSubmit}>
         <br />
         <h2 id="heading">Basic Profile Setup</h2>

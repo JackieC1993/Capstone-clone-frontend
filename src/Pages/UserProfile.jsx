@@ -48,10 +48,10 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
 
   return (
     <div className="userprofile-container">
-      <div className="profile-picture">
-        <img id="profile-image" src={profilePic} alt="Profile Image" />
+      <div className="userprofile-picture">
+        <img id="userprofile-image" src={profilePic} alt="Profile Image" />
       </div>
-      <div className="profile-header">
+      <div className="userprofile-header">
         <h4>
           {profiles.firstname} {profiles.lastname}
         </h4>

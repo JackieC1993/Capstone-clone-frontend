@@ -20,7 +20,7 @@
     box-sizing: border-box;
   }
 
-  #profile-image {
+  #userprofile-image {
     margin-top: 30px;
 
     width: 120px;
@@ -28,7 +28,7 @@
     border-radius: 50%;
   }
 
-  .profile-picture {
+  .userprofile-picture {
     grid-area: i;
   }
 
@@ -49,19 +49,19 @@
     position: relative;
   }
 
-  .profile-header {
+  .userprofile-header {
     padding-top: 25px;
     font-size: small;
     grid-area: p;
     align-items: center;
   }
 
-  .profile-header h4 {
+  .userprofile-header h4 {
     font-weight: bold;
     font-size: 22px;
   }
 
-  .profile-header h6 {
+  .userprofile-header h6 {
     font-size: 18px;
   }
 
@@ -185,7 +185,7 @@
     box-sizing: border-box;
   }
 
-  #profile-image {
+  #userprofile-image {
     margin-top: 30px;
 
     width: 250px;
@@ -193,7 +193,7 @@
     border-radius: 50%;
   }
 
-  .profile-picture {
+  .userprofile-picture {
     grid-area: i;
   }
 
@@ -216,19 +216,19 @@
     position: relative;
   }
 
-  .profile-header {
+  .userprofile-header {
     padding-top: 25px;
     font-size: small;
     grid-area: p;
     align-items: center;
   }
 
-  .profile-header h4 {
+  .userprofile-header h4 {
     font-weight: bold;
     font-size: 22px;
   }
 
-  .profile-header h6 {
+  .userprofile-header h6 {
     font-size: 18px;
   }
 
