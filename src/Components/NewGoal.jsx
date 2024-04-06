@@ -112,6 +112,7 @@ const NewGoal = ({ user, token }) => {
             value={goal.description}
             onChange={handleTextChange}
             id="description"
+            rows="4"
           />
         </div>
         <br />

@@ -2,9 +2,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import React from "react";
-import toggle from "../assets/toggle.png";
+// import toggle from "../assets/toggle.png";
 import logo from "../assets/gh_text_logo.png";
-import quote from "../assets/quote.png";
+// import quote from "../assets/quote.png";
 
 import "./login.css";
 
@@ -72,12 +72,11 @@ const Login = ({ setUser, setToken, user, token }) => {
   // }
 
   return (
-    <div className="login">
-      <img id="login-logo" src={logo} style={{ width: 300, height: 400 }} />
-
+    <div id="login" className="login">
+      <img id="login-logo" src={logo} style={{ width: 225, height: 300 }} />
       <Form onSubmit={handleLogin}>
-        <Form.Group controlId="username">
-          <Form.Label>Username</Form.Label>
+        <Form.Group controlId="login-username">
+          <Form.Label id="login-username-label">Username</Form.Label>
           <Form.Control
             type="text"
             placeholder="Enter your username"
@@ -85,11 +84,11 @@ const Login = ({ setUser, setToken, user, token }) => {
             value={formData.username}
             onChange={handleInputChange}
             required
+            className="form-control-sm"
           />
         </Form.Group>
-
-        <Form.Group controlId="password">
-          <Form.Label id="password-label">Password</Form.Label>
+        <Form.Group controlId="login-password">
+          <Form.Label id="login-password-label">Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter your password"
@@ -99,40 +98,16 @@ const Login = ({ setUser, setToken, user, token }) => {
             required
             className="form-control-sm"
           />
-        </Form.Group>
-
-        <button className="css-button-3d--green" type="submit">
-          Log in
+        </Form.Group>{" "}
+        <br />
+        <button
+          className="css-button-3d--green"
+          type="submit"
+          id="login-button"
+        >
+          LOGIN
         </button>
       </Form>
-
-      {/* <form className="form" onSubmit={handleLogin}>
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
-          required
-        />
-
-        <br />
-        <br />
-
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="password_hash"
-          value={formData.password_hash}
-          onChange={handleInputChange}
-          required
-        />
-
-        <br />
-        <br />
-
-        <button type="submit">LOGIN</button>
-      </form> */}
       <p>
         Don't have an account? <Link to="/signup">Sign Up</Link>
       </p>
