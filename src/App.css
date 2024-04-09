@@ -1082,3 +1082,28 @@ div.scroll2 {
   align-items: center;
   flex-wrap: wrap;
 }
+/* div#request{
+  text-align: center;
+  margin: auto;
+  background-color: var(--GHBlue);
+  border: 1px solid var(--GHGreen);
+  display: flex;
+}
+
+h6{
+  text-align: center;
+  padding-top: 15px;
+  border-spacing: 15px ;
+}
+button#accept{
+  text-align: center;
+}
+
+button#decline{
+  text-align:center;
+}
+p.friendrequest{
+  margin: auto;
+  padding-left: 0%;
+  padding-right: 0px;
+} */

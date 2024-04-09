@@ -155,8 +155,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
-import { TiArrowSortedDown } from "react-icons/ti";
-import { TiArrowSortedUp } from "react-icons/ti";
+// import { TiArrowSortedDown } from "react-icons/ti";
+// import { TiArrowSortedUp } from "react-icons/ti";
 import "../Pages/GoalProfile.css";
 
 const GoalProfile = () => {
@@ -281,7 +281,7 @@ const [filteredUsers, setFilteredUsers] = useState([])
             >
               <div className="tbg">
                 <div className="tbgwrap">
-                  <TiArrowSortedUp className="uparrow" />
+                  {/* <TiArrowSortedUp className="uparrow" /> */}
 
                     <Link to= {path}>
                   <div className="tphoto">
@@ -315,7 +315,7 @@ const [filteredUsers, setFilteredUsers] = useState([])
                     <div className="tno">
                       <i className="fa fa-times" aria-hidden="true"></i>
                     </div>
-                    <TiArrowSortedDown className="downarrow" />
+                    {/* <TiArrowSortedDown className="downarrow" /> */}
                     <div className="tyes">
                       <i className="fa fa-heart" aria-hidden="true"></i>
                     </div>
