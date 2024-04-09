@@ -27,6 +27,7 @@ import InterFace from "./Pages/InterFace";
 // import Dash from "./Pages/DashBoard";
 import GetCurrentGoals from "./Pages/CurrentGoals";
 import FriendRequest from "./Pages/Friends";
+import ChatComponent from "./Components/Chat";
 
 function App({userprofile_id}) {
   const [user, setUser] = useState(
@@ -144,6 +145,8 @@ function App({userprofile_id}) {
 
           <Route path="/interface" element={<InterFace />} />
 
+//          <Route path="/" element={<Dash />} />
+          <Route path="/feed" element={<Feed />} />
           {/* <Route path="/" element={<Dash />} /> */}
           {/* <Route path="/feed" element={<Feed />} /> */}
           <Route path="/currentgoals" element={<GetCurrentGoals user={user} />} />
@@ -156,6 +159,7 @@ function App({userprofile_id}) {
             user={user}
             token={token}
           />
+          <Route path="/chat" element={<ChatComponent user={user}/>}/>
         </Routes>
       </Router>
     </div>
