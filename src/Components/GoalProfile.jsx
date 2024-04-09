@@ -167,17 +167,14 @@ const GoalProfile = () => {
   const { id } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userSelect, setUserSelect] = useState("");
-const [filteredUsers, setFilteredUsers] = useState([])
-
+  const [filteredUsers, setFilteredUsers] = useState([]);
 
   const handleSelectChange = (event) => {
     setUserSelect(event.target.value);
   };
 
-
-
   useEffect(() => {
-    console.log(API)
+    console.log(API);
     const fetchData = async () => {
       try {
         const response = await fetch(`${API}/profiles`);
@@ -219,8 +216,8 @@ const [filteredUsers, setFilteredUsers] = useState([])
         }
         const data = await response.json();
         setInterest(data);
-        console.log("Interest")
-        console.log(data)
+        console.log("Interest");
+        console.log(data);
       } catch (error) {
         console.error("Fetch error:", error);
       }
@@ -229,12 +226,16 @@ const [filteredUsers, setFilteredUsers] = useState([])
   }, []);
 
   useEffect(() => {
-    const filteredUsers = allusers.filter(user => {
+    const filteredUsers = allusers.filter((user) => {
       // If no interest is selected, return true to include all users
       if (!userSelect) return true;
 
       // Check if the user has the selected interest
-      return interests.some(interest => interest.interest_id === user.userprofile_id && interest.name === userSelect);
+      return interests.some(
+        (interest) =>
+          interest.interest_id === user.userprofile_id &&
+          interest.name === userSelect
+      );
     });
 
     setFilteredUsers(filteredUsers);
@@ -249,7 +250,7 @@ const [filteredUsers, setFilteredUsers] = useState([])
       prevIndex > 0 ? prevIndex - 1 : allusers.length - 1
     );
   };
-  
+
   const goToNextCard = () => {
     if (allusers.length === 0) {
       setCurrentIndex(0); // Reset to the first position
@@ -283,34 +284,39 @@ const [filteredUsers, setFilteredUsers] = useState([])
                 <div className="tbgwrap">
                   {/* <TiArrowSortedUp className="uparrow" /> */}
 
-                    <Link to= {path}>
-                  <div className="tphoto">
-                    <img
-                      src={user.profile_img}
-                      title="tphoto"
-                      alt="Tinder Photo"
+                  <Link to={path}>
+                    <div className="tphoto">
+                      <img
+                        src={user.profile_img}
+                        title="tphoto"
+                        alt="Tinder Photo"
                       />
-                    <div className="tname">
-                      <h1>{user.username}</h1>{" "}
-                      <span className="age">
-                        <h3>Age: {user.age}</h3>
-                      </span>
-                      {goals
-                        .filter((goal) => goal.goal_id === user.userprofile_id)
-                        .map((goal, goalIndex) => (
-                          <p key={goalIndex}> Goal: {goal.description}</p>
+                      <div className="tname">
+                        <h1>{user.username}</h1>{" "}
+                        <span className="age">
+                          <h3>Age: {user.age}</h3>
+                        </span>
+                        {goals
+                          .filter(
+                            (goal) => goal.goal_id === user.userprofile_id
+                          )
+                          .map((goal, goalIndex) => (
+                            <p key={goalIndex}> Goal: {goal.description}</p>
                           ))}
-                      {interests
-                        .filter(
-                          (interest) =>
-                          interest.interest_id === user.userprofile_id
+                        {interests
+                          .filter(
+                            (interest) =>
+                              interest.interest_id === user.userprofile_id
                           )
                           .map((interest, interestIndex) => (
-                            <p key={interestIndex}> Interest: {interest.name}</p>
-                            ))}
+                            <p key={interestIndex}>
+                              {" "}
+                              Interest: {interest.name}
+                            </p>
+                          ))}
+                      </div>
                     </div>
-                  </div>
-                            </Link>
+                  </Link>
                   <div className="tcontrols">
                     <div className="tno">
                       <i className="fa fa-times" aria-hidden="true"></i>
@@ -331,21 +337,24 @@ const [filteredUsers, setFilteredUsers] = useState([])
       </div>
     );
   };
-  
+
   return (
     <>
-      <div className="carousel-container"{...handlers}
-      >
-        <h1>Find a Buddy</h1>
+      <div className="carousel-container" {...handlers}>
+        <h2>Find a Buddy</h2>
         <form>
-          <label>Search by Interest</label>
+          <label>Find others that share your interest.</label>
           <select
             className="select"
             name="interests"
             onChange={handleSelectChange}
             value={userSelect}
-            >
-            <option value="">Please select an interest</option>
+          >
+            <option value="">
+              Use the dropdown to select an interest{" "}
+              <Link to="/ =>"> =&gt;</Link>
+            </option>
+
             <option value="Tech"> Tech</option>
             <option value="Hiking">Hiking</option>
             <option value="Photography">Photography</option>
@@ -357,7 +366,6 @@ const [filteredUsers, setFilteredUsers] = useState([])
             <option value="Crypto">Crypto</option>
             <option value="Art">Art</option>
             <option value="Music">Music</option>
-            
           </select>
         </form>
         <SwipeableComponent />

@@ -10,35 +10,14 @@ body {
 }
 
 * {
-  --GHBlue: #2977fa;
-  --GHGreen: #7ed957;
-}
-
-.css-button-gradient--5 {
-  min-width: 130px;
-  height: 40px;
-  color: #fff;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border-radius: 5px;
-  border: none;
-  background-size: 120% auto;
-  background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
-}
-.css-button-gradient--5:hover {
-  background-position: right center;
-}
-.css-button-gradient--5:active {
-  top: 2px;
+  --GHBlue: #3f7cac;
+  --GHGreen: #8fe779;
 }
 
 .css-button-3d--sky {
-  min-width: 130px;
+  font-family: "Open Sans", sans-serif;
+  font-size: smaller;
+  min-width: 110px;
   height: 40px;
   color: #fff;
   padding: 5px 10px;
@@ -50,20 +29,22 @@ body {
   outline: none;
   border-radius: 5px;
   border: none;
-  background: #3a86ff;
-  box-shadow: 0 5px #9fff95;
+  background: var(--GHBlue);
+  box-shadow: 0 5px #184388;
 }
 .css-button-3d--sky:hover {
-  box-shadow: 0 3px #9fff95;
+  background: 0 5px var(--GHGreen);
   top: 1px;
 }
 .css-button-3d--sky:active {
-  box-shadow: 0 0 #9fff95;
+  box-shadow: 0 0 var(--GHGreen);
   top: 5px;
 }
 
 .css-button-3d--sand {
-  min-width: 130px;
+  min-width: 110px;
+  font-family: "Open Sans", sans-serif;
+  font-size: smaller;
   height: 40px;
   color: #fff;
   padding: 5px 10px;
@@ -75,38 +56,14 @@ body {
   outline: none;
   border-radius: 5px;
   border: none;
-  background: #999c9f;
-  box-shadow: 0 5px #696d71;
+  background: #808284;
+  box-shadow: 0 5px #474a4c;
 }
 .css-button-3d--sand:hover {
-  box-shadow: 0 3px #adb5bd;
+  background: 0 3px #7ed957;
   top: 1px;
 }
 .css-button-3d--sand:active {
-  box-shadow: 0 0 #adb5bd;
+  box-shadow: 0 0 #2f5021;
   top: 5px;
-}
-
-.css-button-shadow-border--black {
-  min-width: 130px;
-  height: 40px;
-  color: #fff;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border-radius: 5px;
-  border: none;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  background: #15181a;
-}
-.css-button-shadow-border--black:hover {
-  background-color: #343a40;
-}
-.css-button-shadow-border--black:active {
-  top: 2px;
 }

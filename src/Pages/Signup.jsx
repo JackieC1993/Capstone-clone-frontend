@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/GH_Logo.png";
+import logo from "../assets/gh_text_logo.png";
 import "./Signup.css";
+import { Form } from "react-bootstrap";
 
 const Signup = ({ setUser, setToken }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -51,41 +52,55 @@ const Signup = ({ setUser, setToken }) => {
   };
 
   return (
-    <div className="signup">
-      <img className="logo" src={logo} />
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter Username"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
-          required
-        />
+    <div className="signup-container">
+      <img id="signup-logo" src={logo} style={{ width: 225, height: 300 }} />
+      <Form id="signup-form" onSubmit={handleSubmit}>
+        <Form.Group controlId="signup-username">
+          <Form.Label id="signup-username-label">Username</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Create a username"
+            name="username"
+            value={formData.username}
+            onChange={handleInputChange}
+            required
+            className="form-control-sm"
+          />
+        </Form.Group>
+        <Form.Group controlId="signup-email">
+          <Form.Label id="signup-email-label">Email</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter your email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="form-control-sm"
+          />
+        </Form.Group>
         <br />
+        <Form.Group controlId="signup-password">
+          <Form.Label id="signup-password-label">Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Create a password"
+            name="password_hash"
+            value={formData.password_hash}
+            onChange={handleInputChange}
+            required
+            className="form-control-sm"
+          />
+        </Form.Group>
         <br />
-        <input
-          type="email"
-          placeholder="Enter Email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <br />
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="password_hash"
-          value={formData.password_hash}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <br />
-        <button type="submit">CREATE ACCOUNT</button>
-      </form>
+        <button
+          className="css-button-3d--green"
+          type="submit"
+          id="signup-button"
+        >
+          CREATE ACCOUNT
+        </button>
+      </Form>
       <p>
         Already have an account? <Link to="/login">Login</Link>
       </p>

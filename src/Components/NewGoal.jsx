@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import "./NewGoal.css";
+import "./newGoal.css";
 
 const NewGoal = ({ user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -58,6 +58,7 @@ const NewGoal = ({ user, token }) => {
   console.log(goal);
   return (
     <div className="new-goal-container">
+      <h4>Create a new goal:</h4>
       <form onSubmit={handleSubmit} className="form-container">
         <div className="form-field">
           <label htmlFor="name">Goal Name:</label>
@@ -69,6 +70,7 @@ const NewGoal = ({ user, token }) => {
             id="name"
             placeholder="Name Your Goal"
             required
+            style={{ color: "white" }}
           />
         </div>
         <br />
@@ -110,11 +112,14 @@ const NewGoal = ({ user, token }) => {
             value={goal.description}
             onChange={handleTextChange}
             id="description"
+            rows="4"
           />
         </div>
         <br />
         <br />
-        <button type="submit">Create Goal</button>
+        <button className="css-button-3d--green" type="submit">
+          Create Goal
+        </button>
       </form>
     </div>
   );

@@ -5,6 +5,7 @@ import "./UserProfile.css";
 import Goals from "./Goals";
 import profilePic from "../assets/profile-male-blue.png";
 import { FaPlusCircle } from "react-icons/fa";
+// import { Button2 } from "flowbite-react";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -47,30 +48,42 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
 
   return (
     <div className="userprofile-container">
-      <img src={profilePic} alt="Profile Image" />
-      <div className="profile-header">
-        <h5>
-          {profiles.firstname} {profiles.lastname}
-        </h5>
-        <h6>{`@${profiles.username}`}</h6>
-        <h6>Age: {profiles.age}</h6>
-        <h6>Gender: {profiles.gender}</h6>
+      <div className="userprofile-picture">
+        <img id="userprofile-image" src={profilePic} alt="Profile Image" />
       </div>
-      <div className="css-button-shadow-border--black">
+      <div className="userprofile-header">
+        <h4>
+          {profiles.firstname} {profiles.lastname}
+        </h4>
+        <h6>
+          {`@${profiles.username}`}
+          <br />
+          <br />
+          Age: {profiles.age}
+          <br />
+          Gender: {profiles.gender}
+        </h6>
+      </div>
+      <br />
+      <div className="logout-button">
         <Button
-          className="css-button-shadow-border--black"
+          className="lg-button"
           onClick={handleLogout}
           style={{ color: "white" }}
         >
           Log Out
         </Button>
       </div>
+
       <div className="bio">
-        <p>
-          Bio: <br />
-          {profiles.bio}
-        </p>
+        <div className="bio-wrapper">
+          <p className="bold" style={{ color: "white" }}>
+            Bio:
+          </p>
+          <p className="ital-bio">{profiles.bio}</p>
+        </div>
       </div>
+      <br />
       <div className="active">
         <button
           className="css-button-3d--sky"
@@ -87,17 +100,17 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Completed
         </button>
       </div>
-      {/* <div className="goals"> */}
+      {/* <div className="profile-goals"> */}
       {!selectedGoals ? (
         <Goals user={user} token={token} />
       ) : (
         <span>List of Completed Goals</span>
       )}
+      {/* </div> */}
       <Link to="/goals/new" className="newgoal-button">
         <FaPlusCircle className="newgoal-icon" />
       </Link>
     </div>
-    // </div>
   );
 };
 

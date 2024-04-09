@@ -1,0 +1,84 @@
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .new-goal-container {
+    font-size: small;
+    min-height: 85vh;
+    margin: auto;
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-width: 0;
+    margin-top: 25px;
+  }
+
+  .new-goal-container h4 {
+    color: var(--GHBlue);
+    font-weight: bolder;
+    margin-left: 20px;
+  }
+
+  .form-container label {
+    color: var(--GHBlue);
+    font-weight: bold;
+  }
+
+  .form-container {
+    border-width: 0px;
+    max-width: 400px;
+  }
+
+  .form-container input {
+    background: var(--GHBlue);
+    color: #fffcff;
+  }
+
+  .form-container input::placeholder {
+    color: #fffcff;
+  }
+
+  .form-container select {
+    background: var(--GHBlue);
+  }
+
+  .form-container textarea {
+    background: var(--GHBlue);
+    color: #fffcff;
+    width: 340px;
+    border-color: rgb(0, 26, 56);
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
+  #name.form-container {
+    color: #fffcff;
+  }
+
+  .css-button-3d--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--GHGreen);
+    box-shadow: 0 5px #57cc99;
+  }
+  .css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+  .css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+}
