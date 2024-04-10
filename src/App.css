@@ -1063,16 +1063,16 @@ div.scroll2 {
   padding-bottom: 60px;
 } */
 
-.comment {
+/* .comment {
   border-radius: 15px;
   color: var(--GHBlue);
   background-color: var(--GHGreen);
-}
+} */
 
-#feed-logo {
+/* #feed-logo {
   height: 100px;
   width: 150px;
-}
+} */
 
 #current {
   display: flex;

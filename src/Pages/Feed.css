@@ -33,3 +33,9 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
+
+.newpost-icon {
+  height: auto;
+  width: 50px;
+  color: black;
+}
