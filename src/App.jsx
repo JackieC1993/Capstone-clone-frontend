@@ -49,9 +49,6 @@ function App({ userprofile_id }) {
       <Router>
         <NavBar navBar={navBar} setNavBar={setNavBar} />
         <Routes>
-          {/* <Route path="/" element={<Home user={user} token={token} />} /> */}
-          {/* <Route path="/profile" element={<UserProfile />} /> */}
-
           <Route path="/" element={<Home user={user} token={token} />} />
 
           <Route
@@ -74,14 +71,9 @@ function App({ userprofile_id }) {
             path="/signup"
             element={<Signup setUser={setUser} setToken={setToken} />}
           />
-          {/* <Route path="/goals" element={<Goals />} /> */}
-          {/* <Route path="/settings" element={<ProfileSettings />} /> */}
+
           <Route path="/hivechat" element={<HiveChat />} />
-          {/* <Route path="/goalprofile" element={<GoalProfile />} /> */}
-          {/* <Route path="/findbuddy" element={<FindBuddy />} /> */}
-          {/* <Route path="/accountsettings" element={<AccountSettings />} /> */}
           <Route path="/interface" element={<InterFace />} />
-          {/* <Route path="/" element={<Dash />} /> */}
           <Route path="/currentgoals" element={<GetCurrentGoals />} />
           <Route path="/friendrequests" element={<FriendRequest />} />
 
@@ -164,10 +156,6 @@ function App({ userprofile_id }) {
 
           <Route path="/interface" element={<InterFace />} />
 
-//          <Route path="/" element={<Dash />} />
-          <Route path="/feed" element={<Feed />} />
-          {/* <Route path="/" element={<Dash />} /> */}
-          {/* <Route path="/feed" element={<Feed />} /> */}
           <Route
             path="/currentgoals"
             element={<GetCurrentGoals user={user} />}
@@ -189,7 +177,7 @@ function App({ userprofile_id }) {
             user={user}
             token={token}
           />
-          <Route path="/chat" element={<ChatComponent user={user}/>}/>
+          <Route path="/chat" element={<ChatComponent user={user} />} />
         </Routes>
       </Router>
     </div>
