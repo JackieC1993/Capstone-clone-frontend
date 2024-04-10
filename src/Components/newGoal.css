@@ -1,5 +1,95 @@
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .new-goal-container {
+    font-size: small;
+    min-height: 85vh;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-width: 0;
+    margin-top: 25px;
+  }
+
+  .new-goal-container h4 {
+    color: var(--GHBlue);
+    font-weight: bolder;
+    margin-left: 20px;
+  }
+
+  .form-container label {
+    color: var(--GHBlue);
+    font-weight: bold;
+  }
+
+  .form-container {
+    border-width: 0px;
+    max-width: 400px;
+  }
+
+  .form-container input {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+    color: var(--GHBlue);
+    border-radius: 5px;
+  }
+
+  .form-container input::placeholder {
+    color: var(--GHBlue);
+    padding: 2px;
+  }
+
+  .form-container select {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+    padding: 2px;
+    border-radius: 5px;
+  }
+
+  .form-container textarea {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+    color: var(--GHBlue);
+    border-radius: 5px;
+    min-width: 350px;
+    padding: 5px;
+  }
+
+  #name.form-container {
+    color: var(--GHBlue);
+  }
+
+  .css-button-3d--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--GHGreen);
+    box-shadow: 0 5px #57cc99;
+  }
+  .css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+  .css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* For desktop and tablets: */
   [class*="col-"] {
     width: 100%;
   }
@@ -27,34 +117,38 @@
   }
 
   .form-container {
-    border-width: 0px;
     max-width: 400px;
+    border-color: white;
   }
 
   .form-container input {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
   .form-container input::placeholder {
-    color: #fffcff;
+    color: var(--GHBlue);
   }
 
   .form-container select {
-    background: var(--GHBlue);
+    border-color: var(--GHBlue);
+    border-width: 3px;
+    border-radius: 5px;
   }
 
   .form-container textarea {
-    background: var(--GHBlue);
-    color: #fffcff;
-    width: 340px;
-    border-color: rgb(0, 26, 56);
-    border-radius: 10px;
-    border-width: 2px;
+    width: 350px;
+    border-color: var(--GHBlue);
+    border-radius: 5px;
+    border-width: 3px;
+    padding: 5px;
+    color: var(--GHBlue);
   }
 
   #name.form-container {
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-radius: 5px;
+    border-width: 3px;
   }
 
   .css-button-3d--green {
@@ -73,10 +167,12 @@
     background: var(--GHGreen);
     box-shadow: 0 5px #57cc99;
   }
+
   .css-button-3d--green:hover {
     box-shadow: 0 3px #57cc99;
     top: 1px;
   }
+
   .css-button-3d--green:active {
     box-shadow: 0 0 #57cc99;
     top: 5px;

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import GoalHive from "../assets/gh_colorful_icon.png";
-import ProfileIcon from "../assets/profile_icon.png";
-import HiveChat from "../assets/chat_icon.png";
-import Buddies from "../assets/find_buddy.png";
-import "./Navbar2.css";
+import GoalHive from "../assets/gh_colorful-emerald.png";
+import ProfileIcon from "../assets/profile_icon-emerald.png";
+import HiveChat from "../assets/chat_icon-emerald.png";
+import Buddies from "../assets/find_buddy-emerald.png";
+import "./navBar.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { CiCirclePlus } from "react-icons/ci";
 
@@ -18,6 +18,7 @@ const NavBar = ({ navBar, setNavBar }) => {
   useEffect(() => {
     setNavBar(showNavBar);
   }, [location.pathname]);
+
 
   return navBar ? (
     <div className="nav">

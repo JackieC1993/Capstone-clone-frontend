@@ -39,31 +39,31 @@
   }
 
   #signup-username.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
-  #signup-username.form-control-sm::placeholder {
+  /* #signup-username.form-control-sm::placeholder {
     color: #fffcff;
-  }
+  } */
 
   #signup-email.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
-  #signup-email.form-control-sm::placeholder {
+  /* #signup-email.form-control-sm::placeholder {
     color: #fffcff;
-  }
+  } */
 
   #signup-password.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
-  #signup-password.form-control-sm::placeholder {
+  /* #signup-password.form-control-sm::placeholder {
     color: #fffcff;
-  }
+  } */
 
   #signup-button.css-button-3d--green {
     min-width: 216px;
@@ -147,31 +147,31 @@
   }
 
   #signup-username.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
-  #signup-username.form-control-sm::placeholder {
+  /* #signup-username.form-control-sm::placeholder {
     color: #fffcff;
-  }
+  } */
 
   #signup-email.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
-  #signup-email.form-control-sm::placeholder {
+  /* #signup-email.form-control-sm::placeholder {
     color: #fffcff;
-  }
+  } */
 
   #signup-password.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
-  #signup-password.form-control-sm::placeholder {
+  /* #signup-password.form-control-sm::placeholder {
     color: #fffcff;
-  }
+  } */
 
   #signup-button.css-button-3d--green {
     min-width: 216px;
