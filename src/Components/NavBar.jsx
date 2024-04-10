@@ -7,6 +7,7 @@ import Buddies from "../assets/find_buddy.png";
 import CreateGoal from "../assets/goals_icon.png";
 import "./Navbar2.css";
 import "bootstrap/dist/css/bootstrap.css";
+import { CiCirclePlus } from "react-icons/ci";
 
 const NavBar = ({ navBar, setNavBar }) => {
   const location = useLocation();
@@ -19,7 +20,7 @@ const NavBar = ({ navBar, setNavBar }) => {
     setNavBar(showNavBar);
   }, [location.pathname]);
 
-  return (
+  return navBar ? (
     <div className="nav">
       <nav className="navbar fixed-bottom bg-body-tertiary">
         <Link className="navbar-link" to="/">
@@ -30,10 +31,9 @@ const NavBar = ({ navBar, setNavBar }) => {
           <img src={Buddies} alt="" />
           <span>Find Buddy</span>
         </Link>
-        {/* <Link className="navbar-link" to="/goals/new">
-          <img src={CreateGoal} alt="" />
-          <span>New Goal</span>
-        </Link> */}
+        <Link className="navbar-link" to="/create">
+          <CiCirclePlus className="nav-icon" size={"90px"} color="#3f7cac" />
+        </Link>
         <Link className="navbar-link" to="/hivechat">
           <img src={HiveChat} alt="" />
           <span>HiveChat</span>
@@ -44,6 +44,8 @@ const NavBar = ({ navBar, setNavBar }) => {
         </Link>
       </nav>
     </div>
+  ) : (
+    <div></div>
   );
 };
 

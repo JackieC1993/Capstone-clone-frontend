@@ -5,10 +5,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   position: relative;
- 
+
   align-items: center;
   width: 19vw;
-/* font-size:xx-small; */
+  /* font-size:xx-small; */
   padding: 10px;
 }
 
@@ -20,9 +20,7 @@
   text-decoration: none;
   flex-wrap: wrap;
   /* flex-direction: row; */
-/* justify-content: center; */
-
-
+  /* justify-content: center; */
 }
 .navbar-link span {
   font-size: 15px;
@@ -42,7 +40,7 @@
   padding: 5px;
 }
 
-.navbar-close{
+.navbar-close {
   all: unset;
   position: fixed;
   top: 0;
@@ -50,15 +48,13 @@
   height: 30px;
 }
 
-.navbar-close svg{
+.navbar-close svg {
   height: 2em;
   width: 2em;
 }
-/* button.navbar-close:hover + .navbar {
-  display: block;
-} */
 
-
-
-
-/* } */
+.navbar-link svg {
+  height: 2em;
+  width: 2em;
+  color: var(--GHGreen);
+}
