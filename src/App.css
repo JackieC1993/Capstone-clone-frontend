@@ -12,7 +12,7 @@
   margin: 0;
 }
 
-/* Bottom Logo */
+/* Bottom Logo */ /*
 img.quote {
   width: 175px;
   height: 100px;
@@ -33,7 +33,7 @@ img.quote {
   overflow: hidden;
   position: relative;
   width: 430px;
-  /* width:100%; */
+  /* width:100%; */ /*
 }
 
 .frame .toggle-on-instance {
@@ -43,8 +43,8 @@ img.quote {
   top: 486px !important;
   width: 30px !important;
 }
-
-/* Top Logo */
+*/
+/* Top Logo */ /* 
 
 .frame .updated-logo {
   height: 204px;
@@ -77,7 +77,7 @@ img.quote {
   background-color: greenyellow;
 }
 
-/*  */
+/* 
 
 .frame .text-wrapper-3 {
   color: #000000;
@@ -144,7 +144,7 @@ img.quote {
 .create:hover {
   background-color: rgb(75, 184, 86);
 } */
-
+/*
 .frame .overlap-2 {
   height: 69px;
   left: 126px;
@@ -152,14 +152,14 @@ img.quote {
   top: 745px;
   width: 325px;
 }
-
+*/
 /* .sign-up {
   margin-bottom: 50px;
   margin-left: 125px;
   width: 150px;
   background-color: var(--GHBlue);
 } */
-
+/*
 .frame .text-wrapper-5 {
   -webkit-text-stroke: 1px #000000;
   color: #000000;
@@ -170,7 +170,7 @@ img.quote {
   left: 59px;
   letter-spacing: var(--regular-28-letter-spacing);
   line-height: var(--regular-28-line-height);
-  /* position: absolute; */
+  /* position: absolute; */ /*
   top: 17px;
   width: 266px;
 }
@@ -1063,16 +1063,16 @@ div.scroll2 {
   padding-bottom: 60px;
 } */
 
-.comment {
+/* .comment {
   border-radius: 15px;
   color: var(--GHBlue);
   background-color: var(--GHGreen);
-}
+} */
 
-#feed-logo {
+/* #feed-logo {
   height: 100px;
   width: 150px;
-}
+} */
 
 #current {
   display: flex;

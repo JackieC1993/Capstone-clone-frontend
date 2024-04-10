@@ -37,23 +37,24 @@
   }
 
   #login-username.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
     margin-bottom: 20px;
   }
 
-  #login-username.form-control-sm::placeholder {
-    color: #fffcff;
-  }
+  /* #login-username.form-control-sm::placeholder {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  } */
 
   #login-password.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
-  #login-password.form-control-sm::placeholder {
+  /* #login-password.form-control-sm::placeholder {
     color: #fffcff;
-  }
+  } */
 
   #login-button {
     margin-bottom: 1rem;
@@ -133,22 +134,24 @@
   }
 
   #login-username.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
+    margin-bottom: 20px;
   }
 
-  #login-username.form-control-sm::placeholder {
-    color: #fffcff;
-  }
+  /* #login-username.form-control-sm::placeholder {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  } */
 
   #login-password.form-control-sm {
-    background: var(--GHBlue);
-    color: #fffcff;
+    border-color: var(--GHBlue);
+    border-width: 3px;
   }
 
-  #login-password.form-control-sm::placeholder {
+  /* #login-password.form-control-sm::placeholder {
     color: #fffcff;
-  }
+  } */
 
   #login .form-group {
     margin-bottom: 1rem; /* Adjust as needed */

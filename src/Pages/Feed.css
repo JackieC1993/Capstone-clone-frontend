@@ -1,6 +1,9 @@
 .feed {
   display: grid;
   row-gap: 15px;
+  background-color: var(--GHBlue);
+  border-radius: 10px;
+  gap: 10px;
 }
 
 .post {
@@ -32,4 +35,10 @@
 #post_username {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+}
+
+.newpost-icon {
+  height: auto;
+  width: 50px;
+  color: black;
 }

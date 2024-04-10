@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Feed from "./Feed";
 import { useAnimating } from "react-scroll-to-bottom";
 
+import "./home.css";
 
 const Home = ({ user, token }) => {
  const navigate = useNavigate();
@@ -10,11 +12,11 @@ const Home = ({ user, token }) => {
       if (!user && !token) {
        navigate("/login");
       }
-    }, []);
+    }, [user, token, navigate]);
 
   return (
     <div className="home">
-      {/* <h1>This is the home page!!</h1> */}
+      <h3>Your GoalHive Feed</h3>
       <Feed user={user} token={token} />
     </div>
   );
