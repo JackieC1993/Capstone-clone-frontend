@@ -1,25 +1,13 @@
 .nav {
   background-color: var(--GHBlue);
   display: flex;
-  /* justify-content: space-evenly; */
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0px;
-  height: 120px;
-  justify-content: center;
   flex-direction: column;
-  text-decoration: none;
-}
+  justify-content: space-evenly;
+  position: relative;
 
-.navbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--GHBlue);
+  align-items: center;
+  width: 19vw;
+  /* font-size:xx-small; */
   padding: 10px;
   box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
   display: flex; /* Add this line */
@@ -44,6 +32,7 @@ navbar.fixed-bottom {
   padding-right: 50px;
   margin-left: 50px;
   margin-right: 50px;
+
 }
 
 .navbar-link span {
@@ -81,19 +70,9 @@ navbar.fixed-bottom {
   color: var(--GHBlue);
 }
 
-/* .navbar-close {
-  all: unset;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 30px;
-}
-
-.navbar-close svg {
+.navbar-link svg {
   height: 2em;
   width: 2em;
-} */
+  color: var(--GHGreen);
+}
 
-/* button#navbar-close {
-  display: none;
-} */

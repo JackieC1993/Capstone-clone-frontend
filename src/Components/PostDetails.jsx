@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 const PostDetails = ({ user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
-  const [post, setPost] = useState([]);
+  const [post, setPost] = useState({ comments: [] });
   const { index } = useParams();
 
   const fetchData = () => {
@@ -24,11 +24,31 @@ const PostDetails = ({ user, token }) => {
     fetchData();
   }, []);
 
-  console.log("One individual post: ", post);
+  //   console.log("One individual post: ", post);
 
+  const comments = post.comments.map((comment) => {
+    // return comment;
+    return comment;
+  });
+  //   console.log(comments[0]);
+  //   console.log(comments);
   return (
-    <div>
-      <h1>The Post Details!</h1>
+    <div className="post_details">
+      <div>
+        <img src={post.profile_img} alt={`${post.username}'s profile image`} />
+        <h4>{post.username}</h4>
+      </div>
+      <span>{post.post_description}</span>
+      <div className="comments">
+        <br />
+        {comments.map((comment) => (
+          <div key={comment.comment_id} className="comment">
+            <br />
+            <span>{comment.description}</span>
+            {/* {console.log(comment)} */}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,112 @@
+.user-message {
+  background-color: lightblue;
+  padding: 8px;
+  margin-bottom: 5px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow: scroll;
+}
+
+.received-message {
+  padding: 8px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-weight: bold;
+  /* color:rgba(0,150,245,1.00);
+   text-shadow: -1px 0 black, 0 1px black,
+1px 0 black, 0 -1px black; */
+}
+
+.chat-container {
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  text-align: left;
+  border: 1px solid blue;
+  height: 50vh; /* Set the desired height relative to the viewport height */
+  width: 400px;
+}
+ h1.room {
+  text-align: center;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 767px) {
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+button.join-button {
+  /* CSS styles for the join button */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+}
+button.leave-button{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .room-input {
+    /* CSS styles for the room input */
+    border: 1px solid green;
+    padding: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
