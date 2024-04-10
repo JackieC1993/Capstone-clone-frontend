@@ -8,6 +8,8 @@
   margin:0;
   margin-right:01px
 } */
+
+
 :root {
   margin: 0;
 }
@@ -394,7 +396,6 @@ div.chat-background {
 .user2-message {
   color: rgb(53, 217, 170);
 }
-
 #form {
   background-color: whitesmoke;
 }
@@ -629,7 +630,7 @@ form#form-2 {
   /* min-height: 100vh; */
   gap: 10px;
   grid-template-areas:
-    " n n m m m "
+    "n n m m m "
     "n n m m m "
     "n n m m m "
     "n n m m m ";
@@ -644,11 +645,11 @@ form#form-2 {
   grid-area: n;
 }
 
-.home {
+/* .home {
   grid-area: m;
   text-align: center;
   height: fit-content;
-}
+} */
 
 img#single-photo {
   width: 200px;
@@ -1082,6 +1083,12 @@ div.scroll2 {
   align-items: center;
   flex-wrap: wrap;
 }
+#chat-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
 /* div#request{
   text-align: center;
   margin: auto;
@@ -1107,3 +1114,5 @@ p.friendrequest{
   padding-left: 0%;
   padding-right: 0px;
 } */
+
+.socket{justify-content: center;}

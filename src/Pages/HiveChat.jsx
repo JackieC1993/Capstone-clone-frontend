@@ -90,17 +90,17 @@ const HiveChat = () => {
 
   return (
     <>
-      <div>
-        <div id="container">
-          <div className="frame">
-            <div className="div2">
+  
+        {/* <div id="container"> */}
+          {/* <div className="frame"> */}
+            <div id='chat-container' >
               <header id="chat" className="header"></header>
               <Progress id="user1-goal" />
               <JoinRoom />
             </div>
-          </div>
-        </div>
-      </div>
+   
+        {/* </div> */}
+      {/* </div> */}
     </>
   );
 };

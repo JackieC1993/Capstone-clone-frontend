@@ -1,20 +1,20 @@
-#profile {
+/* #profile {
   height: 100px;
   border-radius: 300px;
   width: 100px;
-}
-.goalstairs {
+} */
+/* .goalstairs {
   color: var(--GHGreen);
   width: 30px;
   height: 100px;
-}
+} */
 
-.carousel-container h2 {
+/* .carousel-container h2 {
   padding-top: 20px;
   color: var(--GHBlue);
-}
+} */
 
-.carousel-container form label {
+ form label {
   font-size: medium;
   padding-left: 15px;
   color: var(--GHBlue);
@@ -91,31 +91,7 @@ path {
   font-family: "Open Sans", sans-serif;
 }
 
-/* .tinfo .fa-users,
-.tinfo .fa-book {
-  color: #c0c0c0;
-  float: right;
-  position: relative;
-  font-size: 24px;
-  padding: 12px;
-} */
 
-/* .tcontrols {} */
-/* 
-.tno {
-  background-color: #fff;
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  position: relative;
-  display: inline-block;
-  top: 70px;
-  left: 25px;
-  border: 10px solid #f0f0f0;
-} */
 
 .tno i {
   color: #ff695b;
@@ -149,12 +125,12 @@ path {
 .carousel-container {
   height: 100vh;
   display: flex;
-  /* flex-wrap: wrap; */
+
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
-  /* background-color: var(--GHBlue); */
+
   background-color: #fffcff;
   border: 1px solid var(--GHGreen);
   overflow-x: hidden;
@@ -169,13 +145,13 @@ form select {
 
 .user-card {
   display: none;
-  padding: 20px;
+  /* padding: 20px; */
   /* background-color: #f0f0f0;
   border: 1px solid #ccc; */
-  height: 700px;
+  height: 60px;
   text-align: center;
   align-items: center;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   border-radius: 15px;
 }
 
@@ -183,9 +159,9 @@ form select {
   display: block;
 }
 
-.user-card p {
+/* .user-card p {
   margin: 0;
-}
+} */
 
 .user-card img {
   width: 200px;

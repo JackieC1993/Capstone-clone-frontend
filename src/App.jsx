@@ -21,10 +21,11 @@ import NavBar from "./Components/NavBar";
 import AccountSettings from "./Components/AccountSettings";
 import NewProfile from "./Components/NewProfile";
 import EditGoal from "./Components/EditGoal";
+import Feed from "./Pages/Feed";
 
 import "./App.css";
 import InterFace from "./Pages/InterFace";
-// import Dash from "./Pages/DashBoard";
+import Dash from "./Pages/DashBoard";
 import GetCurrentGoals from "./Pages/CurrentGoals";
 import FriendRequest from "./Pages/Friends";
 import ChatComponent from "./Components/Chat";

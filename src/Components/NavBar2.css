@@ -1,9 +1,9 @@
-.nav {
+/* .nav {
   background-color: var(--GHBlue);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  position: fixed;
+
   bottom: 0;
   left: 0;
   width: 100%;
@@ -12,7 +12,7 @@
   justify-content: center;
   flex-direction: column;
   text-decoration: none;
-}
+} */
 
 .navbar-link {
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .navbar-link span {
-  /* background-color: var(--GHGreen); */
+
   font-size: 12px;
   color: var(--GHBlue);
   font-weight: bold;
@@ -31,7 +31,7 @@
 }
 
 .container-fluid span {
-  /* background-color: var(--GHGreen); */
+
   font-size: 15px;
   color: black;
   border-radius: 15px;
