@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import "./UserProfile.css";
 import Goals from "./Goals";
 import profilePic from "../assets/profile-male-blue.png";
-import friend from "../assets/friends.png";
+// import friend from "../assets/friend.png";
 import { FaPlusCircle } from "react-icons/fa";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
@@ -70,8 +70,8 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           </Button>
         </div>
         <div className="friend-div">
-          <img className="friends" src={friend} alt="Friends Icon" />
-          <h6 className="friendname">Friends</h6>
+          {/* <img className="friends" src={friend} alt="Friends Icon" />
+          <h6 className="friendname">Friends</h6> */}
         </div>
       </div>
       <div className="bio">

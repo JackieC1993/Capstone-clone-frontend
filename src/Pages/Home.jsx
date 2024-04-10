@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Feed from "./Feed";
 import { useAnimating } from "react-scroll-to-bottom";
 
