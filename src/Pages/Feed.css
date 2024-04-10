@@ -1,6 +1,9 @@
 .feed {
   display: grid;
   row-gap: 15px;
+  background-color: var(--GHBlue);
+  border-radius: 10px;
+  gap: 10px;
 }
 
 .post {

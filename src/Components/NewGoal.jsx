@@ -70,10 +70,8 @@ const NewGoal = ({ user, token }) => {
             id="name"
             placeholder="Name Your Goal"
             required
-            style={{ color: "white" }}
           />
         </div>
-        <br />
         <br />
         <div className="form-field">
           <label htmlFor="interests">Select an Interest:</label>
@@ -91,7 +89,6 @@ const NewGoal = ({ user, token }) => {
           </select>
         </div>
         <br />
-        <br />
         <div className="form-field">
           <label htmlFor="tartgetDate">Target Date:</label>
           <br />
@@ -103,7 +100,6 @@ const NewGoal = ({ user, token }) => {
             required
           />
         </div>
-        <br />
         <br />
         <div className="form-field">
           <label htmlFor="description">Goal Description:</label>

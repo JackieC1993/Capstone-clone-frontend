@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import GoalHive from "../assets/gh_colorful_icon.png";
-import ProfileIcon from "../assets/profile_icon.png";
-import HiveChat from "../assets/chat_icon.png";
-import Buddies from "../assets/find_buddy.png";
-import "./Navbar2.css";
+import GoalHive from "../assets/gh_colorful-emerald.png";
+import ProfileIcon from "../assets/profile_icon-emerald.png";
+import HiveChat from "../assets/chat_icon-emerald.png";
+import Buddies from "../assets/find_buddy-emerald.png";
+import "./navBar.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 const NavBar = ({ navBar, setNavBar }) => {
@@ -20,8 +20,8 @@ const NavBar = ({ navBar, setNavBar }) => {
 
   return (
     showNavBar && (
-      <div className="nav">
-        <nav className="navbar fixed-bottom bg-body-tertiary">
+      <div className="nav" id="navbar-color">
+        <nav className="navbar" style={{ backgroundColor: "var(--GHBlue)" }}>
           <Link className="navbar-link" to="/">
             <img id="goalhive-icon" src={GoalHive} alt="icon" />
             <span>Home</span>

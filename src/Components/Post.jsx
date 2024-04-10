@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Post = ({ user, token, post }) => {
   return (
     <Link to={`/feed/${post.id}`} className="post">
-      <div >
+      <div className="post-container">
         <div className="post_header">
           <img
             src={post.profile_img}
