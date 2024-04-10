@@ -343,14 +343,18 @@ const GoalProfile = () => {
       <div className="carousel-container" {...handlers}>
         <h2>Find a Buddy</h2>
         <form>
-          <label>Search by Interest</label>
+          <label>Find others that share your interest.</label>
           <select
             className="select"
             name="interests"
             onChange={handleSelectChange}
             value={userSelect}
           >
-            <option value="">Please select an interest</option>
+            <option value="">
+              Use the dropdown to select an interest{" "}
+              <Link to="/ =>"> =&gt;</Link>
+            </option>
+
             <option value="Tech"> Tech</option>
             <option value="Hiking">Hiking</option>
             <option value="Photography">Photography</option>

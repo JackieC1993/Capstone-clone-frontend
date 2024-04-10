@@ -20,7 +20,7 @@
     box-sizing: border-box;
   }
 
-  #profile-image {
+  #userprofile-image {
     margin-top: 30px;
 
     width: 120px;
@@ -28,7 +28,7 @@
     border-radius: 50%;
   }
 
-  .profile-picture {
+  .userprofile-picture {
     grid-area: i;
   }
 
@@ -49,19 +49,19 @@
     position: relative;
   }
 
-  .profile-header {
+  .userprofile-header {
     padding-top: 25px;
     font-size: small;
     grid-area: p;
     align-items: center;
   }
 
-  .profile-header h4 {
+  .userprofile-header h4 {
     font-weight: bold;
     font-size: 22px;
   }
 
-  .profile-header h6 {
+  .userprofile-header h6 {
     font-size: 18px;
   }
 
@@ -77,13 +77,13 @@
   .bio {
     grid-area: b;
     padding: 0;
-    /* background-color: #3f7cac;
+    /* background-color: var(--GHBlue);
     color: #fffcff; */
     text-align: left;
   }
 
   .bio .bio-wrapper {
-    background-color: #3f7cac; /* Background color for the bio section */
+    background-color: var(--GHBlue); /* Background color for the bio section */
     color: #fffcff; /* Text color for the bio section */
     padding: 15px 20px;
     border-radius: 3%;
@@ -159,7 +159,7 @@
   }
 
   body {
-    background-color: #3f7cac;
+    background-color: var(--GHBlue);
   }
 }
 
@@ -185,7 +185,7 @@
     box-sizing: border-box;
   }
 
-  #profile-image {
+  #userprofile-image {
     margin-top: 30px;
 
     width: 250px;
@@ -193,7 +193,7 @@
     border-radius: 50%;
   }
 
-  .profile-picture {
+  .userprofile-picture {
     grid-area: i;
   }
 
@@ -216,19 +216,19 @@
     position: relative;
   }
 
-  .profile-header {
+  .userprofile-header {
     padding-top: 25px;
     font-size: small;
     grid-area: p;
     align-items: center;
   }
 
-  .profile-header h4 {
+  .userprofile-header h4 {
     font-weight: bold;
     font-size: 22px;
   }
 
-  .profile-header h6 {
+  .userprofile-header h6 {
     font-size: 18px;
   }
 
@@ -244,7 +244,7 @@
   .bio {
     grid-area: b;
     padding: 20px;
-    background-color: #3f7cac;
+    background-color: var(--GHBlue);
     color: #fffcff;
     text-align: left;
     border-radius: 12px 12px 12px 12px;

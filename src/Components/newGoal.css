@@ -16,22 +16,23 @@
   }
 
   .new-goal-container h4 {
-    color: #3f7cac;
+    color: var(--GHBlue);
     font-weight: bolder;
     margin-left: 20px;
   }
 
   .form-container label {
-    color: #3f7cac;
+    color: var(--GHBlue);
     font-weight: bold;
   }
 
   .form-container {
+    border-width: 0px;
     max-width: 400px;
   }
 
   .form-container input {
-    background: #3f7cac;
+    background: var(--GHBlue);
     color: #fffcff;
   }
 
@@ -40,13 +41,16 @@
   }
 
   .form-container select {
-    background: #3f7cac;
-    color: #fffcff;
+    background: var(--GHBlue);
   }
 
   .form-container textarea {
-    background: #3f7cac;
+    background: var(--GHBlue);
     color: #fffcff;
+    width: 340px;
+    border-color: rgb(0, 26, 56);
+    border-radius: 10px;
+    border-width: 2px;
   }
 
   #name.form-container {
@@ -66,7 +70,7 @@
     outline: none;
     border-radius: 5px;
     border: none;
-    background: #8fe779;
+    background: var(--GHGreen);
     box-shadow: 0 5px #57cc99;
   }
   .css-button-3d--green:hover {

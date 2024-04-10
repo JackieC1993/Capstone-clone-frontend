@@ -1,29 +1,30 @@
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
   }
-
   .new-profile {
     max-width: 400px;
-    margin: 0 auto;
   }
 
   .newProfile-form {
+    align-content: center;
+    margin: auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 0;
     border-radius: 5px;
+    box-sizing: border-box;
   }
 
-  label {
+  #new-profile label {
     display: block;
     margin-bottom: 10px;
   }
 
-  input[type="text"],
-  input[type="number"],
-  select,
-  textarea {
+  #new-profile input[type="text"],
+  #new-profile input[type="number"],
+  #new-profile select,
+  #new-profile textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
@@ -32,9 +33,9 @@
     box-sizing: border-box;
   }
 
-  input[type="submit"] {
+  #new-profile input[type="submit"] {
     width: 100%;
-    background-color: #80b192;
+    background-color: var(--GHGreen);
     color: #fff;
     border: none;
     padding: 10px 0;
@@ -42,18 +43,18 @@
     cursor: pointer;
   }
 
-  input[type="submit"]:hover {
-    background-color: #0056b3;
+  #new-profile input[type="submit"]:hover {
+    background-color: var(--GHBlue);
   }
 
-  label {
+  #new-profile label {
     display: inline-block;
     margin-right: 10px;
   }
 
-  input,
-  select,
-  textarea {
+  #new-profile input,
+  #new-profile select,
+  #new-profile textarea {
     margin-bottom: 10px;
   }
 
@@ -61,9 +62,9 @@
     margin-top: 20px;
   }
 
-  form h2 {
+  #new-profile form h2 {
     text-align: center;
-    color: #0056b3;
+    color: var(--GHBlue);
   }
 }
 /* .form {
@@ -78,3 +79,70 @@
   padding: 20px;
   align-content: center;
 } */
+
+@media (min-width: 768px) {
+  /* For desktop and tablets: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .new-profile {
+    max-width: 400px;
+  }
+
+  .newProfile-form {
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+  }
+
+  #new-profile label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #new-profile input[type="text"],
+  #new-profile input[type="number"],
+  #new-profile select,
+  #new-profile textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #new-profile input[type="submit"] {
+    width: 100%;
+    background-color: var(--GHGreen);
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #new-profile input[type="submit"]:hover {
+    background-color: var(--GHBlue);
+  }
+
+  #new-profile label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  #new-profile input,
+  #new-profile select,
+  #new-profile textarea {
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    margin-top: 20px;
+  }
+
+  #new-profile form h2 {
+    text-align: center;
+    color: var(--GHBlue);
+  }
+}

@@ -4,7 +4,6 @@ import GoalHive from "../assets/gh_colorful_icon.png";
 import ProfileIcon from "../assets/profile_icon.png";
 import HiveChat from "../assets/chat_icon.png";
 import Buddies from "../assets/find_buddy.png";
-import CreateGoal from "../assets/goals_icon.png";
 import "./Navbar2.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { CiCirclePlus } from "react-icons/ci";
