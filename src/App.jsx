@@ -76,7 +76,8 @@ function App({userprofile_id}) {
           <Route path="/interface" element={<InterFace />} />
           {/* <Route path="/" element={<Dash />} /> */}
           <Route path="/currentgoals" element={<GetCurrentGoals />} />
-          <Route path="/friendrequests" element={<FriendRequest />} />
+          
+          <Route path="/friendrequests"   element={<FriendRequest  user={user} />} />
 
           <Route
             path="/feed/:index"
@@ -145,12 +146,11 @@ function App({userprofile_id}) {
 
           <Route path="/interface" element={<InterFace />} />
 
-//          <Route path="/" element={<Dash />} />
-          <Route path="/feed" element={<Feed />} />
+{/* //          <Route path="/" element={<Dash />} /> */}
+          {/* <Route path="/feed" element={<Feed />} /> */}
           {/* <Route path="/" element={<Dash />} /> */}
           {/* <Route path="/feed" element={<Feed />} /> */}
           <Route path="/currentgoals" element={<GetCurrentGoals user={user} />} />
-          <Route path="/friendrequests"   element={<FriendRequest user={user} />} />
           <Route path="/profile/:userprofile_id" element={<SingleProfile userprofile_id={userprofile_id} user={user}/>}/>
           <Route
             path="/findbuddy"

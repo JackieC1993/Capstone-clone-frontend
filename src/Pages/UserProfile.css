@@ -332,3 +332,30 @@
     font-size: initial;
   }
 }
+.friends {
+  height: 65px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.friend-div {
+  text-align: center;
+}
+
+a{
+  text-align: center;
+}
+
+a.connectfriends{
+  text-decoration: none;
+  position: absolute;
+}
+svg.newgoal-icon{
+  margin-top: 1px;
+  margin-right: 25px;
+  margin-left: 10px;
+}
+
+h6.friendname{
+  text-align: center;
+}
