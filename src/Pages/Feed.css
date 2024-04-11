@@ -11,6 +11,7 @@
   padding: 10px;
   text-decoration: none;
   color: black;
+  background-color: #fffcff;
 }
 
 .post_header {
@@ -41,4 +42,12 @@
   height: auto;
   width: 50px;
   color: black;
+}
+
+div.post {
+  border-radius: 10px;
+}
+
+#post-description {
+  text-align: left;
 }

@@ -42,8 +42,9 @@ const Post = ({ user, token, post }) => {
         <img src={post.profile_img} alt={`${post.username}'s profile image`} />
         <h4 id="post_username">{post.username}</h4>
       </div>
-      <span id="post_description">{post.post_description}</span>
-      <br />
+      <div id="post_description" style={{ textAlign: "left" }}>
+        {post.post_description}
+      </div>
       <div>
         <FaCommentDots /> <span></span>
         <AiOutlineLike onClick={handleClick} />{" "}
