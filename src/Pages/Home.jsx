@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Feed from "./Feed";
+import { useAnimating } from "react-scroll-to-bottom";
+
 import "./home.css";
 
 const Home = ({ user, token }) => {
-  const navigate = useNavigate(); // Initialize useNavigate
-
-  useEffect(() => {
-    if (!user || !token) {
-      // Change the condition to check if user or token is missing
-      navigate("/login");
-    }
-  }, [user, token, navigate]); // Add user, token, and navigate to the dependency array
+ const navigate = useNavigate();
+    useEffect(() => {
+      if (!user && !token) {
+       navigate("/login");
+      }
+    }, [user, token, navigate]);
 
   return (
     <div className="home">

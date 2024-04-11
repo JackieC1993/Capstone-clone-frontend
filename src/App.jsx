@@ -75,7 +75,8 @@ function App({ userprofile_id }) {
           <Route path="/hivechat" element={<HiveChat />} />
           <Route path="/interface" element={<InterFace />} />
           <Route path="/currentgoals" element={<GetCurrentGoals />} />
-          <Route path="/friendrequests" element={<FriendRequest />} />
+          
+          <Route path="/friendrequests"   element={<FriendRequest  user={user} />} />
 
           <Route
             path="/feed/:index"

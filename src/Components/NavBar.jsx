@@ -19,29 +19,32 @@ const NavBar = ({ navBar, setNavBar }) => {
     setNavBar(showNavBar);
   }, [location.pathname]);
 
-  return (
-    showNavBar && (
-      <div className="nav" id="navbar-color">
-        <nav className="navbar" style={{ backgroundColor: "var(--GHBlue)" }}>
-          <Link className="navbar-link" to="/">
-            <img id="goalhive-icon" src={GoalHive} alt="icon" />
-            <span>Home</span>
-          </Link>
-          <Link className="navbar-link" to="/findbuddy">
-            <img src={Buddies} alt="" />
-            <span>Find Buddy</span>
-          </Link>
-          <Link className="navbar-link" to="/hivechat">
-            <img src={HiveChat} alt="" />
-            <span>HiveChat</span>
-          </Link>
-          <Link className="navbar-link" to="/userprofile">
-            <img src={ProfileIcon} alt="" />
-            <span>My Profile</span>
-          </Link>
-        </nav>
-      </div>
-    )
+  return navBar ? (
+    <div className="nav">
+      <nav className="navbar" style={{ backgroundColor: "var(--GHBlue)" }}>
+        <Link className="navbar-link" to="/">
+          <img id="goalhive-icon" src={GoalHive} alt="icon" />
+          <span>Home</span>
+        </Link>
+        <Link className="navbar-link" to="/findbuddy">
+          <img src={Buddies} alt="" />
+          <span>Find Buddy</span>
+        </Link>
+        <Link className="navbar-link" to="/create">
+          <CiCirclePlus className="nav-icon" />
+        </Link>
+        <Link className="navbar-link" to="/hivechat">
+          <img src={HiveChat} alt="" />
+          <span>HiveChat</span>
+        </Link>
+        <Link className="navbar-link" to="/userprofile">
+          <img src={ProfileIcon} alt="" />
+          <span>My Profile</span>
+        </Link>
+      </nav>
+    </div>
+  ) : (
+    <div></div>
   );
 };
 

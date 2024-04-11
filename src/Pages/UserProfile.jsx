@@ -4,16 +4,14 @@ import { Button } from "react-bootstrap";
 import "./UserProfile.css";
 import Goals from "./Goals";
 import profilePic from "../assets/profile-male-blue.png";
+// import friend from "../assets/friend.png";
 import { FaPlusCircle } from "react-icons/fa";
-// import { Button2 } from "flowbite-react";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
-  // console.log("The user: ", user);
   const [profiles, setProfiles] = useState({});
   const [selectedGoals, setSelectedGoals] = useState(false);
-  // const [goals, setGoals] = useState({});
 
   const handleLogout = () => {
     setUser(null);
@@ -33,7 +31,6 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
         .then((res) => res.json())
         .then((res) => {
           setProfiles(res);
-          // console.log("The response from fetch: ", res);
         });
     } catch (error) {
       console.log(error);
@@ -43,8 +40,6 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
   useEffect(() => {
     fetchData();
   }, []);
-
-  // console.log("user obj:", profiles);
 
   return (
     <div className="userprofile-container">
@@ -64,17 +59,21 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Gender: {profiles.gender}
         </h6>
       </div>
-      <br />
-      <div className="logout-button">
-        <Button
-          className="lg-button"
-          onClick={handleLogout}
-          style={{ color: "white" }}
-        >
-          Log Out
-        </Button>
+      <div className="logout-friend-container">
+        <div className="logout-button">
+          <Button
+            className="lg-button"
+            onClick={handleLogout}
+            style={{ color: "white" }}
+          >
+            Log Out
+          </Button>
+        </div>
+        <div className="friend-div">
+          {/* <img className="friends" src={friend} alt="Friends Icon" />
+          <h6 className="friendname">Friends</h6> */}
+        </div>
       </div>
-
       <div className="bio">
         <div className="bio-wrapper">
           <p className="bold" style={{ color: "white" }}>
@@ -83,7 +82,6 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           <p className="ital-bio">{profiles.bio}</p>
         </div>
       </div>
-      <br />
       <div className="active">
         <button
           className="css-button-3d--sky"
@@ -92,6 +90,7 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Active Goals
         </button>
       </div>
+        <FaPlusCircle className="newgoal-icon" />
       <div className="completed">
         <button
           className="css-button-3d--sand"
@@ -100,16 +99,14 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Completed
         </button>
       </div>
-      {/* <div className="profile-goals"> */}
       {!selectedGoals ? (
         <Goals user={user} token={token} />
       ) : (
         <span>List of Completed Goals</span>
       )}
-      {/* </div> */}
       <Link to="/goals/new" className="newgoal-button">
-        <FaPlusCircle className="newgoal-icon" />
       </Link>
+      <Link className="connectfriends" to="/friendrequests"></Link>
     </div>
   );
 };
