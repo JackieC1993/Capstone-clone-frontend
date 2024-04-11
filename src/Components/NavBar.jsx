@@ -19,10 +19,9 @@ const NavBar = ({ navBar, setNavBar }) => {
     setNavBar(showNavBar);
   }, [location.pathname]);
 
-
   return navBar ? (
     <div className="nav">
-      <nav className="navbar fixed-bottom bg-body-tertiary">
+      <nav className="navbar" style={{ backgroundColor: "var(--GHBlue)" }}>
         <Link className="navbar-link" to="/">
           <img id="goalhive-icon" src={GoalHive} alt="icon" />
           <span>Home</span>
