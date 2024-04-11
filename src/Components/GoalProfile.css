@@ -118,12 +118,12 @@ path {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 932px;
+  /* height: 932px; */
   display: inline-block;
 }
 
 .carousel-container {
-  height: 100vh;
+  height: 85vh;
   display: flex;
 
   flex-direction: column;
@@ -132,15 +132,16 @@ path {
   width: 100vw;
 
   background-color: #fffcff;
-  border: 1px solid var(--GHGreen);
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-form select {
-  background: var(--GHBlue);
-
-  color: #fffcff;
+select.carousel-select {
+  border-color: var(--GHGreen);
+  border-width: 3px;
+  border-radius: 5px;
+  color: var(--GHBlue);
+  margin-left: 40px;
 }
 
 .user-card {
@@ -202,11 +203,6 @@ form select {
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
 }
 
 .swiper-container {

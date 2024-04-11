@@ -1,163 +1,9 @@
-// // import React from 'react';
-// import "../Pages/GoalProfile.css";
-// import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-// import { useSwipeable } from "react-swipeable";
-
-// const GoalProfile = () => {
-//   const API = import.meta.env.VITE_BASE_URL;
-//   const [goals, setGoals] = useState([]);
-//    const [allusers, setAllUsers] = useState([]);
-//   const [interest, setInterest] = useState([]);
-//   const { id } = useParams();
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch(`${API}/profiles`);
-//         if (!response.ok) {
-//           throw new Error(`Request failed with status: ${response.status}`);
-//         }
-//         const data = await response.json();
-//         setAllUsers(data);
-//       } catch (error) {
-//         console.error("Fetch error:", error);
-//       }
-//     };
-//     fetchData();
-//   }, []);
-
-//   useEffect(() => {
-//     const fetchGoals = async () => {
-//       try {
-//         const response = await fetch(`${API}/allgoals`);
-//         if (!response.ok) {
-//           throw new Error(`Request failed with status: ${response.status}`);
-//         }
-//         const data = await response.json();
-//         setGoals(data);
-//       } catch (error) {
-//         console.error("Fetch error:", error);
-//       }
-//     };
-//     fetchGoals();
-//   }, [id]);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch(`${API}/interests`);
-//         if (!response.ok) {
-//           throw new Error(`Request failed with status: ${response.status}`);
-//         }
-//         const data = await response.json();
-//         setInterest(data);
-//       } catch (error) {
-//         console.error("Fetch error:", error);
-//       }
-//     };
-//     fetchData();
-//   }, []);
-
-//   const goToPreviousCard = () => {
-//     setCurrentIndex((prevIndex) =>
-//       prevIndex > 0 ? prevIndex - 1 : allusers.length - 1
-//     );
-//   };
-
-//   const goToNextCard = () => {
-//     setCurrentIndex((prevIndex) =>
-//       prevIndex < allusers.length - 1 ? prevIndex + 1 : 0
-//     );
-//   };
-
-//   const handlers = useSwipeable({
-//     onSwipedRight: goToNextCard,
-//     onSwipedLeft: goToPreviousCard,
-//   });
-
-//   const SwipeableComponent = () => {
-//     return (
-//       <div className="carousel" {...handlers}>
-//                 <div className="theader">
-//                   <i className="fa fa-cog" aria-hidden="true"></i>
-//                   <i className="fa fa-comments" aria-hidden="true"></i>
-//                   <div className="tlogo">
-//                     <img
-//                       src="src/assets/pf.png"
-//                       alt="Tinder Logo"
-//                       title="Tinder Logo"
-//                     />
-//                   </div>
-//                 </div>
-//         {allusers.map((user, index) => {
-//           const isCurrentCard = index === currentIndex;
-//           return (
-//             <div
-//               className={`user-card${isCurrentCard ? " active" : ""}`}
-//               key={index}
-//               {...handlers}
-//             >
-//               <div className="tbg">
-//                 <div className="tbgwrap">
-//                   <div className="tphoto">
-//                     <img
-//                       src={user.profile_img}
-//                       title="tphoto"
-//                       alt="Tinder Photo"
-//                     />
-//                     <div className="tname">
-//                       {user.username}, <span className="age">{user.age}</span>
-//                       {goals
-//                         .filter((goal) => goal.goal_id === user.userprofile_id)
-//                         .map((goal, goalIndex) => (
-//                           <p key={goalIndex}>〉{goal.description}</p>
-//                         ))}
-//                       {interest
-//                         .filter(
-//                           (goal) => goal.interest_id === user.userprofile_id
-//                         )
-//                         .map((goal, goalIndex) => (
-//                           <p key={goalIndex}>〉{goal.name}</p>
-//                         ))}
-//                     </div>
-//                   </div>
-//                   <div className="tcontrols">
-//                     <div className="tno">
-//                       <i className="fa fa-times" aria-hidden="true"></i>
-//                     </div>
-//                     <div className="tyes">
-//                       <i className="fa fa-heart" aria-hidden="true"></i>
-//                     </div>
-//                   </div>
-//                 </div>
-//                 <div className="credit">
-//                   <a href="http://themakery.jcink.net"></a>
-//                 </div>
-//               </div>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     );
-//   };
-
-//   return (
-//     <>
-//       <div className="carousel-container">
-//         <h1>Find a Buddy</h1>
-//         <SwipeableComponent />
-//       </div>
-//     </>
-//   );
-// };
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 // import { TiArrowSortedDown } from "react-icons/ti";
 // import { TiArrowSortedUp } from "react-icons/ti";
-import "../Pages/GoalProfile.css";
+import "./GoalProfile.css";
 
 const GoalProfile = () => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -335,14 +181,13 @@ const GoalProfile = () => {
         <form>
           <label>Find others that share your interest.</label>
           <select
-            className="select"
+            className="carousel-select"
             name="interests"
             onChange={handleSelectChange}
             value={userSelect}
           >
             <option value="">
-              Use the dropdown to select an interest{" "}
-              <Link to="/ =>"> =&gt;</Link>
+              Select an interest here <Link to="/ =>"> =&gt;</Link>
             </option>
 
             <option value="Tech"> Tech</option>

@@ -108,10 +108,12 @@ const NewProfile = ({ user, token }) => {
         <label>
           Bio:
           <textarea
+            id="bio-input"
             placeholder="Bio..."
             name="bio"
             value={newProfile.bio}
             onChange={handleInputChange}
+            rows="3"
           />
         </label>
         <br />
