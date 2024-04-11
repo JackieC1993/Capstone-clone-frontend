@@ -47,12 +47,12 @@ navbar.fixed-bottom {
   background-color: #fffcff;
 }
 
-.container-fluid span {
+/* .container-fluid span { */
   /* background-color: var(--GHGreen); */
-  font-size: 15px;
+  /* font-size: 15px;
   color: black;
-  border-radius: 15px;
-}
+  border-radius: 15px; */
+/* } */
 
 .navbar-link img {
   background-color: rgb(255, 255, 255);
@@ -71,8 +71,8 @@ navbar.fixed-bottom {
 }
 
 .navbar-link svg {
-  height: 2em;
-  width: 2em;
-  color: var(--GHGreen);
+  height: 90px;
+  width: 90px;
+  color: #3f7cac;
 }
 

@@ -32,7 +32,7 @@ const NavBar = ({ navBar, setNavBar }) => {
           <span>Find Buddy</span>
         </Link>
         <Link className="navbar-link" to="/create">
-          <CiCirclePlus className="nav-icon" size={"90px"} color="#3f7cac" />
+          <CiCirclePlus className="nav-icon" />
         </Link>
         <Link className="navbar-link" to="/hivechat">
           <img src={HiveChat} alt="" />

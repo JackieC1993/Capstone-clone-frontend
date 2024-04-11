@@ -4,21 +4,38 @@ import { FaCommentDots } from "react-icons/fa";
 import { AiOutlineLike, AiFillLike } from "react-icons/ai";
 
 const Post = ({ user, token, post }) => {
+  const usersWhoLiked = post.users_who_liked || [];
   const API = import.meta.env.VITE_BASE_URL;
-  const [likeCount, setLikeCount] = useState(post.users_who_liked);
-  const [likeToggle, setLikeToggle] = useState(false);
-  const [liked, setLiked] = useState({
-    userprofile_id: user.userprofile_id,
-    post_id: post.post_id,
-  });
+  const [likeCount, setLikeCount] = useState(usersWhoLiked.length);
+  const [likeToggle, setLikeToggle] = useState(
+    usersWhoLiked.includes(user.userprofile_id)
+  );
+  //   const [liked, setLiked] = useState({
+  //     userprofile_id: user.userprofile_id,
+  //     post_id: post.post_id,
+  //   });
+
+  console.log({ likeToggle });
 
   const handleClick = () => {
     // Toggle liked state
-    // setLiked(!liked);
+    // setLikeToggle(!likeToggle);
+    setLikeToggle((prev) => !prev);
 
-    fetch(`${API}/posts/like`, {
-      method: "POST",
-      body: JSON.stringify(liked),
+    if (likeToggle) {
+      //   setLikeCount(likeCount - 1);
+      setLikeCount((prev) => prev - 1);
+    } else {
+      //   setLikeCount(likeCount + 1);
+      setLikeCount((prev) => prev + 1);
+    }
+
+    fetch(`${API}/posts/${likeToggle ? "unlike" : "like"}`, {
+      method: `${likeToggle ? "DELETE" : "POST"}`,
+      body: JSON.stringify({
+        userprofile_id: user.userprofile_id,
+        post_id: post.post_id,
+      }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -26,7 +43,6 @@ const Post = ({ user, token, post }) => {
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        setLiked(res);
       })
       .catch((error) => console.log(error));
   };
@@ -35,7 +51,7 @@ const Post = ({ user, token, post }) => {
   // console.log(post);
   //   console.log(post.users_who_liked);
   //   console.log(likeCount);
-  console.log(liked);
+  console.log(likeToggle);
   return (
     <div className="post">
       <div className="post_header">
@@ -46,8 +62,12 @@ const Post = ({ user, token, post }) => {
       <br />
       <div>
         <FaCommentDots /> <span></span>
-        <AiOutlineLike onClick={handleClick} />{" "}
-        <span>{likeCount ? likeCount.length : 0}</span>
+        {likeToggle ? (
+          <AiFillLike onClick={handleClick} />
+        ) : (
+          <AiOutlineLike onClick={handleClick} />
+        )}
+        <span>{likeCount}</span>
       </div>
       <Link to={`/feed/${post.post_id}`}></Link>
     </div>
