@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaCommentDots } from "react-icons/fa";
 import { AiOutlineLike, AiFillLike } from "react-icons/ai";
 
 const Post = ({ user, token, post }) => {
-  const usersWhoLiked = post.users_who_liked || [];
   const API = import.meta.env.VITE_BASE_URL;
+  const navigate = useNavigate();
+  const usersWhoLiked = post.users_who_liked || [];
   const [likeCount, setLikeCount] = useState(usersWhoLiked.length);
   const [likeToggle, setLikeToggle] = useState(
     usersWhoLiked.includes(user.userprofile_id)
@@ -15,7 +16,7 @@ const Post = ({ user, token, post }) => {
   //     post_id: post.post_id,
   //   });
 
-  console.log({ likeToggle });
+//   console.log({ likeToggle });
 
   const handleClick = () => {
     // Toggle liked state
@@ -47,30 +48,38 @@ const Post = ({ user, token, post }) => {
       .catch((error) => console.log(error));
   };
 
+  //   const handlePostClick = () => {
+  //     navigate(`/feed/${post.post_id}`);
+  //   };
+
   // console.log(user);
   // console.log(post);
   //   console.log(post.users_who_liked);
   //   console.log(likeCount);
-  console.log(likeToggle);
+  //   console.log(likeToggle);
   return (
-    <div className="post">
-      <div className="post_header">
-        <img src={post.profile_img} alt={`${post.username}'s profile image`} />
-        <h4 id="post_username">{post.username}</h4>
-      </div>
-      <div id="post_description" style={{ textAlign: "left" }}>
-        {post.post_description}
-      </div>
-      <div>
-        <FaCommentDots /> <span></span>
-        {likeToggle ? (
-          <AiFillLike onClick={handleClick} />
-        ) : (
-          <AiOutlineLike onClick={handleClick} />
-        )}
-        <span>{likeCount}</span>
-      </div>
-      <Link to={`/feed/${post.post_id}`}></Link>
+      <div className="post" >
+        <Link to={`/feed/${post.post_id}`} style={{textDecoration: "none", color: "black"}}>
+        <div className="post_header">
+          <img
+            src={post.profile_img}
+            alt={`${post.username}'s profile image`}
+          />
+          <h4 id="post_username">{post.username}</h4>
+        </div>
+        <div id="post_description" style={{ textAlign: "left" }}>
+          {post.post_description}
+        </div>
+          </Link>
+        <div className="post_footer">
+          <FaCommentDots className="comment_icon"/>
+          {likeToggle ? (
+            <AiFillLike onClick={handleClick} className="like_icon" style={{color: "var(--GHGreen)"}}/>
+          ) : (
+            <AiOutlineLike onClick={handleClick} className="like_icon" />
+            )}
+            <span id="like_count">{likeCount}</span>
+        </div>
     </div>
   );
 };

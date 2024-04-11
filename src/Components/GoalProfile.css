@@ -229,11 +229,6 @@ select.carousel-select {
   font-family: "Open Sans", sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-}
-
 .swiper-container {
   width: 800px;
   height: 200px;
