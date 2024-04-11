@@ -353,12 +353,16 @@ a.connectfriends {
   text-decoration: none;
   position: absolute;
 }
-/* svg.newgoal-icon{
+ /* svg.newgoal-icon{
   margin-top: 1px;
   margin-right: 25px;
   margin-left: 10px;
-} */
+}  */
 
 h6.friendname {
   text-align: center;
+}
+#sponsoricon{
+margin-left: 10px;
+height: 45px;
 }
