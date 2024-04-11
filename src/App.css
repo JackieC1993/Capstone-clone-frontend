@@ -53,11 +53,13 @@
 }
 
 header#chat.header {
-  background-image: url("./assets/quote.png");
+  /* background-image: url("./assets/quote.png"); */
+  background-color: var(--GHBlue);
   /* background-color: rgb(34, 32, 32); */
   background-size: 300px;
   /* width:100%; */
   /* opacity: 30%; */
+  padding: 30px;
   margin-bottom: 20px;
   height: 100px;
   background-repeat: none;

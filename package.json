@@ -17,6 +17,7 @@
     "@react-native-firebase/app": "^18.9.0",
     "@react-native-firebase/messaging": "^18.9.0",
     "@talkjs/react-native": "^0.7.1",
+    "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",

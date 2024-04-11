@@ -94,8 +94,8 @@ const HiveChat = () => {
         <div id="container">
           <div className="frame">
             <div className="div2">
-              <header id="chat" className="header"></header>
-              <Progress id="user1-goal" />
+              <header id="chat" className="header"><h1>HiveChat</h1></header>              
+              {/* <Progress id="user1-goal" /> */}
               <JoinRoom />
             </div>
           </div>
