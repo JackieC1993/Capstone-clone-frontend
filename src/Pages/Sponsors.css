@@ -1,0 +1,94 @@
+.discount{
+    /* border: 2px solid; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+li{text-decoration: none;}
+
+#prizes{
+    background-color: var(--GHGreen);
+}
+
+#sponsor-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.discount{
+    animation: slideInAnimation 1s ease-in;
+  }
+  
+  @keyframes slideInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .discount-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .discount-list li {
+    margin-bottom: 10px;
+    /* Add more custom styles as per your requirements */
+  }
+  .flashing-animation:hover{
+    background-color: var(--GHGreen);
+  }
+
+  /* @keyframes flashingAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  } */
+  
+  .flashing-animation {
+    animation: flashingAnimation 3s infinite;
+    border: 2px solid;
+border-radius: 15px;
+padding-bottom: 10px;
+text-align: center;
+background-color: var(--GHBlue);
+margin-bottom: 10px;
+height: 80px;
+
+  }
+
+  .honeycomb-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+  }
+  ul {
+    list-style-type: none;
+  }
+  /* .flashing-animation {
+    animation: flashingAnimation 1s infinite;
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 50%;
+  } */
+
+  
