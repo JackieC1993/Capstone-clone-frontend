@@ -32,9 +32,12 @@
     grid-area: i;
   }
 
-  Link.newgoal-button {
-    grid-area: n;
+  .newgoal-button {
+    position: absolute;
+    right: 15px;
+    bottom: 130px;
   }
+
   .newgoal-icon {
     height: auto;
     width: 40px;
@@ -205,7 +208,7 @@
   .newgoal-button {
     position: absolute;
     right: 15px;
-    bottom: 15px;
+    bottom: 130px;
   }
 
   .goalcard {
@@ -342,20 +345,20 @@
   text-align: center;
 }
 
-a{
+a {
   text-align: center;
 }
 
-a.connectfriends{
+a.connectfriends {
   text-decoration: none;
   position: absolute;
 }
-svg.newgoal-icon{
+/* svg.newgoal-icon{
   margin-top: 1px;
   margin-right: 25px;
   margin-left: 10px;
-}
+} */
 
-h6.friendname{
+h6.friendname {
   text-align: center;
 }
