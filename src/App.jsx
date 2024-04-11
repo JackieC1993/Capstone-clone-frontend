@@ -15,6 +15,7 @@ import GoalProfile from "./Components/GoalProfile";
 import SingleProfile from "./Pages/SingleProfile";
 import ShowPost from "./Pages/ShowPost";
 import CreatePage from "./Pages/CreatePage";
+import Sponsors from "./Pages/Sponsors";
 
 //Components
 import NavBar from "./Components/NavBar";
@@ -179,6 +180,7 @@ function App({ userprofile_id }) {
             token={token}
           />
           <Route path="/chat" element={<ChatComponent user={user} />} />
+          <Route path="/sponsors" element={<Sponsors user={user}/>}/>
         </Routes>
       </Router>
     </div>
