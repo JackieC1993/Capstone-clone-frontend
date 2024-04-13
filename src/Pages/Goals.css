@@ -6,9 +6,9 @@
   row-gap: 5%;
 }
 .goalcard {
-  border: 1px solid #ccc;
-  height: 50px;
-  width: 92%;
+  border: 2px solid #c1bfbf;
+  height: 55px;
+  width: 95%;
   padding: 0 10px;
   margin-bottom: 20px;
   /* overflow: hidden; */
@@ -23,6 +23,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  font-size: 17px;
 }
 
 .goalcard-buttons {
