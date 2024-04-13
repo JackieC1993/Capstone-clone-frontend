@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./NewPost.css";
 
 const NewPost = ({ user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -24,7 +25,7 @@ const NewPost = ({ user, token }) => {
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => console.log(error));
   };
@@ -41,8 +42,8 @@ const NewPost = ({ user, token }) => {
   console.log(newPost);
   return (
     <div className="new-post-container">
-      <h1>New Post Component</h1>
-      <form onSubmit={handeSubmit}>
+      {/* <h1>New Post Component</h1> */}
+      <form className="form-container" onSubmit={handeSubmit}>
         <label htmlFor="post_description">Make a Post</label>
         <br />
         <textarea
@@ -51,7 +52,7 @@ const NewPost = ({ user, token }) => {
           onChange={handleTextChange}
           id="post_description"
         />
-        <button className="" type="submit">
+        <button className="post_button" type="submit">
           Post
         </button>
       </form>

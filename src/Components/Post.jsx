@@ -1,24 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaCommentDots } from "react-icons/fa";
 import { AiOutlineLike, AiFillLike } from "react-icons/ai";
 
 const Post = ({ user, token, post }) => {
   const API = import.meta.env.VITE_BASE_URL;
-  const [likeCount, setLikeCount] = useState(post.users_who_liked);
-  const [likeToggle, setLikeToggle] = useState(false);
-  const [liked, setLiked] = useState({
-    userprofile_id: user.userprofile_id,
-    post_id: post.post_id,
-  });
+  const navigate = useNavigate();
+  const usersWhoLiked = post.users_who_liked || [];
+  const [likeCount, setLikeCount] = useState(usersWhoLiked.length);
+  const [likeToggle, setLikeToggle] = useState(
+    usersWhoLiked.includes(user.userprofile_id)
+  );
+  //   const [liked, setLiked] = useState({
+  //     userprofile_id: user.userprofile_id,
+  //     post_id: post.post_id,
+  //   });
+
+//   console.log({ likeToggle });
 
   const handleClick = () => {
     // Toggle liked state
-    // setLiked(!liked);
+    // setLikeToggle(!likeToggle);
+    setLikeToggle((prev) => !prev);
 
-    fetch(`${API}/posts/like`, {
-      method: "POST",
-      body: JSON.stringify(liked),
+    if (likeToggle) {
+      //   setLikeCount(likeCount - 1);
+      setLikeCount((prev) => prev - 1);
+    } else {
+      //   setLikeCount(likeCount + 1);
+      setLikeCount((prev) => prev + 1);
+    }
+
+    fetch(`${API}/posts/${likeToggle ? "unlike" : "like"}`, {
+      method: `${likeToggle ? "DELETE" : "POST"}`,
+      body: JSON.stringify({
+        userprofile_id: user.userprofile_id,
+        post_id: post.post_id,
+      }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -26,31 +44,42 @@ const Post = ({ user, token, post }) => {
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        setLiked(res);
       })
       .catch((error) => console.log(error));
   };
+
+  //   const handlePostClick = () => {
+  //     navigate(`/feed/${post.post_id}`);
+  //   };
 
   // console.log(user);
   // console.log(post);
   //   console.log(post.users_who_liked);
   //   console.log(likeCount);
-  console.log(liked);
+  //   console.log(likeToggle);
   return (
-    <div className="post">
-      <div className="post_header">
-        <img src={post.profile_img} alt={`${post.username}'s profile image`} />
-        <h4 id="post_username">{post.username}</h4>
-      </div>
-      <div id="post_description" style={{ textAlign: "left" }}>
-        {post.post_description}
-      </div>
-      <div>
-        <FaCommentDots /> <span></span>
-        <AiOutlineLike onClick={handleClick} />{" "}
-        <span>{likeCount ? likeCount.length : 0}</span>
-      </div>
-      <Link to={`/feed/${post.post_id}`}></Link>
+      <div className="post" >
+        <Link to={`/feed/${post.post_id}`} style={{textDecoration: "none", color: "black"}}>
+        <div className="post_header">
+          <img
+            src={post.profile_img}
+            alt={`${post.username}'s profile image`}
+          />
+          <h4 id="post_username">{post.username}</h4>
+        </div>
+        <div id="post_description" style={{ textAlign: "left" }}>
+          {post.post_description}
+        </div>
+          </Link>
+        <div className="post_footer">
+          <FaCommentDots className="comment_icon"/>
+          {likeToggle ? (
+            <AiFillLike onClick={handleClick} className="like_icon" style={{color: "var(--GHGreen)"}}/>
+          ) : (
+            <AiOutlineLike onClick={handleClick} className="like_icon" />
+            )}
+            <span id="like_count">{likeCount}</span>
+        </div>
     </div>
   );
 };

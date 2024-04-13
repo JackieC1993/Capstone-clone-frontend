@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
 .joinChatContainer h3 {
@@ -59,7 +60,7 @@ body {
 .chat-window .chat-header {
   height: 45px;
   border-radius: 6px;
-  background: #263238;
+  background: var(--GHBlue);
   position: relative;
   cursor: pointer;
 }

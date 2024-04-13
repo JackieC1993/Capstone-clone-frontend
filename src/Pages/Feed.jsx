@@ -32,8 +32,8 @@ const Feed = ({ user, token }) => {
     <div className="feed">
       {/* <h2>This is the feed</h2> */}
 
-      <Link to={"/posts/new"}>
-      <IoIosCreate className="newpost-icon"/>
+      <Link to={"/posts/new"} className="newpost_link">
+      <IoIosCreate className="newpost_icon"/>
       </Link>
       {feed.map((posts) => {
         return (

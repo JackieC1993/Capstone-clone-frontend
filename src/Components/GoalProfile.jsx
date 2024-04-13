@@ -163,21 +163,11 @@ const GoalProfile = () => {
                       </div>
                     </div>
                   </Link>
-                  <div className="tcontrols">
-                    <div className="tno">
-                      <i className="fa fa-times" aria-hidden="true"></i>
-                    </div>
-                    {/* <TiArrowSortedDown className="downarrow" /> */}
-                    <div className="tyes">
-                      <i className="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                  </div>
+                 
                 </div>
-                <div className="credit">
-                  <a href="http://themakery.jcink.net"></a>
-                </div>
+               
               </div>
-            </div>
+        </div>
           );
         })}
       </div>

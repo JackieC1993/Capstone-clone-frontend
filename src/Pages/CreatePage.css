@@ -1,0 +1,30 @@
+.create_page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50%;
+}
+
+.create_button {
+  padding: 5%;
+}
+
+.create_button button {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 50px 100px 50px 100px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid var(--GHBlue);
+  background: var(--GHBlue);
+}
+/* .create_button:hover {
+  background: red;
+  color: yellow;
+} */
