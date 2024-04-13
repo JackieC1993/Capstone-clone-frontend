@@ -13,6 +13,9 @@ li{text-decoration: none;}
 #prizes{
     background-color: var(--GHGreen);
 }
+#sponsor-img{
+    height:30px
+}
 
 #sponsor-container{
     display: flex;

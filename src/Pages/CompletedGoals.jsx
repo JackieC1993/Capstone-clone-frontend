@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import GoalCard from "../Components/GoalCard";
+import CompletedGoalCard from "../Components/CompletedGoalCard";
 import "./Goals.css";
 
-const Goals = ({ user, token }) => {
+const CompletedGoals = ({ user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const [goals, setGoals] = useState([]);
   const [err, setError] = useState("");
@@ -32,16 +33,16 @@ const Goals = ({ user, token }) => {
     fetchData();
   }, []);
 console.log(goals)
-const filteredGoals = goals.filter((goal) => !goal.completed);
+const filteredGoals = goals.filter((goal) => goal.completed);
 
 return (
   <div className="goals-container">
     {filteredGoals.map((goal) => {
       return (
-        <GoalCard key={goal.goal_id} onEdit={fetchData} user={user} token={token} goal={goal} />
+        <CompletedGoalCard key={goal.goal_id} onEdit={fetchData} user={user} token={token} goal={goal} />
       );
     })}
   </div>
 );
 };
-export default Goals;
+export default CompletedGoals;

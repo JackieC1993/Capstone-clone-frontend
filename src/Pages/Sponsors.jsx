@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import "./Sponsors.css"
+import nike from "../assets/nike.jpg"
 
 const Sponsors = ({ user, token }) => {
   const { userprofile_id } = useParams();
@@ -12,7 +13,7 @@ const Sponsors = ({ user, token }) => {
   .filter((goal) => goal.userprofile_id === user.userprofile_id)
 
   const sponsors = [
-    { company: 'Nike', category: 'Shopping', discount: '10% off membership' },
+    { company: 'Nike',image: `${nike}`, category: 'Shopping', discount: '10% off membership' },
     { company: 'Amazon', category: 'Shopping', discount: 'Free Prime membership' },
     { company: 'Google', category: 'Technology', discount: '20% off Google products' },
     { company: 'Starbucks', category: 'Food & Beverage', discount: 'Free coffee for a month' },
@@ -79,6 +80,7 @@ const Sponsors = ({ user, token }) => {
 
   return (
     <div id="sponsor-container">
+
       {/* <h1>Goal Tracker</h1> */}
       {/* <button onClick={handleGoalCompletion}>Complete Goal</button> */}
       <h2>Goals Completed</h2>
@@ -93,17 +95,26 @@ const Sponsors = ({ user, token }) => {
                     ))}
         </ul>
       )}
+
       {trueGoallength.length > 1 && (
         <div className='discount'>
           <h2>Discounts Earned</h2>
           <ul>
             <div className="honeycomb-container">
-            {sponsors.map((discount, index) => (
+            {sponsors.map((sponsor, index) => (
+  <li className="flashing-animation" key={index}>
+    <img id="sponsor-img"src={sponsor.image} alt={sponsor.company} />
+    {/* <a href={`http://www.${sponsor.company}.com`}> */}
+      {sponsor.company}: {sponsor.category} - {sponsor.discount}
+    {/* </a> */}
+  </li>
+))}
+            {/* {sponsors.map((discount, index) => (
               <li className="flashing-animation" key={index}>
-                {discount.company}: {discount.category} - {discount.discount}
+                {discount.company}:{discount.image} {discount.category} - {discount.discount}
 
               </li>
-            ))}
+            ))} */}
 
             </div>
           </ul >       </div>
