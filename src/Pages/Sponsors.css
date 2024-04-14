@@ -12,6 +12,7 @@ li{text-decoration: none;}
 
 #prizes{
     background-color: var(--GHGreen);
+    
 }
 #sponsor-img{
     height:60px;
@@ -23,7 +24,7 @@ li{text-decoration: none;}
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .discount{
@@ -53,7 +54,20 @@ li{text-decoration: none;}
   .flashing-animation:hover{
     background-color: var(--GHGreen);
   }
+  .completed{
+display:flex;
+flex-wrap: wrap;
 
+text-align: center;
+margin-right: 0px;
+
+
+
+}
+.results{
+justify-content: center;
+
+}
   /* @keyframes flashingAnimation {
     0% {
       opacity: 1;

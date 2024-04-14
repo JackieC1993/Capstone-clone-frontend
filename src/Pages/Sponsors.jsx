@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
 import "./Sponsors.css"
+
+//pics
 import nike from "../assets/nike.jpg"
 import Ubereats from "../assets/Ubereats.png";
 import amazon from "../assets/amazon.png";
@@ -23,10 +24,11 @@ import uber from "../assets/uber.png";
 import temu from "../assets/temu.png";
 import crest from "../assets/crest.png";
 
+
 const Sponsors = ({ user, token }) => {
-  const { userprofile_id } = useParams();
+ 
   const [goalsCompleted, setGoalsCompleted] = useState([]);
-  const [discountsEarned, setDiscountsEarned] = useState([]);
+
   const [isLoading, setIsLoading] = useState(true);
   const trueGoallength=goalsCompleted
   .filter((goal) => goal.userprofile_id === user.userprofile_id)
@@ -61,66 +63,63 @@ const Sponsors = ({ user, token }) => {
   };
 
   useEffect(() => {
-    fetchCompletedGoals(); // Fetch completed goals when the component mounts
+    fetchCompletedGoals(); 
   }, []);
 
   const fetchCompletedGoals = async () => {
     try {
-      const response = await axios.get(`http://localhost:3005/allgoals`, { headers });
+      const response = await axios.get(`http://localhost:5009/allgoals`, { headers });
       const completedGoals = response.data;
       setGoalsCompleted(completedGoals);
-      setIsLoading(false);
+    //   if(goalsCompleted.length>5){
+    //         setIsLoading(false);
+        
+    //   }
     } catch (error) {
       console.log('Error fetching completed goals:', error);
     }
   };
 
-  const handleGoalCompletion = async () => {
-    try {
-      const goalId = Math.floor(Math.random() * 1000); // Generate a random goal ID
-      if (!goalsCompleted.includes(goalId)) {
-        // Perform the logic for completing the goal
-        // ...
-        const completedGoals = [...goalsCompleted, goalId];
-        setGoalsCompleted(completedGoals);
-        if (completedGoals.length > 10) {
-          const discount = getDiscountFromSponsorCompany();
-          setDiscountsEarned([...discountsEarned, discount]);
-        }
-      }
-    } catch (error) {
-      console.log('Error completing goal:', error);
+  useEffect(() => {
+    if (trueGoallength.length> 2) {
+      setIsLoading(false);
     }
-  };
+  }, [trueGoallength]);
 
-  const getDiscountFromSponsorCompany = () => {
-    const randomIndex = Math.floor(Math.random() * sponsors.length);
-    return sponsors[randomIndex];
-  };
+
 
   return (
     <div id="sponsor-container">
 
-      {/* <h1>Goal Tracker</h1> */}
-      {/* <button onClick={handleGoalCompletion}>Complete Goal</button> */}
+
+      
       <h2>Goals Completed</h2>
       {isLoading ? (
+        <>
         <p>Loading...</p>
+        <h1>Complete More goals to unlock offers!!!</h1>
+        </>
       ) : (
+
+            // <div className="completed">
         <ul>
+                <br></br>
+           
         {goalsCompleted
-                    .filter((goal) => goal.userprofile_id === user.userprofile_id)
+                    .filter((goal) => goal.userprofile_id === user.userprofile_id && goal.completed )
                     .map((goal, goalIndex) => (
-                      <p id="prizes"key={goalIndex}>💯% {goal.description}</p>
-                    ))}
+
+                            <p id="prizes"key={goalIndex}>💯% {goal.description}</p>
+                            ))}
         </ul>
+                            // </div>
       )}
 
-      {trueGoallength.length > 1 && (
-        <>
-        {/* <div className='discount'> */}
+      {!isLoading  && (
+          <>
+       
+          <ul className='results'>
           <h2>Discounts Earned</h2>
-          <ul>
             <div className="honeycomb-container">
             {sponsors.map((sponsor, index) => (
               <li className="flashing-animation" key={index}>
@@ -129,21 +128,16 @@ const Sponsors = ({ user, token }) => {
 <a className='websites' href= {`http://www.${sponsor.company}.com`}>{sponsor.company}</a>
                 </div>
     <br></br>
-    {/* <a href={`http://www.${sponsor.company}.com`}> */}
+   
       {sponsor.company}: {sponsor.category} - {sponsor.discount}
-    {/* </a> */}
+   
   </li>
 ))}
-            {/* {sponsors.map((discount, index) => (
-              <li className="flashing-animation" key={index}>
-              {discount.company}:{discount.image} {discount.category} - {discount.discount}
-              
-              </li>
-            ))} */}
+        
 
             </div>
           </ul >       
-          {/* </div> */}
+         
             </>
       )}
     </div>

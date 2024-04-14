@@ -181,7 +181,7 @@ function App({ userprofile_id }) {
             token={token}
           />
           <Route path="/chat" element={<ChatComponent user={user} />} />
-          <Route path="/sponsors" element={<Sponsors user={user}/>}/>
+          <Route path="/sponsors" element={<Sponsors user={user} token={token}/>}/>
         </Routes>
       </Router>
     </div>
