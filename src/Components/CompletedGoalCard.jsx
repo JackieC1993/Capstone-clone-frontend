@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EditGoal from "../Components/EditGoal";
 
-const GoalCard = ({ user, token, goal, onEdit }) => {
+const CompletedGoalCard = ({ user, token, goal, onEdit }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const [editGoal, setEditGoal] = useState(false);
   const [expandedGoal, setExpandedGoal] = useState(false);
@@ -74,22 +74,9 @@ const GoalCard = ({ user, token, goal, onEdit }) => {
       </div>
       <p>{goal.description}</p>
 
-      <div className="goalcard-buttons">
-        <button onClick={() => setEditGoal(true)}>✏️</button>
-        <button onClick={() => markGoalAsCompleted(goal.goal_id)}>
-          Completed
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            handleDelete(goal.goal_id);
-          }}
-        >
-          Delete
-        </button>
-      </div>
+     
     </div>
   );
 };
 
-export default GoalCard;
+export default CompletedGoalCard;

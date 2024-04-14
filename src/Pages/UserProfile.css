@@ -8,17 +8,23 @@
     background-color: #fffcff;
     padding: 10px 20px;
     grid-template-areas:
-      "i p l"
-      "b b b"
-      "a c n"
-      "g g g";
+    "i p l"
+    "b b b"
+    "a c c"
+    "g g g";
+   ;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 180px 260px 50px auto;
     gap: 10px;
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    /* height: 100vh; */
+    /* max-width: 100%; */
     box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 90px;
   }
+  
 
   #userprofile-image {
     margin-top: 30px;
@@ -27,17 +33,15 @@
     height: 120px;
     border-radius: 50%;
   }
+  
 
   .userprofile-picture {
     grid-area: i;
   }
 
-  .newgoal-button {
-    position: absolute;
-    right: 15px;
-    bottom: 130px;
+  Link.newgoal-button {
+    grid-area: n;
   }
-
   .newgoal-icon {
     height: auto;
     width: 40px;
@@ -45,11 +49,30 @@
   }
 
   .goalcard {
-    width: 125px;
-    height: 350px;
+    width: 400px;
+    height: fit-content;
     overflow: hidden;
     margin: 0 auto;
-    position: relative;
+    /* position: relative; */
+    text-wrap: wrap;
+ */
+  }
+  .friend-div{
+    text-align: center;
+  }
+  #create-new{
+    margin-bottom: 100px;
+    /* background-color: red; */
+  }
+  .sponsor-div{
+    display: flex;
+ 
+    text-align: center;
+  }
+  .button-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .userprofile-header {
@@ -96,6 +119,7 @@
 
   .active {
     grid-area: a;
+    margin-bottom: 50px;
   }
 
   .completed {
@@ -104,6 +128,7 @@
 
   .goals-container {
     grid-area: g;
+    margin: 0;
   }
 
   p.bold {
@@ -166,6 +191,7 @@
   }
 }
 
+
 /* Adjustments for responsive layout */
 @media (min-width: 768px) {
   .userprofile-container {
@@ -187,7 +213,7 @@
     max-width: 100%;
     box-sizing: border-box;
   }
-
+  
   #userprofile-image {
     margin-top: 30px;
 
@@ -208,16 +234,26 @@
   .newgoal-button {
     position: absolute;
     right: 15px;
-    bottom: 130px;
+    bottom: 15px;
   }
 
-  .goalcard {
+  /* .goalcard {
     width: 125px;
     height: 350px;
     overflow: hidden;
     margin: 0 auto;
     position: relative;
+  } */
+  .goalcard {
+    width: 400px;
+    /* height:fit-content; */
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    text-wrap: wrap;
+
   }
+
 
   .userprofile-header {
     padding-top: 25px;
@@ -266,6 +302,7 @@
 
   .goals-container {
     grid-area: g;
+    margin: 0;
   }
 
   p.bold {
@@ -334,35 +371,4 @@
   .lg-button > .ld {
     font-size: initial;
   }
-}
-.friends {
-  height: 65px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.friend-div {
-  text-align: center;
-}
-
-a {
-  text-align: center;
-}
-
-a.connectfriends {
-  text-decoration: none;
-  position: absolute;
-}
- /* svg.newgoal-icon{
-  margin-top: 1px;
-  margin-right: 25px;
-  margin-left: 10px;
-}  */
-
-h6.friendname {
-  text-align: center;
-}
-#sponsoricon{
-margin-left: 10px;
-height: 45px;
 }
