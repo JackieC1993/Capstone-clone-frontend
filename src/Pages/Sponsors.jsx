@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import "../assets/nike.png";
 import "./Sponsors.css"
 
 const Sponsors = ({ user, token }) => {
@@ -12,27 +13,27 @@ const Sponsors = ({ user, token }) => {
   .filter((goal) => goal.userprofile_id === user.userprofile_id)
 
   const sponsors = [
-    { company: 'Nike', category: 'Shopping', discount: '10% off membership' },
-    { company: 'Amazon', category: 'Shopping', discount: 'Free Prime membership' },
-    { company: 'Google', category: 'Technology', discount: '20% off Google products' },
-    { company: 'Starbucks', category: 'Food & Beverage', discount: 'Free coffee for a month' },
-    { company: 'Netflix', category: 'Entertainment', discount: '1 month free subscription' },
-    { company: 'Apple', category: 'Technology', discount: 'Special pricing on Apple products' },
-    
-    { company: 'Microsoft', category: 'Technology', discount: '10% off Microsoft products' },
-    { company: 'Adidas', category: 'Shopping', discount: '15% off membership' },
-    { company: 'Coca-Cola', category: 'Food & Beverage', discount: 'Free soda for a month' },
-    { company: 'Samsung', category: 'Technology', discount: '20% off Samsung products' },
-    { company: 'Sony', category: 'Entertainment', discount: '10% off Sony products' },
-    { company: 'Target', category: 'Shopping', discount: 'Free gift card' },
-    { company: 'Walmart', category: 'Shopping', discount: 'Discounts on select items' },
-    { company: 'McDonalds', category: 'Food & Beverage', discount: 'Free fries with purchase' },
-    { company: 'Burger King', category: 'Food & Beverage', discount: 'Buy one, get one free' },
-    { company: 'HP', category: 'Technology', discount: 'Special pricing on HP products' },
-    { company: 'Canon', category: 'Technology', discount: '15% off Canon products' },
-    { company: 'Uber', category: 'Transportation', discount: 'Discounted rides' },
-    { company: 'Lyft', category: 'Transportation', discount: '10% off Lyft rides' },
-  ];
+      { company: 'Nike', category: 'Shopping', discount: '10% off membership', url: 'https://www.nike.com' },
+      { company: 'Amazon', category: 'Shopping', discount: 'Free Prime membership', url: 'https://www.amazon.com' },
+      { company: 'Google', category: 'Technology', discount: '20% off Google products', url: 'https://www.google.com' },
+      { company: 'Starbucks', category: 'Food & Beverage', discount:'Free coffee for a month', url: 'https://www.starbucks.com' },
+      { company: 'Netflix', category: 'Entertainment', discount: '1 month free subscription', url: 'https://www.netflix.com' },
+      { company: 'Apple', category: 'Technology', discount: 'Special pricing on Apple products', url: 'https://www.apple.com' },
+      
+      { company: 'Microsoft', category: 'Technology', discount: '10% off Microsoft products', url: 'https://www.microsoft.com' },
+      { company: 'Adidas', category: 'Shopping', discount: '15% off membership', url: 'https://www.adidas.com' },
+      { company: 'Coca-Cola', category: 'Food & Beverage', discount: 'Free soda for a month', url: 'https://www.coca-cola.com' },
+      { company: 'Samsung', category: 'Technology', discount: '20% off Samsung products', url: 'https://www.samsung.com' },
+      { company: 'Sony', category: 'Entertainment', discount: '10% off Sony products', url: 'https://www.sony.com' },
+      { company: 'Target', category: 'Shopping', discount: 'Free gift card', url: 'https://www.target.com' },
+      { company: 'Walmart', category: 'Shopping', discount: 'Discounts on select items', url: 'https://www.walmart.com' },
+      { company: 'McDonalds', category: 'Food & Beverage', discount: 'Free fries with purchase', url: 'https://www.mcdonalds.com' },
+      { company: 'Burger King', category: 'Food & Beverage', discount: 'Buy one, get one free', url: 'https://www.burgerking.com' },
+      { company: 'Spotify', category: 'Technology', discount: 'Special pricing on Student spotify', url: 'https://www.spotify.com' },
+      { company: 'UberEats', category: 'Food & Beverages', discount: '15% off UberEats', url: 'https://www.ubereats.com' },
+      { company: 'Uber', category: 'Transportation', discount: 'Discounted rides', url: 'https://www.uber.com' },
+      { company: 'Lyft', category: 'Transportation', discount: '10% off Lyft rides', url: 'https://www.lyft.com' },
+    ];
 
   const headers = {
     'Content-Type': 'application/json',
@@ -45,7 +46,7 @@ const Sponsors = ({ user, token }) => {
 
   const fetchCompletedGoals = async () => {
     try {
-      const response = await axios.get(`http://localhost:5009/allgoals`, { headers });
+      const response = await axios.get(`http://localhost:3005/allgoals`, { headers });
       const completedGoals = response.data;
       setGoalsCompleted(completedGoals);
       setIsLoading(false);

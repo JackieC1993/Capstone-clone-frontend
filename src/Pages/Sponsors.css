@@ -66,7 +66,7 @@ li{text-decoration: none;}
     animation: flashingAnimation 3s infinite;
     border: 2px solid;
 border-radius: 15px;
-padding-bottom: 10px;
+padding-bottom: 100px;
 text-align: center;
 background-color: var(--GHBlue);
 margin-bottom: 10px;
