@@ -10,7 +10,7 @@
   background-color: white;
 } */
 
-#request {
+/* #request {
   margin: 20px;
   width: 200px;
   background-color: var(--GHBlue);
@@ -23,5 +23,5 @@
 #accept,
 #decline {
   border-radius: 15px;
-  /* Add additional styling as needed */
-}
+  /* Add additional styling as needed */ /*
+} */

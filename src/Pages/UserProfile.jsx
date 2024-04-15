@@ -112,17 +112,13 @@
 //           {!selectedGoals ? (
 //             <div>
 //               <Goals  user={user} token={token} />
-    
+
 //             </div>
 //           ) : (
 //             <span>List of Completed Goals</span>
 //           )}
 //       </div>
- 
 
-
-
-  
 //       {/* <Link className="connectfriends" to="/friendrequests"></Link> */}
 //     </div>
 //   );
@@ -136,9 +132,9 @@ import { Button } from "react-bootstrap";
 import "./UserProfile.css";
 import Goals from "./Goals";
 import CompletedGoals from "./CompletedGoals";
-import profilePic from "../assets/profile-male-blue.png";
-import friend from "../assets/friends.png"
-import sponsorpic from "../assets/sponsor.png"
+import profilePic from "../assets/userprofile_32.png";
+import friend from "../assets/friends-icon.png";
+import sponsorpic from "../assets/sponsor.png";
 import { FaPlusCircle } from "react-icons/fa";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
@@ -193,24 +189,32 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Gender: {profiles.gender}
         </h6>
       </div>
-      <div className="logout-friend-container">
-        <div className="logout-button">
-          <Button
-            className="lg-button"
-            onClick={handleLogout}
-            style={{ color: "white" }}
-          >
-            Log Out
-          </Button>
+      <div>
+        <div className="logout-friend-container">
+          <div className="logout-button">
+            <Button
+              className="lg-button"
+              onClick={handleLogout}
+              style={{ color: "white" }}
+            >
+              Log Out
+            </Button>
+          </div>
+          <br></br>
         </div>
-      <br></br>
-      </div>
         <div className="friend-div">
           <Link to="/friendrequests">
-          <img className="friends" src={friend} alt="Friends Icon" />
+            <img
+              className="friends"
+              src={friend}
+              alt="Friends Icon"
+              width="75"
+              height="75"
+            />
           </Link>
           <h6 className="friendname">Friends</h6>
         </div>
+      </div>
       <div className="bio">
         <div className="bio-wrapper">
           <p className="bold" style={{ color: "white" }}>
@@ -236,54 +240,39 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Completed
         </button>
       </div>
+      <div id="create-new">
+        <Link to="/goals/new" className="newgoal-button">
+          <FaPlusCircle className="newgoal-icon" />
+        </Link>
+      </div>
       {/* <div className="button-container"> */}
       {/* </div> */}
-   
-
 
       {!selectedGoals ? (
-  
-          <>
-          <div id="create-new">
-      <Link id="create-new"to="/goals/new" className="newgoal-button">
-        <FaPlusCircle className="newgoal-icon" />
-      </Link>
-
-          </div>
+        <>
           <Goals user={user} token={token} />
-          
-          </>
-
-
-  
+        </>
       ) : (
         <>
-        
-        <div>
+          <div>
+            <span>List of Completed Goals</span>
+            <CompletedGoals user={user} token={token} />
+          </div>
+          <br></br>
+          <div className="sponsor-div">
+            <label>
+              <strong>
+                <h6>Sponsors</h6>
+              </strong>
 
-            <span><h1>Completed Goals</h1> </span>
-            <CompletedGoals user={user} token={token}/>
-
-
-        </div>
-        <br></br>
-        <div className="sponsor-div">
-        <label>
-          <strong><h3>Sponsors</h3></strong>
-
-          <Link  to="/sponsors/">
-              <img  src={sponsorpic}/>
-            </Link>
-        </label>
-        
-
-
-
-        </div>
+              <Link to="/sponsors/">
+                <img src={sponsorpic} />
+              </Link>
+            </label>
+          </div>
         </>
       )}
-  
-        
+
       {/* <Link className="connectfriends" to="/friendrequests"></Link> */}
     </div>
   );

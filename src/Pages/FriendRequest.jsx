@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "../Pages/Friends.css";
+import "../Pages/friendRequest.css";
+import accept from "../assets/accept-button.png";
+import decline from "../assets/decline-button.png";
+
 const FriendRequest = ({ setUser, token, user, setToken }) => {
   const API = import.meta.env.VITE_BASE_URL;
   let userprofile_id = 1;
@@ -116,43 +119,117 @@ const FriendRequest = ({ setUser, token, user, setToken }) => {
     };
     fetchFriendRequests();
   }, [receiver_user_profile_id]);
+
   return (
-    <>
-      <div className="friendrequests-container">
-        <h3>Friend Request</h3>
+    <div className="friendrequests-container">
+      <div className="friend-requests">
+        <h3>Friend Requests</h3>
         {friendRequest.map((request) => (
-          <div id="request" key={request.id}>
+          <div className="request-container" key={request.id}>
             <p>
               <img
                 className="request-photo"
                 src={request.profile_img}
                 alt="Profile"
               />
-              <h2>{request.username} sent you a friend request.</h2>
+              <span> {request.username}</span>
             </p>
             <p>
-              <button
-                id="accept"
+              <img
+                className="friend-request-img"
+                src={accept}
+                alt="Accept"
                 onClick={() =>
                   acceptFriendRequest(request.id, request.userprofile_id)
                 }
-              >
-                :white_check_mark: Accept
-              </button>{" "}
-              <br />
-              <button
-                id="decline"
+              />
+              <img
+                className="friend-request-img"
+                src={decline}
+                alt="Decline"
                 onClick={() =>
                   denyFriendRequest(request.id, request.userprofile_id)
                 }
-              >
-                :x: Decline
-              </button>
+              />
             </p>
           </div>
         ))}
       </div>
-      <div>
+      <div className="friend-list">
+        <h3>Friends</h3>
+        {acceptFriend.map((accepted) => (
+          <div className="friend-container" key={accepted.id}>
+            <p>
+              <img
+                className="friend-photo"
+                src={accepted.profile_img}
+                alt="Profile"
+              />
+              <span className="friend-height">{accepted.username}</span>
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default FriendRequest; /*
+
+//
+/* return (
+    <div className="friendrequests-container">
+      <h3>Friend Request</h3>
+      {friendRequest.map((request) => (
+        <div className="request-container" id="request" key={request.id}>
+          <p>
+            <img
+              className="request-photo"
+              src={request.profile_img}
+              alt="Profile"
+            />
+            <h2>{request.username} sent you a friend request.</h2>
+          </p>
+          {/* <p>
+            <button
+              id="accept"
+              onClick={() =>
+                acceptFriendRequest(request.id, request.userprofile_id)
+              }
+            >
+              :white_check_mark: Accept
+            </button>{" "}
+            <br />
+            <button
+              id="decline"
+              onClick={() =>
+                denyFriendRequest(request.id, request.userprofile_id)
+              }
+            >
+              :x: Decline
+            </button>
+          </p> */ /*
+          <p>
+            <img
+              className="friend-request-img"
+              src={accept}
+              alt="Accept"
+              onClick={() =>
+                acceptFriendRequest(request.id, request.userprofile_id)
+              }
+            />
+            <img
+              className="friend-request-img"
+              src={decline}
+              alt="Decline"
+              onClick={() =>
+                denyFriendRequest(request.id, request.userprofile_id)
+              }
+            />
+          </p>
+        </div>
+      ))}
+      <div className="friend_list">
         <h3>Friends Lists</h3>
         {acceptFriend.map((accepted) => (
           <div id="request" key={accepted.id}>
@@ -167,7 +244,7 @@ const FriendRequest = ({ setUser, token, user, setToken }) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
-export default FriendRequest;
+export default FriendRequest;   */
