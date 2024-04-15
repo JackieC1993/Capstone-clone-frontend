@@ -103,7 +103,7 @@ const Sponsors = ({ user, token }) => {
 
       {/* <h1>Goal Tracker</h1> */}
       {/* <button onClick={handleGoalCompletion}>Complete Goal</button> */}
-      <h2>Goals Completed</h2>
+      <h2 className='goalcompleted'>Goals Completed</h2>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
@@ -119,7 +119,7 @@ const Sponsors = ({ user, token }) => {
       {trueGoallength.length > 1 && (
         <>
         {/* <div className='discount'> */}
-          <h2>Discounts Earned</h2>
+          <h2 className='discountsearned'>Discounts Earned</h2>
           <ul>
             <div className="honeycomb-container">
             {sponsors.map((sponsor, index) => (
