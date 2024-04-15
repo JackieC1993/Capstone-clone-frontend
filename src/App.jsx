@@ -30,7 +30,7 @@ import "./App.css";
 import InterFace from "./Pages/InterFace";
 import Dash from "./Pages/DashBoard";
 import GetCurrentGoals from "./Pages/CurrentGoals";
-import FriendRequest from "./Pages/Friends";
+import FriendRequest from "./Pages/FriendRequest";
 import ChatComponent from "./Components/Chat";
 
 function App({ userprofile_id }) {
@@ -77,8 +77,11 @@ function App({ userprofile_id }) {
           <Route path="/hivechat" element={<HiveChat />} />
           <Route path="/interface" element={<InterFace />} />
           <Route path="/currentgoals" element={<GetCurrentGoals />} />
-          
-          <Route path="/friendrequests"   element={<FriendRequest  user={user} />} />
+
+          <Route
+            path="/friendrequests"
+            element={<FriendRequest user={user} />}
+          />
 
           <Route
             path="/feed/:index"
@@ -181,7 +184,10 @@ function App({ userprofile_id }) {
             token={token}
           />
           <Route path="/chat" element={<ChatComponent user={user} />} />
-          <Route path="/sponsors" element={<Sponsors user={user} token={token}/>}/>
+          <Route
+            path="/sponsors"
+            element={<Sponsors user={user} token={token} />}
+          />
         </Routes>
       </Router>
     </div>

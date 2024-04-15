@@ -8,14 +8,13 @@
     background-color: #fffcff;
     padding: 10px 20px;
     grid-template-areas:
-
       "i p l"
       "b b b"
-      "a c c"
+      "a c n"
       "g g g";
 
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 190px 325px 50px auto;
+    grid-template-rows: 190px 300px 50px auto;
     gap: 10px;
     width: 100vw;
     /* height: 100vh; */
@@ -24,6 +23,23 @@
     overflow-y: scroll;
     overflow-x: hidden;
     padding-bottom: 90px;
+  }
+  .friend-div {
+    margin-left: 8px;
+    color: var(--GHBlue);
+    font-weight: bold;
+  }
+
+  .userprofile-header {
+    color: var(--GHBlue);
+  }
+
+  h6.friendname {
+    font-size: 18px;
+  }
+
+  img.friends {
+    align-self: center;
   }
 
   #userprofile-image {
@@ -38,9 +54,11 @@
     grid-area: i;
   }
 
-  Link.newgoal-button {
+  #create-new {
     grid-area: n;
+    margin-left: 30px;
   }
+
   .newgoal-icon {
     height: auto;
     width: 40px;
@@ -58,7 +76,6 @@
   .friend-div {
     text-align: center;
     grid-area: f;
-  
   }
   #create-new {
     margin-bottom: 100px;
@@ -111,7 +128,7 @@
   .bio .bio-wrapper {
     background-color: var(--GHBlue); /* Background color for the bio section */
     color: #fffcff; /* Text color for the bio section */
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 3%;
     border-width: 5px;
     border-color: #0f314b;
@@ -186,9 +203,9 @@
     font-size: smaller;
   }
 
-  body {
+  /* body {
     background-color: var(--GHBlue);
-  }
+  } */
 }
 
 /* Adjustments for responsive layout */
@@ -197,7 +214,7 @@
     width: 750px;
     font-size: medium;
     display: grid;
-    /* min-height: 85vh; */
+    min-height: 85vh;
     margin: 0 auto;
     background-color: #fffcff;
     padding: 25px 20px;
@@ -207,14 +224,14 @@
       " g g g "
       " a s c "; */
       "i p l"
-    "b b f"
-    "a s c"
-    "g g g";
+      "b b f"
+      "a s c"
+      "g g g";
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 270px 250px auto 50px;
     gap: 10px;
     max-width: 100vw;
-  
+
     box-sizing: border-box;
     row-gap: 15px;
     height: max-content;
@@ -222,12 +239,9 @@
     overflow-x: hidden;
 
     /* overflow-y: auto;  */
- 
+
     scroll-behavior: smooth;
     text-align: center;
-   
-    
-    
   }
   /* .userprofile-container {
     width: 750px;
@@ -259,15 +273,13 @@
   text-align: center;
   ;
   } */
-  .sponsor-div{
+  .sponsor-div {
     grid-area: s;
     /* margin-left: 100px; */
   }
-  .friend-div{
-  
- 
+  .friend-div {
     /* margin-right: 100px; */
-  grid-area: f;
+    grid-area: f;
   }
 
   #userprofile-image {

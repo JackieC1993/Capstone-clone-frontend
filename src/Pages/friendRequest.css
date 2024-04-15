@@ -1,0 +1,227 @@
+/*@media (max-width: 767px) {
+  /* For mobile phones: */ /*
+  [class*="col-"] {
+    width: 100%;
+  }
+    div.friendrequests-container {
+        font-size: small;
+        display: grid;
+        /* min-height: 85vh; */ /*
+        margin: 0 auto;
+        background-color: #fffcff;
+        padding: 10px 20px;
+        /* grid-template-areas:  */ /*
+        grid-template-columns: 3fr 1fr;
+        gap: 10px;
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        overflow-x: hidden; 
+    }
+    
+    div.friendrequests-container h3 {
+        color: var(--GHBlue);
+        grid-area: t;
+    }
+
+    div.request-container {
+        grid-area: r;
+    }
+
+    div.friend_list {
+        grid-area: f;
+    }
+    
+  }
+
+    
+
+        div.request-container{
+        font-size: small;
+        display: grid;
+        /* min-height: 85vh; */ /*
+        margin: 0 auto;
+        background-color: #fffcff;
+        padding: 10px 20px;
+        grid-template-areas: 
+        "i n a r"
+        "i n a r"
+        "i n a r"
+        "i n a r"
+        "i n a r"
+        "i n a r";
+
+        grid-template-columns: 2fr 3fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    
+        /* height: 100vh; */ /*
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-bottom: 90px;
+    }
+
+}
+
+@media (min-width: 768px) {
+  /* For desktop and tablets: */ /*
+  [class*="col-"] {
+    width: 100%;
+  }
+  div.friendrequests-container {
+    display: grid;
+    /* min-height: 85vh; */ /*
+    margin: 0 auto;
+    background-color: #fffcff;
+    padding: 10px 20px;
+    grid-template-areas: 
+    "t t"
+    "f r";
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    min-height: 85vh;
+    width: 100vw;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    }
+  }
+} */
+
+@media (max-width: 767px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  width: 60%;
+  margin-left: 15px;
+}
+
+.friend-list {
+  width: 30%;
+}
+
+.request-container,
+.friend-container {
+  margin-bottom: 20px;
+}
+
+.request-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+div.friendrequests-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+}
+
+div.friend-requests h3 {
+  color: var(--GHBlue);
+}
+
+.friend-requests {
+  .friend-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Adjust spacing between items */
+  }
+
+  .friend-photo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.friend-list {
+    background-color: var(--GHBlue);
+    padding: 5px;
+    border-radius: 15px;
+    color: #fffcff;
+  }
+
+  span.friend-height {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+
+  .friend-request-img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+  }
+}
+/* Adjustments for responsiveness */
+@media screen and (min-width: 768px) {
+  .friendrequests-container {
+    flex-direction: column;
+  }
+
+  .friend-requests,
+  .friend-list {
+    width: 100%;
+  }
+}
+
+div.friendrequests-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+}
+
+div.friend-requests h3 {
+  color: var(--GHBlue);
+}
+
+.friend-requests {
+  .friend-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Adjust spacing between items */
+  }
+
+  .friend-photo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.friend-list {
+    background-color: var(--GHBlue);
+    padding: 5px;
+    border-radius: 15px;
+    color: #fffcff;
+  }
+
+  span.friend-height {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+
+  .friend-request-img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+  }
+}
