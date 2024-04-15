@@ -203,6 +203,7 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
             Log Out
           </Button>
         </div>
+        
       <br></br>
       </div>
         <div className="friend-div">
@@ -236,10 +237,7 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Completed
         </button>
       </div>
-      {/* <div className="button-container"> */}
-      {/* </div> */}
    
-
 
       {!selectedGoals ? (
         <Goals
@@ -259,33 +257,6 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
       <Link to="/goals/new" className="newgoal-button">
         <FaPlusCircle className="newgoal-icon" />
       </Link>
-          </div>
-          <Goals user={user} token={token} /> 
-          </>
-      ) : (
-        <>
-        <div>
-            <span><h1>Completed Goals</h1> </span>
-            <CompletedGoals user={user} token={token}/>
-        </div>
-        <br></br>
-        <div className="sponsor-div">
-        <label>
-          <strong><h3>Sponsors</h3></strong>
-
-          <Link  to="/sponsors/">
-              <img  src={sponsorpic}/>
-            </Link>
-        </label>
-        
-
-
-
-        </div>
-        </>
-      )}
-  
-        
       {/* <Link className="connectfriends" to="/friendrequests"></Link> */}
     </div>
   );
