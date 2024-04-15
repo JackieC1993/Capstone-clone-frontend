@@ -90,9 +90,11 @@ const Sponsors = ({ user, token }) => {
 
   return (
     <div id="sponsor-container">
+    
+      {/* <h1>Goal Tracker</h1> */}
+      {/* <button onClick={handleGoalCompletion}>Complete Goal</button> */}
+      <h2 className='goalcompleted'>Goals Completed</h2>      
 
-
-      
       <h2>Goals Completed</h2>
       {isLoading ? (
         <>
@@ -115,11 +117,17 @@ const Sponsors = ({ user, token }) => {
                             // </div>
       )}
 
+      {trueGoallength.length > 1 && (
+        <>
+        {/* <div className='discount'> */}
+          <h2 className='discountsearned'>Discounts Earned</h2>
+          <ul>
       {!isLoading  && (
           <>
        
           <ul className='results'>
           <h2>Discounts Earned</h2>
+
             <div className="honeycomb-container">
             {sponsors.map((sponsor, index) => (
               <li className="flashing-animation" key={index}>
