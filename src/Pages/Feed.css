@@ -49,16 +49,15 @@
 .post_footer {
   text-align: left;
   display: grid;
-  grid-template-columns: 40px 25px auto;
-  /* margin-top: 180px; */
+  grid-template-columns: 30px 25px 30px 25px;
 }
-
+/* 40px 25px */
 .like_icon {
   height: auto;
   width: 20px;
 }
 
-#like_count {
+.count {
   font-size: 15px;
 }
 
@@ -71,6 +70,13 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  max-height: 140px;
+  /* border: 1px solid black; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+div #post_description {
 }
 
 #post_username {
@@ -90,7 +96,7 @@
   /* border: 1px solid orange; */
   height: auto;
   width: 50px;
-  color: black;
+  color: var(--GHGreen);
 }
 
 .newpost_link {

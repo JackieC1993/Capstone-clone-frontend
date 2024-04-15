@@ -242,29 +242,31 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
 
 
       {!selectedGoals ? (
-  
-          <>
-          <div id="create-new">
-      <Link id="create-new"to="/goals/new" className="newgoal-button">
+        <Goals
+          user={user}
+          token={token}
+          active={true}
+          selectedGoals={selectedGoals}
+        />
+      ) : (
+        <Goals
+          user={user}
+          token={token}
+          completed={true}
+          selectedGoals={selectedGoals}
+        />
+      )}
+      <Link to="/goals/new" className="newgoal-button">
         <FaPlusCircle className="newgoal-icon" />
       </Link>
-
           </div>
-          <Goals user={user} token={token} />
-          
+          <Goals user={user} token={token} /> 
           </>
-
-
-  
       ) : (
         <>
-        
         <div>
-
             <span><h1>Completed Goals</h1> </span>
             <CompletedGoals user={user} token={token}/>
-
-
         </div>
         <br></br>
         <div className="sponsor-div">
