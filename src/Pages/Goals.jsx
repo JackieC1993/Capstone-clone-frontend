@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import GoalCard from "../Components/GoalCard";
 import "./Goals.css";
 
-const Goals = ({ user, token }) => {
+const Goals = ({ user, token, completed, active, selectedGoals }) => {
   const API = import.meta.env.VITE_BASE_URL;
   const [goals, setGoals] = useState([]);
   const [err, setError] = useState("");
+
+  const [activeGoalId, setActiveGoalId] = useState(null);
 
   // console.log("The user obj", user);
 
@@ -19,7 +21,15 @@ const Goals = ({ user, token }) => {
       .then((res) => res.json())
       .then((res) => {
         // console.log(res);
-        setGoals(res);
+        const activeGoals = res.filter(({ completed }) => !completed);
+        const completedGoals = res.filter(({ completed }) => completed);
+        console.log(completedGoals);
+        const showGoals = active
+          ? activeGoals
+          : completed
+          ? completedGoals
+          : [];
+        setGoals(showGoals);
       })
       .catch((err) => {
         setError(err.message);
@@ -30,18 +40,29 @@ const Goals = ({ user, token }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
-console.log(goals)
-const filteredGoals = goals.filter((goal) => !goal.completed);
+  }, [selectedGoals]);
+  // console.log(goals);
+  return (
+    <div className="goals-container">
+      {/* <h1>The Goals Page</h1> */}
 
-return (
-  <div className="goals-container">
-    {filteredGoals.map((goal) => {
-      return (
-        <GoalCard key={goal.goal_id} onEdit={fetchData} user={user} token={token} goal={goal} />
-      );
-    })}
-  </div>
-);
+      {goals.map((goal) => {
+        return (
+          <GoalCard
+            key={goal.goal_id}
+            onEdit={fetchData}
+            user={user}
+            token={token}
+            goal={goal}
+            goals={goals}
+            setGoals={setGoals}
+            completed={completed}
+            activeGoalId={activeGoalId}
+            setActiveGoalId={setActiveGoalId}
+          />
+        );
+      })}
+    </div>
+  );
 };
 export default Goals;

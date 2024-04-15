@@ -17,9 +17,7 @@ const Home = ({ user, token }) => {
 
   return (
     <div className="home">
-      <img className="feed-logo" src={logo}/>
-
-      <h3 style={{color: "black"}}>DashBoard</h3>
+      <h3 style={{color: "white"}}>GoalHive</h3>
       <Feed user={user} token={token} />
     </div>
   );
