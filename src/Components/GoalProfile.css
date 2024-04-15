@@ -14,10 +14,22 @@
   color: var(--GHBlue);
 } */
 
- form label {
+form label {
   font-size: medium;
   padding-left: 15px;
   color: var(--GHBlue);
+}
+
+div.carousel-container h2 {
+  margin-top: 40px;
+  color: var(--GHBlue);
+  font-weight: bold;
+}
+
+form.carousel-select label {
+  font-weight: bold;
+  padding-left: 30px;
+  margin-top: 30px;
 }
 
 .uparrow,
@@ -52,8 +64,8 @@ path {
 }
 
 .tphoto {
-  width: 350px;
-  height: 500px;
+  width: 375px;
+  height: 550px;
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -62,7 +74,7 @@ path {
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
   -ms-border-radius: 10px;
-  border: 5px solid var(--GHBlue);
+  border: 8px solid var(--GHBlue);
   padding-bottom: 60px;
   background-color: #fffcff;
   box-shadow: 2px 2px 2px #051c2e;
@@ -70,7 +82,7 @@ path {
 
 .tphoto img {
   width: 185px;
-  border: 1px solid var(--GHGreen);
+  border: 1px solid var(--GHBlue);
   border-radius: 15px;
   margin: 0px 0px 0px 0px;
   margin-top: 30px;
@@ -78,7 +90,7 @@ path {
 
 .tname {
   padding: 15px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Open Sans", sans-serif;
   float: left;
 }
@@ -90,8 +102,6 @@ path {
 .tinfo {
   font-family: "Open Sans", sans-serif;
 }
-
-
 
 .tno i {
   color: #ff695b;
@@ -137,11 +147,11 @@ path {
 }
 
 select.carousel-select {
-  border-color: var(--GHGreen);
+  border-color: var(--GHBlue);
   border-width: 3px;
   border-radius: 5px;
   color: var(--GHBlue);
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .user-card {

@@ -203,14 +203,14 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
             Log Out
           </Button>
         </div>
+      <br></br>
+      </div>
         <div className="friend-div">
           <Link to="/friendrequests">
           <img className="friends" src={friend} alt="Friends Icon" />
           </Link>
           <h6 className="friendname">Friends</h6>
         </div>
-      <br></br>
-      </div>
       <div className="bio">
         <div className="bio-wrapper">
           <p className="bold" style={{ color: "white" }}>
@@ -261,7 +261,7 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
         
         <div>
 
-            <span>List of Completed Goals</span>
+            <span><h1>Completed Goals</h1> </span>
             <CompletedGoals user={user} token={token}/>
 
 
@@ -271,7 +271,7 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
         <label>
           <strong><h3>Sponsors</h3></strong>
 
-          <Link to="/sponsors/">
+          <Link  to="/sponsors/">
               <img  src={sponsorpic}/>
             </Link>
         </label>

@@ -4,16 +4,18 @@
   /* border: 1px solid orange; */
   /* grid-template-columns: auto; */
   row-gap: 5%;
+  
 }
 .goalcard {
-  border: 1px solid #ccc;
+  border: 1px solid var(--GHBlue);
   /* height: 60px; */
-  
-  width: 92%;
+    width: 92%;
   padding: 0 10px;
   margin-bottom: 20px;
+  border-radius: 15px;
+  ;
 
- 
+
   /* overflow: hidden; */
 }
 .goal-expand {
@@ -26,6 +28,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  font-size: 17px;
 }
 
 .goalcard-buttons {

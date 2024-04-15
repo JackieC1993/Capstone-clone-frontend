@@ -163,11 +163,9 @@ const GoalProfile = () => {
                       </div>
                     </div>
                   </Link>
-                 
                 </div>
-               
               </div>
-        </div>
+            </div>
           );
         })}
       </div>
@@ -178,7 +176,7 @@ const GoalProfile = () => {
     <>
       <div className="carousel-container" {...handlers}>
         <h2>Find a Buddy</h2>
-        <form>
+        <form className="carousel-select">
           <label>Find others that share your interest.</label>
           <select
             className="carousel-select"
@@ -186,9 +184,7 @@ const GoalProfile = () => {
             onChange={handleSelectChange}
             value={userSelect}
           >
-            <option value="">
-              Select an interest here <Link to="/ =>"> =&gt;</Link>
-            </option>
+            <option value="">Select an interest here</option>
 
             <option value="Tech"> Tech</option>
             <option value="Hiking">Hiking</option>

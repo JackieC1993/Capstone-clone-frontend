@@ -75,9 +75,9 @@ const GoalCard = ({ user, token, goal, onEdit }) => {
       <p>{goal.description}</p>
 
       <div className="goalcard-buttons">
-        <button onClick={() => setEditGoal(true)}>✏️</button>
+        <button onClick={() => setEditGoal(true)}>📝</button>
         <button onClick={() => markGoalAsCompleted(goal.goal_id)}>
-          Completed
+          ✅
         </button>
         <button
           type="button"
@@ -85,7 +85,7 @@ const GoalCard = ({ user, token, goal, onEdit }) => {
             handleDelete(goal.goal_id);
           }}
         >
-          Delete
+          ❌
         </button>
       </div>
     </div>

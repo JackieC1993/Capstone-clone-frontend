@@ -70,7 +70,7 @@ const CompletedGoalCard = ({ user, token, goal, onEdit }) => {
         <h6>
           <strong>{goal.name}</strong>
         </h6>
-        <span>Target Date: {goal.target_date.slice(0, 10)}</span>
+        {/* <span>Target Date: {goal.target_date.slice(0, 10)}</span> */}
       </div>
       <p>{goal.description}</p>
 
