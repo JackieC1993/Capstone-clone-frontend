@@ -15,7 +15,7 @@ const Home = ({ user, token }) => {
 
   return (
     <div className="home">
-      <h3 style={{color: "black"}}>GoalHive</h3>
+      <h3 style={{color: "white"}}>GoalHive</h3>
       <Feed user={user} token={token} />
     </div>
   );

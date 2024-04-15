@@ -100,9 +100,19 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
         </button>
       </div>
       {!selectedGoals ? (
-        <Goals user={user} token={token} />
+        <Goals
+          user={user}
+          token={token}
+          active={true}
+          selectedGoals={selectedGoals}
+        />
       ) : (
-        <span>List of Completed Goals</span>
+        <Goals
+          user={user}
+          token={token}
+          completed={true}
+          selectedGoals={selectedGoals}
+        />
       )}
       <Link to="/goals/new" className="newgoal-button">
         <FaPlusCircle className="newgoal-icon" />

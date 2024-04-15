@@ -5,18 +5,19 @@ import { AiOutlineLike, AiFillLike } from "react-icons/ai";
 
 const Post = ({ user, token, post }) => {
   const API = import.meta.env.VITE_BASE_URL;
-  const navigate = useNavigate();
+
   const usersWhoLiked = post.users_who_liked || [];
   const [likeCount, setLikeCount] = useState(usersWhoLiked.length);
   const [likeToggle, setLikeToggle] = useState(
     usersWhoLiked.includes(user.userprofile_id)
   );
+  const [comments, setComments] = useState([]);
+
   //   const [liked, setLiked] = useState({
   //     userprofile_id: user.userprofile_id,
   //     post_id: post.post_id,
   //   });
-
-//   console.log({ likeToggle });
+  //   console.log({ likeToggle });
 
   const handleClick = () => {
     // Toggle liked state
@@ -48,18 +49,29 @@ const Post = ({ user, token, post }) => {
       .catch((error) => console.log(error));
   };
 
-  //   const handlePostClick = () => {
-  //     navigate(`/feed/${post.post_id}`);
-  //   };
+  const fetchComments = () => {
+    fetch(`${API}/posts/${post.post_id}/comments`)
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res);
+        setComments(res);
+      })
+      .catch((error) => console.log(error));
+  };
+  console.log("This is the comments array: ", comments);
+  console.log(post.userprofile_id);
+  useEffect(() => {
+    fetchComments();
+  }, []);
 
-  // console.log(user);
-  // console.log(post);
-  //   console.log(post.users_who_liked);
-  //   console.log(likeCount);
-  //   console.log(likeToggle);
+  //   console.log("This is the comments array: ",comments.map((com)=> console.log(com)));
+
   return (
-      <div className="post" >
-        <Link to={`/feed/${post.post_id}`} style={{textDecoration: "none", color: "black"}}>
+    <div className="post">
+      <Link
+        to={`/feed/${post.post_id}`}
+        style={{ textDecoration: "none", color: "black" }}
+      >
         <div className="post_header">
           <img
             src={post.profile_img}
@@ -70,16 +82,21 @@ const Post = ({ user, token, post }) => {
         <div id="post_description" style={{ textAlign: "left" }}>
           {post.post_description}
         </div>
-          </Link>
-        <div className="post_footer">
-          <FaCommentDots className="comment_icon"/>
-          {likeToggle ? (
-            <AiFillLike onClick={handleClick} className="like_icon" style={{color: "var(--GHGreen)"}}/>
-          ) : (
-            <AiOutlineLike onClick={handleClick} className="like_icon" />
-            )}
-            <span id="like_count">{likeCount}</span>
-        </div>
+      </Link>
+      <div className="post_footer">
+        <FaCommentDots className="comment_icon" />{" "}
+        <span className="count comments_">{comments.length}</span>
+        {likeToggle ? (
+          <AiFillLike
+            onClick={handleClick}
+            className="like_icon"
+            style={{ color: "var(--GHGreen)" }}
+          />
+        ) : (
+          <AiOutlineLike onClick={handleClick} className="like_icon" />
+        )}
+        <span className="count likes">{likeCount}</span>
+      </div>
     </div>
   );
 };
