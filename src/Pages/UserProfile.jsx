@@ -72,21 +72,19 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
               Log Out
             </Button>
           </div>
-          <br></br>
-        </div>
-      <br></br>
-      </div>
-        <div className="friend-div">
-          <Link to="/friendrequests">
-            <img
-              className="friends"
-              src={friend}
-              alt="Friends Icon"
-              width="75"
-              height="75"
-            />
-          </Link>
-          <h6 className="friendname">Friends</h6>
+          <br />
+          <div className="friend-div">
+            <Link to="/friendrequests">
+              <img
+                className="friends"
+                src={friend}
+                alt="Friends Icon"
+                width="75"
+                height="75"
+              />
+            </Link>
+            <h6 className="friendname">Friends</h6>
+          </div>
         </div>
       </div>
       <div className="bio">
@@ -105,7 +103,6 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Active Goals
         </button>
       </div>
-
       <div className="completed">
         <button
           className="css-button-3d--sand"
@@ -114,8 +111,6 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Completed
         </button>
       </div>
-
- 
       {!selectedGoals ? (
         <Goals
           user={user}
