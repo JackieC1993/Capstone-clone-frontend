@@ -1,3 +1,12 @@
+.feed-logo{
+  height: 100px;
+
+}
+.home{text-align: center;
+overflow-y: scroll;
+overflow-x: hidden;
+padding-bottom: 40px;
+}
 @media (max-width: 767px) {
   /* For mobile phones: */
   [class*="col-"] {
@@ -15,8 +24,14 @@
     background-color: var(--GHBlue);
     border-radius: 10px;
     color: #fffcff;
-    text-align: left;
+    text-align: center;
+    padding-bottom: 80px;
     border-radius: 10px;
+
+  }
+  .feed-logo{
+    height: 100px;
+  
   }
 
   a.post {
