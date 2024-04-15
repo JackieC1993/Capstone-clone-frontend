@@ -65,5 +65,4 @@ const Goals = ({ user, token, completed, active, selectedGoals }) => {
     </div>
   );
 };
-
 export default Goals;

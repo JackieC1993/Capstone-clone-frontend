@@ -58,6 +58,26 @@ const GoalCard = ({
       .catch((err) => console.log(err));
   };
 
+//   const markGoalAsCompleted = (goalId) => {
+//     fetch(`${API}/profiles/${user.userprofile_id}/goals/${goalId}`, {
+//       method: "PATCH",
+//       headers: {
+//         Authorization: token,
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         completed: true,
+//       }),
+//     })
+//       .then((res) => res.json())
+//       .then((res) => {
+//         onEdit();
+//         window.location.reload();
+//         console.log(res);
+//       })
+//       .catch((err) => console.log(err));
+//   };
+
   if (editGoal) {
     return (
       <EditGoal
@@ -69,6 +89,7 @@ const GoalCard = ({
       />
     );
   }
+
   return (
     <div
       className={!expandedGoal ? "goalcard" : "goalcard goal-expand"}
@@ -85,6 +106,7 @@ const GoalCard = ({
       <p>{goal.description}</p>
 
       <div className="goalcard-buttons">
+
         <button onClick={() => setEditGoal(true)}>✏️</button>
         {!completed && (
           <button
@@ -95,13 +117,19 @@ const GoalCard = ({
             Completed
           </button>
         )}
+
+//         <button onClick={() => setEditGoal(true)}>📝</button>
+//         <button onClick={() => markGoalAsCompleted(goal.goal_id)}>
+//           ✅
+//         </button>
+
         <button
           type="button"
           onClick={() => {
             handleDelete(goal.goal_id);
           }}
         >
-          Delete
+          ❌
         </button>
       </div>
     </div>

@@ -1,23 +1,35 @@
-#profile {
+/* #profile {
   height: 100px;
   border-radius: 300px;
   width: 100px;
-}
-.goalstairs {
+} */
+/* .goalstairs {
   color: var(--GHGreen);
   width: 30px;
   height: 100px;
-}
+} */
 
-.carousel-container h2 {
+/* .carousel-container h2 {
   padding-top: 20px;
   color: var(--GHBlue);
-}
+} */
 
-.carousel-container form label {
+form label {
   font-size: medium;
   padding-left: 15px;
   color: var(--GHBlue);
+}
+
+div.carousel-container h2 {
+  margin-top: 40px;
+  color: var(--GHBlue);
+  font-weight: bold;
+}
+
+form.carousel-select label {
+  font-weight: bold;
+  padding-left: 30px;
+  margin-top: 30px;
 }
 
 .uparrow,
@@ -52,8 +64,8 @@ path {
 }
 
 .tphoto {
-  width: 350px;
-  height: 500px;
+  width: 375px;
+  height: 550px;
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -62,7 +74,7 @@ path {
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
   -ms-border-radius: 10px;
-  border: 5px solid var(--GHBlue);
+  border: 8px solid var(--GHBlue);
   padding-bottom: 60px;
   background-color: #fffcff;
   box-shadow: 2px 2px 2px #051c2e;
@@ -70,7 +82,7 @@ path {
 
 .tphoto img {
   width: 185px;
-  border: 1px solid var(--GHGreen);
+  border: 1px solid var(--GHBlue);
   border-radius: 15px;
   margin: 0px 0px 0px 0px;
   margin-top: 30px;
@@ -78,7 +90,7 @@ path {
 
 .tname {
   padding: 15px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Open Sans", sans-serif;
   float: left;
 }
@@ -90,32 +102,6 @@ path {
 .tinfo {
   font-family: "Open Sans", sans-serif;
 }
-
-/* .tinfo .fa-users,
-.tinfo .fa-book {
-  color: #c0c0c0;
-  float: right;
-  position: relative;
-  font-size: 24px;
-  padding: 12px;
-} */
-
-/* .tcontrols {} */
-/* 
-.tno {
-  background-color: #fff;
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  position: relative;
-  display: inline-block;
-  top: 70px;
-  left: 25px;
-  border: 10px solid #f0f0f0;
-} */
 
 .tno i {
   color: #ff695b;
@@ -149,34 +135,34 @@ path {
 .carousel-container {
   height: 85vh;
   display: flex;
-  /* flex-wrap: wrap; */
+
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
-  /* background-color: var(--GHBlue); */
+
   background-color: #fffcff;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
 select.carousel-select {
-  border-color: var(--GHGreen);
+  border-color: var(--GHBlue);
   border-width: 3px;
   border-radius: 5px;
   color: var(--GHBlue);
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .user-card {
   display: none;
-  padding: 20px;
+  /* padding: 20px; */
   /* background-color: #f0f0f0;
   border: 1px solid #ccc; */
-  height: 700px;
+  height: 60px;
   text-align: center;
   align-items: center;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   border-radius: 15px;
 }
 
@@ -184,9 +170,9 @@ select.carousel-select {
   display: block;
 }
 
-.user-card p {
+/* .user-card p {
   margin: 0;
-}
+} */
 
 .user-card img {
   width: 200px;

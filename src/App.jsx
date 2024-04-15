@@ -15,6 +15,7 @@ import GoalProfile from "./Components/GoalProfile";
 import SingleProfile from "./Pages/SingleProfile";
 import ShowPost from "./Pages/ShowPost";
 import CreatePage from "./Pages/CreatePage";
+import Sponsors from "./Pages/Sponsors";
 
 //Components
 import NavBar from "./Components/NavBar";
@@ -22,11 +23,12 @@ import AccountSettings from "./Components/AccountSettings";
 import NewProfile from "./Components/NewProfile";
 import NewGoal from "./Components/NewGoal";
 import EditGoal from "./Components/EditGoal";
+import Feed from "./Pages/Feed";
 import NewPost from "./Components/NewPost";
 
 import "./App.css";
 import InterFace from "./Pages/InterFace";
-// import Dash from "./Pages/DashBoard";
+import Dash from "./Pages/DashBoard";
 import GetCurrentGoals from "./Pages/CurrentGoals";
 import FriendRequest from "./Pages/Friends";
 import ChatComponent from "./Components/Chat";
@@ -179,6 +181,7 @@ function App({ userprofile_id }) {
             token={token}
           />
           <Route path="/chat" element={<ChatComponent user={user} />} />
+          <Route path="/sponsors" element={<Sponsors user={user} token={token}/>}/>
         </Routes>
       </Router>
     </div>
