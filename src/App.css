@@ -464,9 +464,9 @@ form#form-2 {
   margin: 0;
 } */
 
-.nav {
-  /* grid-area: n; */
-}
+/*.nav {
+ grid-area: n;
+} */
 
 /* .home {
   grid-area: m;
@@ -629,7 +629,6 @@ div#user.row {
   background-color: var(--GHBlue);
 }
 
-
 #dash-logo {
   /* background-color: red; */
   width: 400px;
@@ -647,8 +646,6 @@ div#user.row {
   justify-content: space-evenly;
   /* justify-content:center; */
 }
-
-
 
 button#feed {
   border-radius: 15px;
@@ -787,7 +784,6 @@ div.scroll2 {
   padding-bottom: 60px;
 }
 
-
 #current {
   display: flex;
   flex-direction: column;
@@ -796,13 +792,14 @@ div.scroll2 {
   align-items: center;
   flex-wrap: wrap;
 }
-#chat-container{
+
+#chat-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
-/* div#request{
+
+/* div#request {
   text-align: center;
   margin: auto;
   background-color: var(--GHBlue);
@@ -828,4 +825,6 @@ p.friendrequest{
   padding-right: 0px;
 } */
 
-.socket{justify-content: center;}
+.socket {
+  justify-content: center;
+}

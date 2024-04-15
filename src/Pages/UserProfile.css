@@ -8,13 +8,14 @@
     background-color: #fffcff;
     padding: 10px 20px;
     grid-template-areas:
-    "i p l"
-    "b b f"
-    "a c c"
-    "g g g";
-   ;
+
+      "i p l"
+      "b b b"
+      "a c c"
+      "g g g";
+
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 180px 260px 50px auto;
+    grid-template-rows: 190px 325px 50px auto;
     gap: 10px;
     width: 100vw;
     /* height: 100vh; */
@@ -24,7 +25,6 @@
     overflow-x: hidden;
     padding-bottom: 90px;
   }
-  
 
   #userprofile-image {
     margin-top: 30px;
@@ -33,7 +33,6 @@
     height: 120px;
     border-radius: 50%;
   }
-  
 
   .userprofile-picture {
     grid-area: i;
@@ -55,23 +54,22 @@
     margin: 0 auto;
     /* position: relative; */
     text-wrap: wrap;
- 
   }
-  .friend-div{
+  .friend-div {
     text-align: center;
     grid-area: f;
   
   }
-  #create-new{
+  #create-new {
     margin-bottom: 100px;
     /* background-color: red; */
   }
-  .sponsor-div{
+  .sponsor-div {
     display: flex;
- 
+
     text-align: center;
   }
-  .button-container{
+  .button-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -149,9 +147,9 @@
     white-space: nowrap;
     background: linear-gradient(
       180deg,
-      #f00000 0.7818608287724784%,
-      #aa2200 47.6041550318329%,
-      #a12000 53.68033061543617%
+      #443f3f 0.7818608287724784%,
+      #7b7b7b 47.6041550318329%,
+      #242323 53.68033061543617%
     );
     border-radius: 5px;
     border: 02px solid #490704;
@@ -192,7 +190,6 @@
     background-color: var(--GHBlue);
   }
 }
-
 
 /* Adjustments for responsive layout */
 @media (min-width: 768px) {
@@ -272,7 +269,7 @@
     /* margin-right: 100px; */
   grid-area: f;
   }
-  
+
   #userprofile-image {
     margin-top: 30px;
 
@@ -310,9 +307,7 @@
     margin: 0 auto;
     position: relative;
     text-wrap: wrap;
-
   }
-
 
   .userprofile-header {
     padding-top: 25px;
