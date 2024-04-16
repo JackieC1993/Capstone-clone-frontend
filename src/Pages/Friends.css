@@ -1,0 +1,27 @@
+/* .friendrequests-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: white;
+} */
+
+/* #request {
+  margin: 20px;
+  width: 200px;
+  background-color: var(--GHBlue);
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#accept,
+#decline {
+  border-radius: 15px;
+  /* Add additional styling as needed */ /*
+} */

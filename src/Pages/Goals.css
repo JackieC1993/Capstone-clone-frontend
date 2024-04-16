@@ -1,0 +1,40 @@
+.goals-container {
+  grid-area: g;
+  /* display: grid; */
+  /* border: 1px solid orange; */
+  /* grid-template-columns: auto; */
+  row-gap: 5%;
+}
+.goalcard {
+  border: 1px solid var(--GHBlue);
+  height: 60px;
+  width: 92%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  /* overflow: hidden; */
+}
+.goal-expand {
+  height: fit-content;
+  margin-bottom: 20%;
+  /* background-color: white; */
+}
+
+.goalcard-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+}
+
+.goalcard-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.goalcard-buttons button {
+  padding: 3px;
+}

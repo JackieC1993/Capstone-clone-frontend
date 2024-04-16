@@ -10,8 +10,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.11",
+    "@floating-ui/react-dom": "^2.0.8",
+    "@notifee/react-native": "^7.8.2",
+    "@react-native-community/push-notification-ios": "^1.11.0",
+    "@react-native-firebase/app": "^18.9.0",
+    "@react-native-firebase/messaging": "^18.9.0",
+    "@talkjs/react-native": "^0.7.1",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.10.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-native-webview": "^13.8.1",
+    "react-router-dom": "^6.22.2",
+    "react-scroll-to-bottom": "^4.2.0",
+    "react-swipeable": "^7.0.1",
+    "socket.io-client": "^4.7.5",
+    "swiper": "^11.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

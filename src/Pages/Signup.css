@@ -1,0 +1,211 @@
+@media (max-width: 767px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(white);
+    /* padding-bottom: 60px; */
+    /* justify-content: space-between; */
+    padding-top: 65px;
+  }
+
+  #signup-email-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  #signup-username-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #signup-password-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #signup-username.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  }
+
+  /* #signup-username.form-control-sm::placeholder {
+    color: #fffcff;
+  } */
+
+  #signup-email.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  }
+
+  /* #signup-email.form-control-sm::placeholder {
+    color: #fffcff;
+  } */
+
+  #signup-password.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  }
+
+  /* #signup-password.form-control-sm::placeholder {
+    color: #fffcff;
+  } */
+
+  #signup-button.css-button-3d--green {
+    min-width: 216px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--GHGreen);
+    box-shadow: 0 5px #57cc99;
+  }
+
+  #signup-button.css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+
+  #signup-button.css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+
+  #signup-button {
+    margin-bottom: 20px;
+  }
+
+  #signup-form.css-button-3d--green {
+    width: 100%;
+  }
+
+  .signup-logo {
+    width: 225px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* For desktop and tablets: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(white);
+    /* padding-bottom: 60px; */
+    /* justify-content: space-between; */
+    padding-top: 45px;
+  }
+
+  #signup-email-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  #signup-username-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #signup-password-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #signup-username.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  }
+
+  /* #signup-username.form-control-sm::placeholder {
+    color: #fffcff;
+  } */
+
+  #signup-email.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  }
+
+  /* #signup-email.form-control-sm::placeholder {
+    color: #fffcff;
+  } */
+
+  #signup-password.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  }
+
+  /* #signup-password.form-control-sm::placeholder {
+    color: #fffcff;
+  } */
+
+  #signup-button.css-button-3d--green {
+    min-width: 216px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--GHGreen);
+    box-shadow: 0 5px #57cc99;
+  }
+
+  #signup-button.css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+
+  #signup-button.css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+
+  #signup-button {
+    margin-bottom: 20px;
+  }
+
+  .signup-logo {
+    width: 200px;
+    height: 300px;
+  }
+}

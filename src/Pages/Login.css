@@ -1,0 +1,205 @@
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .login {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+  }
+
+  #login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #login-username-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 20;
+    margin-bottom: 0;
+  }
+
+  #login-password-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 20;
+    margin-bottom: 0;
+  }
+
+  #login-username.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+    margin-bottom: 20px;
+  }
+
+  /* #login-username.form-control-sm::placeholder {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  } */
+
+  #login-password.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  }
+
+  /* #login-password.form-control-sm::placeholder {
+    color: #fffcff;
+  } */
+
+  #login-button {
+    margin-bottom: 1rem;
+  }
+
+  #login-logo {
+    width: 250px; /* Adjust the width for mobile */
+    height: auto;
+  }
+
+  #login form {
+    width: 100%;
+    max-width: 300px; /* Adjust the max width for mobile */
+  }
+
+  #login-button.css-button-3d--green {
+    min-width: 216px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--GHGreen);
+    box-shadow: 0 5px #57cc99;
+  }
+
+  #login-button.css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+
+  #login-button.css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  .login {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+  }
+
+  #login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #login-username-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 20;
+    margin-bottom: 0;
+  }
+
+  #login-password-label {
+    color: var(--GHBlue);
+    font-weight: bold;
+    margin-top: 20;
+    margin-bottom: 0;
+  }
+
+  #login-username.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+    margin-bottom: 20px;
+  }
+
+  /* #login-username.form-control-sm::placeholder {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  } */
+
+  #login-password.form-control-sm {
+    border-color: var(--GHBlue);
+    border-width: 3px;
+  }
+
+  /* #login-password.form-control-sm::placeholder {
+    color: #fffcff;
+  } */
+
+  #login .form-group {
+    margin-bottom: 1rem; /* Adjust as needed */
+  }
+
+  #login-logo {
+    width: 250px; /* Adjust the width for mobile */
+    height: auto;
+  }
+
+  #login form {
+    width: 100%;
+    max-width: 300px; /* Adjust the max width for mobile */
+  }
+
+  #login-button {
+    margin-bottom: 1rem;
+  }
+
+  .form-container input {
+    background: var(--GHBlue);
+    color: #fffcff;
+  }
+
+  #login-button.css-button-3d--green {
+    min-width: 216px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--GHGreen);
+    box-shadow: 0 5px #57cc99;
+  }
+
+  #login-button.css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+
+  #login-button.css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+}

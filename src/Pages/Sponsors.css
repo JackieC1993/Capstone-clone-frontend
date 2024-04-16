@@ -1,0 +1,165 @@
+.discount{
+    /* border: 2px solid; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+li{text-decoration: none;}
+
+#prizes{
+    background-color: var(--GHBlue);
+    color: #fffcff;
+    font-size: 1.25rem;
+    font-family: "Open Sans", sans-serif;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px rgba(253, 0, 0, 0.3) ;
+    text-align: center;
+    border: 2px solid var(--GHBlue);
+    transition: transform 0.3s;
+}
+#sponsor-img{
+    height:60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+#sponsor-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    /* padding: 20px; */
+}
+
+.discount{
+    animation: slideInAnimation 1s ease-in;
+  }
+  
+  @keyframes slideInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .discount-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .discount-list li {
+    margin-bottom: 10px;
+    /* Add more custom styles as per your requirements */
+  }
+  .flashing-animation:hover{
+    background-color: var(--GHGreen);
+  }
+  .completed{
+display:flex;
+flex-wrap: wrap;
+
+text-align: center;
+margin-right: 0px;
+
+
+
+}
+.results{
+justify-content: center;
+
+}
+  /* @keyframes flashingAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  } */
+  
+  .flashing-animation {
+    animation: flashingAnimation 3s infinite;
+    /* border: 2px solid; */
+/* border-radius: 15px; */
+border: 2px dashed black;
+display: flex;
+padding-bottom: 120px;
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: large;
+font-weight:bolder;
+/* background-color: var(--GHBlue); */
+margin-bottom: 25px;
+height: 80px;
+  }
+
+  .honeycomb-container {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    height: 100vh;
+    padding-bottom: 60px;
+    flex-direction: column;
+    grid-gap: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* align-items: first baseline; */
+  }
+  ul {
+    list-style-type: none;
+  }
+  /* .flashing-animation {
+    animation: flashingAnimation 1s infinite;
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 50%;
+  } */
+
+  .websites{
+    text-decoration: none;
+    text-align: center;
+
+  }
+  .website-id{
+   /* display: flex;
+   flex-direction: column; */
+   display: grid;
+   text-align: left;
+   margin: 1px;
+  }
+  .goalcompleted{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: x-large
+  }
+.discountsearned{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  font-stretch: expanded;
+  font-size: x-large;
+ /* margin-left: 15px;
+ margin-right: 15px;
+ margin-top: 10px; */
+}

@@ -1,0 +1,153 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+   align-items: center;
+  width: 100vw;
+  flex-wrap: wrap;
+} 
+
+.user-card {
+  display: none;
+  padding: 20px; 
+   background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  height: 400px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  border-color: aquamarine;
+} 
+
+.user-card.active {
+  display: block;
+  background-color: var(--GHGreen);
+} 
+
+.user-card p {
+  margin: 0;
+} 
+
+ .user-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+} 
+
+ .user-goals {
+  margin-top: 10px;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+.carousel-buttons button:focus {
+  outline: none;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-card {
+  display: none;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.user-card.active {
+  display: block;
+}
+
+.user-card p {
+  margin: 0;
+}
+
+.user-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.user-goals {
+  margin-top: 10px;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+} 
+
+.swiper-container {
+   width: 800px; 
+   height: 200px;
+  line-height: 200px;
+  text-align: center;
+}  
+
+.swiper-slide {
+  background-color: rgb(4 47 46);
+  color: #fff;
+  font-size: 25px;
+}
+
+.carousel-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+.carousel-buttons button:focus {
+  outline: none;
+}
+
+/* Adjust the position of the cards based on the current index */
+.carousel .user-card {
+  transform: translateX(-50%);
+}
+
+.carousel .user-card.active {
+  transform: translateX(0);
+}

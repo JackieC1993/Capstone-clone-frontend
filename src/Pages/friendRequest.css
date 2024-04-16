@@ -1,0 +1,173 @@
+/* For desktop and tablets: */
+@media (max-width: 767px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  div.friend-requests {
+    width: 60%;
+    margin-left: 15px;
+  }
+
+  .friend-list {
+    width: 30%;
+    margin-right: 20px;
+  }
+
+  .request-container {
+    margin-bottom: 20px;
+  }
+
+  .friend-container {
+    margin-bottom: 20px;
+  }
+
+  .request-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  div.friendrequests-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  div.friend-requests h3 {
+    color: var(--GHBlue);
+  }
+
+  .friend-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Adjust spacing between items */
+  }
+
+  .friend-photo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.friend-list {
+    background-color: var(--GHBlue);
+    padding: 5px;
+    border-radius: 15px;
+    color: #fffcff;
+  }
+
+  span.friend-height {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+
+  .friend-request-img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+  }
+  div.status-icon {
+    display: flex;
+  }
+
+  .status-icon {
+    width: fit-content;
+    height: 30px;
+  }
+
+  .status-icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 40px;
+  }
+
+  pending-requests {
+    margin-bottom: 25px;
+  }
+}
+/* Adjustments for responsiveness */
+@media screen and (min-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  div.friend-requests {
+    width: 60%;
+    margin-left: 15px;
+  }
+
+  .friend-list {
+    width: 30%;
+  }
+
+  .request-container {
+    margin-bottom: 20px;
+  }
+
+  .friend-container {
+    margin-bottom: 20px;
+  }
+
+  .request-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  div.friendrequests-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.friend-requests h3 {
+    color: var(--GHBlue);
+  }
+
+  .friend-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Adjust spacing between items */
+  }
+
+  .friend-photo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.friend-list {
+    background-color: var(--GHBlue);
+    padding: 5px;
+    border-radius: 15px;
+    color: #fffcff;
+  }
+
+  span.friend-height {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+
+  .friend-request-img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,118 @@
+.feed-logo{
+  height: 100px;
+
+}
+.home{text-align: center;
+overflow-y: scroll;
+overflow-x: hidden;
+padding-bottom: 40px;
+}
+@media (max-width: 767px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .home {
+    font-size: x-small;
+    min-height: 85vh;
+    margin: auto;
+    padding: 25px 20px 130px 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-width: 20px;
+    background-color: var(--GHBlue);
+    border-radius: 10px;
+    color: #fffcff;
+    text-align: center;
+    padding-bottom: 80px;
+    border-radius: 10px;
+
+  }
+  .feed-logo{
+    height: 100px;
+  
+  }
+
+  a.post {
+    margin: 5px;
+    background-color: #fffcff;
+    border-radius: 10px;
+  }
+
+  .css-button-3d--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--GHGreen);
+    box-shadow: 0 5px #57cc99;
+  }
+  .css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+  .css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* For desktop and tablets: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .home {
+    font-size: x-small;
+    min-height: 85vh;
+    margin: auto;
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-width: 20px;
+    background-color: var(--GHBlue);
+  }
+
+  a.post {
+    margin: 5px;
+    background-color: #fffcff;
+    border-radius: 10px;
+  }
+
+  .css-button-3d--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: var(--GHGreen);
+    box-shadow: 0 5px #57cc99;
+  }
+
+  .css-button-3d--green:hover {
+    box-shadow: 0 3px #57cc99;
+    top: 1px;
+  }
+
+  .css-button-3d--green:active {
+    box-shadow: 0 0 #57cc99;
+    top: 5px;
+  }
+}

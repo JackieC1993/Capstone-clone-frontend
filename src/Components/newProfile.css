@@ -1,0 +1,157 @@
+@media (max-width: 767px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .new-profile {
+    max-width: 400px;
+  }
+
+  .newProfile-form {
+    align-content: center;
+    margin: auto;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #new-profile label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #new-profile input[type="text"],
+  #new-profile input[type="number"],
+  #new-profile select,
+  #new-profile textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #new-profile input[type="submit"] {
+    width: 100%;
+    background-color: var(--GHGreen);
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #new-profile input[type="submit"]:hover {
+    background-color: var(--GHBlue);
+  }
+
+  #new-profile label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  #new-profile input,
+  #new-profile select,
+  #new-profile textarea {
+    margin-bottom: 10px;
+  }
+
+  #bio-input {
+    min-width: 350px;
+  }
+
+  input[type="submit"] {
+    margin-top: 20px;
+  }
+
+  #new-profile form h2 {
+    text-align: center;
+    color: var(--GHBlue);
+  }
+}
+/* .form {
+  padding: 20px 0px 0px 0px;
+}
+
+.new-profile #description {
+  font-style: italic;
+}
+
+.new-profile {
+  padding: 20px;
+  align-content: center;
+} */
+
+@media (min-width: 768px) {
+  /* For desktop and tablets: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .new-profile {
+    max-width: 400px;
+  }
+
+  .newProfile-form {
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+  }
+
+  #new-profile label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #new-profile input[type="text"],
+  #new-profile input[type="number"],
+  #new-profile select,
+  #new-profile textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 3px solid var(--GHBlue);
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #new-profile input[type="submit"] {
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #new-profile input[type="submit"]:hover {
+    background-color: var(--GHBlue);
+  }
+
+  #new-profile label {
+    display: inline-block;
+    margin-right: 10px;
+    color: var(--GHBlue);
+  }
+
+  #new-profile input,
+  #new-profile select,
+  #new-profile textarea {
+    margin-bottom: 10px;
+    border: 3px solid var(--GHBlue);
+  }
+
+  #bio-input {
+    min-width: 350px;
+  }
+
+  input[type="submit"] {
+    margin-top: 20px;
+  }
+
+  #new-profile form h2 {
+    text-align: left;
+    color: var(--GHBlue);
+    margin-bottom: 0;
+  }
+}
