@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "../Components/Chat";
 
-const socket = io.connect("http://localhost:3002");
+const socket = io.connect("https://capstone-backend-ny1d.onrender.com");
 
 function JoinRoom() {
   const [username, setUsername] = useState("");
