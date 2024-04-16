@@ -6,7 +6,7 @@ import Goals from "./Goals";
 import CompletedGoals from "./CompletedGoals";
 import profilePic from "../assets/userprofile_32.png";
 import friend from "../assets/friends-icon.png";
-import sponsorpic from "../assets/sponsor.png";
+import sponsors from "../assets/sponsors.png";
 import { FaPlusCircle } from "react-icons/fa";
 
 const UserProfile = ({ setUser, setToken, user, token }) => {
@@ -111,6 +111,11 @@ const UserProfile = ({ setUser, setToken, user, token }) => {
           Completed
         </button>
       </div>
+      {/* <Link id="sponsor1"><img className="sponsorspic" src={sponsors}/>Sponsors</Link> */}
+      <a id="sponsor1" href="/sponsors">
+  <img className="sponsorspic" src={sponsors} alt="Sponsor logo" />
+  Sponsors
+</a>
       {!selectedGoals ? (
         <Goals
           user={user}

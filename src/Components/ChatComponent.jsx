@@ -3,7 +3,7 @@ import io from "socket.io-client";
 
 const ChatComponent = () => {
   const [messages, setMessages] = useState([]);
-  const socket = io("http://localhost:3001"); // Replace with your server URL
+  const socket = io("http://localhost:3002"); // Replace with your server URL
 
   useEffect(() => {
     socket.on("message", (message) => {
