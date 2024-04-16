@@ -1,26 +1,91 @@
-.post_details {
-  /* background-color: var(--GHBlue); */
-  max-width: 600px;
-  max-height: 100%;
+/* .post_details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  background-color: #fffcff; */
+  /* max-width: 600px; */
+  /* height: 87.1vh;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
+} */
+
+/* .upper-post{ */
+  /* border-bottom: 1px solid black; */
+  /* margin-bottom: 10px;
+} */
+
+/* .post_details img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover; */
+  /* border-radius: 50%; */
+/* } */
+
+/* .post_details h4 { */
+  /* margin-left: 10px; */
+/* } */
+
+/* .post_details span { */
+  /* display: block; */
+  /* margin-top: 10px; */
+  /* font-size: 18px;
+} */
+
+/* .comments { */
+  /* border: 1px solid brown; */
+  
+/* } */
+
+/* .comment { */
+  /* padding: 10px; */
+  /* background-color: #f9f9f9;
+  border-top: 1px solid black; */
+  /* border-radius: 5px; */
+  /* margin-bottom: 10px; */
+/* } */
+
+
+.post_details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  background-color: #fffcff;
+  max-width: 600px;
+  height: 87.1vh;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upper-post{
+  /* display: flex; */
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .post_details img {
   width: 50px;
   height: 50px;
   object-fit: cover;
-  /* border-radius: 50%; */
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .post_details h4 {
-  margin-left: 10px;
+  margin-left: 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .post_details span {
   display: block;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 16px;
+  color: #5f6368;
 }
 
 .comments {
@@ -30,6 +95,12 @@
 .comment {
   padding: 10px;
   background-color: #f9f9f9;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment span {
+  font-size: 16px;
+  color: #5f6368;
 }

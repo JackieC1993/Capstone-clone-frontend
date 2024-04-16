@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./PostDetails.css"
+import "./PostDetails.css";
 
 const PostDetails = ({ user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
@@ -27,29 +27,28 @@ const PostDetails = ({ user, token }) => {
 
   //   console.log("One individual post: ", post);
 
-  const comments = post.comments.map((comment) => {
-    // return comment;
-    return comment;
-  });
+  const comments = post.comments.map((comment) => (
+    <div key={comment.comment_id} className="comment">
+      <span>{comment.description}</span>
+    </div>
+  ));
   //   console.log(comments[0]);
   //   console.log(comments);
   return (
     <div className="post_details">
-      <div>
-        <img src={post.profile_img} alt={`${post.username}'s profile image`} />
-        <h4>{post.username}</h4>
+      <div className="upper-post">
+        <div className="post-header">
+          <img
+            src={post.profile_img}
+            alt={`${post.username}'s profile image`}
+          />
+          <h4>{post.username}</h4>
+        </div>
+
+        <span id="post-body">{post.post_description}</span>
       </div>
-      <span>{post.post_description}</span>
-      <div className="comments">
-        <br />
-        {comments.map((comment) => (
-          <div key={comment.comment_id} className="comment">
-            <br />
-            <span>{comment.description}</span>
-            {/* {console.log(comment)} */}
-          </div>
-        ))}
-      </div>
+
+      <div className="comments">{comments}</div>
     </div>
   );
 };
