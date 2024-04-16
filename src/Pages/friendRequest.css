@@ -1,134 +1,45 @@
-/*@media (max-width: 767px) {
-  /* For mobile phones: */ /*
-  [class*="col-"] {
-    width: 100%;
-  }
-    div.friendrequests-container {
-        font-size: small;
-        display: grid;
-        /* min-height: 85vh; */ /*
-        margin: 0 auto;
-        background-color: #fffcff;
-        padding: 10px 20px;
-        /* grid-template-areas:  */ /*
-        grid-template-columns: 3fr 1fr;
-        gap: 10px;
-        height: 100vh;
-        width: 100vw;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow-y: scroll;
-        overflow-x: hidden; 
-    }
-    
-    div.friendrequests-container h3 {
-        color: var(--GHBlue);
-        grid-area: t;
-    }
-
-    div.request-container {
-        grid-area: r;
-    }
-
-    div.friend_list {
-        grid-area: f;
-    }
-    
-  }
-
-    
-
-        div.request-container{
-        font-size: small;
-        display: grid;
-        /* min-height: 85vh; */ /*
-        margin: 0 auto;
-        background-color: #fffcff;
-        padding: 10px 20px;
-        grid-template-areas: 
-        "i n a r"
-        "i n a r"
-        "i n a r"
-        "i n a r"
-        "i n a r"
-        "i n a r";
-
-        grid-template-columns: 2fr 3fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 10px;
-    
-        /* height: 100vh; */ /*
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        padding-bottom: 90px;
-    }
-
-}
-
-@media (min-width: 768px) {
-  /* For desktop and tablets: */ /*
-  [class*="col-"] {
-    width: 100%;
-  }
-  div.friendrequests-container {
-    display: grid;
-    /* min-height: 85vh; */ /*
-    margin: 0 auto;
-    background-color: #fffcff;
-    padding: 10px 20px;
-    grid-template-areas: 
-    "t t"
-    "f r";
-    grid-template-columns: 1fr 3fr;
-    gap: 10px;
-    min-height: 85vh;
-    width: 100vw;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-y: scroll;
-    overflow-x: hidden; 
-    }
-  }
-} */
-
+/* For desktop and tablets: */
 @media (max-width: 767px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
   }
 
-  width: 60%;
-  margin-left: 15px;
-}
+  div.friend-requests {
+    width: 60%;
+    margin-left: 15px;
+  }
 
-.friend-list {
-  width: 30%;
-}
+  .friend-list {
+    width: 30%;
+    margin-right: 20px;
+  }
 
-.request-container,
-.friend-container {
-  margin-bottom: 20px;
-}
+  .request-container {
+    margin-bottom: 20px;
+  }
 
-.request-photo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-div.friendrequests-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 25px;
-}
+  .friend-container {
+    margin-bottom: 20px;
+  }
 
-div.friend-requests h3 {
-  color: var(--GHBlue);
-}
+  .request-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
 
-.friend-requests {
+  div.friendrequests-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  div.friend-requests h3 {
+    color: var(--GHBlue);
+  }
+
   .friend-container {
     display: flex;
     flex-direction: column;
@@ -164,31 +75,66 @@ div.friend-requests h3 {
     height: auto;
     cursor: pointer;
   }
+  div.status-icon {
+    display: flex;
+  }
+
+  .status-icon {
+    width: fit-content;
+    height: 30px;
+  }
+
+  .status-icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 40px;
+  }
+
+  pending-requests {
+    margin-bottom: 25px;
+  }
 }
 /* Adjustments for responsiveness */
 @media screen and (min-width: 768px) {
-  .friendrequests-container {
-    flex-direction: column;
-  }
-
-  .friend-requests,
-  .friend-list {
+  [class*="col-"] {
     width: 100%;
   }
-}
+  div.friend-requests {
+    width: 60%;
+    margin-left: 15px;
+  }
 
-div.friendrequests-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 25px;
-}
+  .friend-list {
+    width: 30%;
+  }
 
-div.friend-requests h3 {
-  color: var(--GHBlue);
-}
+  .request-container {
+    margin-bottom: 20px;
+  }
 
-.friend-requests {
+  .friend-container {
+    margin-bottom: 20px;
+  }
+
+  .request-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  div.friendrequests-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.friend-requests h3 {
+    color: var(--GHBlue);
+  }
+
   .friend-container {
     display: flex;
     flex-direction: column;
