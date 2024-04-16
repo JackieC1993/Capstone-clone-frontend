@@ -2,9 +2,8 @@ import "../Pages/JoinRoom.css";
 import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "../Components/Chat";
-const API = import.meta.VITE_BASE_URL
 
-const socket = io.connect(`${API}`);
+const socket = io.connect("http://localhost:3002");
 
 function JoinRoom() {
   const [username, setUsername] = useState("");
