@@ -59,6 +59,13 @@
     margin-left: 30px;
   }
 
+  .newgoal-button {
+    width: fit-content;
+    position: fixed;
+    right: 15px;
+    bottom: 130px;
+  }
+
   .newgoal-icon {
     height: auto;
     width: 40px;
@@ -299,10 +306,18 @@
     width: 40px;
     color: var(--GHGreen);
   }
+
   .newgoal-button {
-    position: absolute;
+    width: fit-content;
+    position: fixed;
     right: 15px;
-    bottom: 15px;
+    bottom: 130px;
+  }
+
+  .newgoal-icon {
+    height: auto;
+    width: 40px;
+    color: var(--GHGreen);
   }
 
   /* .goalcard {
