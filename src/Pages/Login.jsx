@@ -6,7 +6,7 @@ import React from "react";
 import logo from "../assets/gh_text_logo.png";
 // import quote from "../assets/quote.png";
 
-import "./login.css";
+import "./Login.css";
 
 const Login = ({ setUser, setToken, user, token }) => {
   const API = import.meta.env.VITE_BASE_URL;
