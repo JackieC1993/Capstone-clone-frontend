@@ -135,7 +135,7 @@ const GoalProfile = () => {
                       <img
                         src={user.profile_img}
                         title="tphoto"
-                        alt="Tinder Photo"
+                        alt="Default Photo"
                       />
                       <div className="tname">
                         <h1>{user.username}</h1>{" "}
