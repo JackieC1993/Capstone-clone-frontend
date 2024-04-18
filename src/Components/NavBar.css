@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     padding: 0px;
-
+    z-index: 50;
     height: 120px;
     justify-content: center;
     flex-direction: column;
@@ -21,7 +21,7 @@
   }
 
   .navbar {
-    /* position: fixed; */
+     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -34,6 +34,7 @@
     border-width: 5px;
     border-color: #fffcff;
     border-top: ghostwhite;
+    z-index: 50;
   }
 
   .navbar-link {

@@ -37,27 +37,27 @@ const Sponsors = ({ user, token }) => {
   .filter((goal) => goal.userprofile_id === user.userprofile_id)
 
   const sponsors = [
-    { company: 'Nike',image: `${nike}`, category: 'Shopping', discount: '10% off membership' },
+    { company: 'Nike',image: `${nike}`, category: 'Shopping', discount: '$25 gift card ' },
     { company: 'Amazon', image: `${amazon}`, category: 'Shopping', discount: 'Free Prime membership' },
-    { company: 'Google',image: `${google}`, category: 'Technology', discount: '20% off Google products' },
+    { company: 'Google',image: `${google}`, category: 'Technology', discount: '$25 gift card' },
     { company: 'Starbucks',image: `${starbucks}`, category: 'Food & Beverage', discount: 'Free coffee for a month' },
     { company: 'Netflix',image: `${netflix}`, category: 'Entertainment', discount: '1 month free subscription' },
-    { company: 'Apple',image: `${apple}`, category: 'Technology', discount: 'Special pricing on Apple products' },
+    { company: 'Apple',image: `${apple}`, category: 'Technology', discount: '$20 gift card' },
     
-    { company: 'Microsoft',image: `${mircosoft}`, category: 'Technology', discount: '10% off Microsoft products' },
-    { company: 'Adidas',image: `${adidas}`, category: 'Shopping', discount: '15% off membership' },
+    { company: 'Microsoft',image: `${mircosoft}`, category: 'Technology', discount: '$10 gift card' },
+    { company: 'Adidas',image: `${adidas}`, category: 'Shopping', discount: '$15 dollar gift card' },
     { company: 'Coca-Cola',image: `${cocacola}`, category: 'Food & Beverage', discount: 'Free soda for a month' },
-    { company: 'Samsung',image: `${samsung}`, category: 'Technology', discount: '20% off Samsung products' },
-    { company: 'Groupon',image: `${groupon}`, category: 'miscellaneous', discount: '30% off groupon items' },
+    { company: 'Samsung',image: `${samsung}`, category: 'Technology', discount: '10% off Samsung products' },
+    { company: 'Groupon',image: `${groupon}`, category: 'miscellaneous', discount: '10% off groupon items' },
     { company: 'Target',image: `${target}`, category: 'Shopping', discount: 'Free gift card' },
     { company: 'Walmart',image:`${walmart}`, category: 'Shopping', discount: 'Discounts on select items' },
     { company: 'McDonalds',image:`${mcdonald}`, category: 'Food & Beverage', discount: 'Free fries with purchase' },
     { company: 'Burger King',image:`${burgerking}`, category: 'Food & Beverage', discount: 'Buy one, get one free' },
-    { company: 'BestBuy',image:`${bestbuy}`, category: 'Technology', discount: '15% percent of BestBuy products' },
-    { company: 'UberEats', image: `${Ubereats}`, category: 'Food and Beverage', discount: '30% off Ubereats order' },
+    { company: 'BestBuy',image:`${bestbuy}`, category: 'Technology', discount: '10% percent of BestBuy products' },
+    { company: 'UberEats', image: `${Ubereats}`, category: 'Food and Beverage', discount: '10% off Ubereats order' },
     { company: 'Uber',image: `${uber}`,category: 'Transportation', discount: 'Discounted rides' },
     { company: 'Temu',image: `${temu}`, category: 'Entertainment', discount: '50% off Temu items' },
-    { company: 'Crest',image: `${crest}`,category: 'Hygenie', discount: '50% off Crest product' },
+    { company: 'Crest',image: `${crest}`,category: 'Hygenie', discount: '10% off Crest product' },
   ];
 
   const headers = {
@@ -96,7 +96,7 @@ const Sponsors = ({ user, token }) => {
 
 
       
-      <h2>Goals Completed</h2>
+      <h2 className='goalcompleted'>Goals Completed</h2>
       {isLoading ? (
         <>
         <p>Loading...</p>
@@ -122,7 +122,7 @@ const Sponsors = ({ user, token }) => {
           <>
        
           <ul className='results'>
-          <h2>Discounts Earned</h2>
+          <h2 className='discountearned'>Discounts Earned</h2>
             <div className="honeycomb-container">
             {sponsors.map((sponsor, index) => (
               <li className="flashing-animation" key={index}>

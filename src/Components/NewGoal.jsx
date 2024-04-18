@@ -13,6 +13,7 @@ const NewGoal = ({ user, token }) => {
     completed: false,
     userprofile_id: user.userprofile_id,
     interest_id: user.interest_id,
+    progress:0
   });
 
   const addGoal = () => {

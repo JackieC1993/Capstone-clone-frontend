@@ -13,7 +13,7 @@ function Chat({ socket, username, room }) {
         message: currentMessage,
         time:
           new Date(Date.now()).getHours() +
-          ":" +
+          ":" + 
           new Date(Date.now()).getMinutes(),
       };
 

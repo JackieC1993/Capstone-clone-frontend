@@ -4,37 +4,125 @@
   /* border: 1px solid orange; */
   /* grid-template-columns: auto; */
   row-gap: 5%;
+  
+  
 }
 .goalcard {
-  border: 1px solid var(--GHBlue);
-  height: 60px;
-  width: 92%;
+  border: 3px solid var(--GHBlue);
+  display: grid;
+
+
+  /* height: 60px; */
+  
+  width: 100%;
   padding: 0 10px;
   margin-bottom: 20px;
   border-radius: 15px;
+  ;
+
+
+ 
   /* overflow: hidden; */
 }
 .goal-expand {
   height: fit-content;
   margin-bottom: 20%;
-  /* background-color: white; */
 }
 
 .goalcard-header {
-  display: flex;
+  /* display: flex; */
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .goalcard-buttons {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  height: 50px;
   padding-bottom: 20px;
 }
 
 .goalcard-buttons button {
+  background-color: white;
+  border: none;
   padding: 3px;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: row; 
+  gap: 10px;
+  justify-content: center;
+  /* width:50px */
+}
+.progress-box {
+  width: 30px;
+   /* border:2px solid red;  */
+  background-color:rgba(252, 3, 3, 0) ;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+.progress-box.checked {
+  background-color: var(--GHGreen);
+  color: white;
+}
+.progress-box.checked::after {
+  content: '\2713';
+  font-size: 24px;
+}
+.animate {
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.addprogress{
+  background-color: var(--GHBlue);
+  border-radius: 20px;
+  height: 35px;
+  width: 90px;
+  color:  #fffcff; 
+  font-size: smaller;
+  font-weight: bold;
+
 }
