@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "../Components/Chat";
 
-const socket = io.connect(process.env.VITE_BASE_URL);
+const socket = io.connect(import.meta.env.VITE_BASE_URL);
 
 function JoinRoom() {
   const [username, setUsername] = useState("");
