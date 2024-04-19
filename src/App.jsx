@@ -74,7 +74,7 @@ function App({ userprofile_id,socket,username,room }) {
             element={<Signup setUser={setUser} setToken={setToken} />}
           />
 
-          <Route path="/hivechat" element={<HiveChat />} />
+          <Route path="/hivechat" element={<HiveChat user={user} username={username} room={room} socket={socket}/>} />
           <Route path="/interface" element={<InterFace />} />
           <Route path="/currentgoals" element={<GetCurrentGoals />} />
 
