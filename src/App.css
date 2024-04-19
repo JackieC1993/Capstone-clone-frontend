@@ -828,3 +828,10 @@ p.friendrequest{
 .socket {
   justify-content: center;
 }
+
+
+.joinchat-container{text-align: center;
+display: flex;
+justify-content: center;
+margin-right: 50px;
+}

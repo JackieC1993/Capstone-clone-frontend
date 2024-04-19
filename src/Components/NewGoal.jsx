@@ -90,7 +90,7 @@ const NewGoal = ({ user, token }) => {
           </select>
         </div>
         <br />
-        <div className="form-field">
+        <div  id="target-date"className="form-field">
           <label htmlFor="tartgetDate">Target Date:</label>
           <br />
           <input

@@ -18,7 +18,7 @@ function JoinRoom() {
   };
 
   return (
-    <div className="App">
+    <div className="joinchat-container">
       {!showChat ? (
         <div className="joinChatContainer">
           <h3>Join A Chat</h3>
