@@ -74,7 +74,7 @@ function App({ userprofile_id,socket,username,room }) {
             element={<Signup setUser={setUser} setToken={setToken} />}
           />
 
-          {/* <Route path="/hivechat" element={<HiveChat />} /> */}
+          <Route path="/hivechat" element={<HiveChat />} />
           <Route path="/interface" element={<InterFace />} />
           <Route path="/currentgoals" element={<GetCurrentGoals />} />
 
@@ -183,7 +183,7 @@ function App({ userprofile_id,socket,username,room }) {
             user={user}
             token={token}
           />
-          <Route path="/chat" element={<ChatComponent user={user} socket={socket} username={username} room={room}/>} />
+          <Route path="/chat" element={<ChatComponent user={user} />} />
           <Route
             path="/sponsors"
             element={<Sponsors user={user} token={token} />}
