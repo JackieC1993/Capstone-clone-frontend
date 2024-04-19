@@ -3,28 +3,12 @@ import button1 from "../assets/navbutton.png";
 // import user2 from "../assets/user2.png"
 import { useState, useEffect } from "react";
 import "../App.css";
-import Progress from "../Components/ProgressBar";
-import Progress2 from "../Components/ProgressBar2";
+;
 import JoinRoom from "../Pages/JoinRoom";
 
-const user1 = {
-  id: "123456789",
-  name: "Alice",
-  email: "alice@example.com",
-  photoUrl: "https://talkjs.com/images/avatar-1.jpg",
-  welcomeMessage: "Hey there! How are you? :-)",
-  role: "default",
-};
 
-const user2 = {
-  id: "987654321",
-  name: "Sebastian",
-  email: "Sebastian@example.com",
-  photoUrl: "https://talkjs.com/images/avatar-5.jpg",
-  welcomeMessage: "Hey, how can I help? https://google.com",
-  role: "default",
-};
-const HiveChat = () => {
+
+const HiveChat = ({username,token, room}) => {
   const [userOneChat, setUserOneChat] = useState("");
   const [userTwoChat, setUserTwoChat] = useState("");
   const [chatDialogue, setChatDialogue] = useState("");
@@ -96,7 +80,7 @@ const HiveChat = () => {
             <div className="div2">
               <header id="chat" className="header"><h1>HiveChat</h1></header>              
               {/* <Progress id="user1-goal" /> */}
-              <JoinRoom />
+              <JoinRoom  username={username} token={token} room={room}/>
             </div>
    
         </div>

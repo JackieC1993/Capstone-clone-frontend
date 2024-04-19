@@ -3,9 +3,9 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "./Chat";
 
-const socket = io.connect("https://capstone-backend-ny1d.onrender.com/3002");
+const socket = io.connect("https://capstone-backend-ny1d.onrender.com");
 
-function JoinRoom() {
+function JoinRoom({socket,username,room}) {
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
   const [showChat, setShowChat] = useState(false);
