@@ -24,14 +24,14 @@ function JoinRoom() {
           <h3>Join A Chat</h3>
           <input
             type="text"
-            placeholder="John..."
+            placeholder="Insert Your Name"
             onChange={(event) => {
               setUsername(event.target.value);
             }}
           />
           <input
             type="text"
-            placeholder="Room ID..."
+            placeholder="Insert Your Room #."
             onChange={(event) => {
               setRoom(event.target.value);
             }}
