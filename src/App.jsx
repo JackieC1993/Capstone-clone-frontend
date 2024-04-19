@@ -33,7 +33,7 @@ import GetCurrentGoals from "./Pages/CurrentGoals";
 import FriendRequest from "./Pages/FriendRequest";
 import ChatComponent from "./Components/Chat";
 
-function App({ userprofile_id }) {
+function App({ userprofile_id,socket,username,room }) {
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("user")) || null
   );
@@ -183,7 +183,7 @@ function App({ userprofile_id }) {
             user={user}
             token={token}
           />
-          <Route path="/chat" element={<ChatComponent user={user} />} />
+          <Route path="/chat" element={<ChatComponent user={user} socket={socket} username={username} room={room}/>} />
           <Route
             path="/sponsors"
             element={<Sponsors user={user} token={token} />}
