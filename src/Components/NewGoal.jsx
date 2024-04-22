@@ -65,7 +65,7 @@ const NewGoal = ({ user, token }) => {
           <label htmlFor="name">Goal Name:</label>
           <br />
           <input
-            value={`Master Python in 10 months:🐍`||goal.name}
+            value={goal.name}
             onChange={handleTextChange}
             type="text"
             id="name"
