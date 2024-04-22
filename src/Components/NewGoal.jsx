@@ -65,7 +65,7 @@ const NewGoal = ({ user, token }) => {
           <label htmlFor="name">Goal Name:</label>
           <br />
           <input
-            value={goal.name}
+            value={`Master Python in 10 months:🐍`||goal.name}
             onChange={handleTextChange}
             type="text"
             id="name"
@@ -106,7 +106,8 @@ const NewGoal = ({ user, token }) => {
           <label htmlFor="description">Goal Description:</label>
           <br />
           <textarea
-            value={goal.description}
+            value={`Master python within 10 months starting with basics, learning syntax, data structures, OOP, libraries.Progress will be tracked through completing online courses, tutorials, and monthly projects, with daily dedication to learning and practicing Python. And engage with the community
+            `||goal.description}
             onChange={handleTextChange}
             id="description"
             rows="4"
