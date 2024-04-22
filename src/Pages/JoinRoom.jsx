@@ -25,6 +25,7 @@ function JoinRoom() {
           <input
             type="text"
             placeholder="Insert Your Name"
+       
             onChange={(event) => {
               setUsername(event.target.value);
             }}
@@ -32,6 +33,7 @@ function JoinRoom() {
           <input
             type="text"
             placeholder="Insert Your Room #."
+            
             onChange={(event) => {
               setRoom(event.target.value);
             }}

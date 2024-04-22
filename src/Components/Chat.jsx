@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 
 function Chat({ socket, username, room }) {
-  const [currentMessage, setCurrentMessage] = useState("");
+  const [currentMessage, setCurrentMessage] = useState(`Hey I saw your post about python and was
+   wondering if you would be able to provide some feedback for this course on Python I started?
+  `);
   const [messageList, setMessageList] = useState([]);
 
   const sendMessage = async () => {
