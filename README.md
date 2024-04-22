@@ -31,7 +31,7 @@ Start the development server with npm run dev.
 Access the frontend at here
 
 Usage 🚀
-Browse our app to explore Goalhive's featurs
+Browse our app to explore Goalhive's features
 Create new profiles to share similar interests
 Make a positive change with our app GoalHive.
 Support each other to achieve similar goals.
@@ -42,4 +42,13 @@ Rich Boyce
 Tyrell K Oliver
 Jackie Cheung
 
-Feel free to explore the codebase and contribute enhancements or bug fixes to make the GoalHive  even better!
+Thank Your For Checking out our App
+
+Deployed on Netlify FrontEnd
+
+https://main--zesty-hotteok-c8a3b0.netlify.app/
+
+Deployed on Render Backend
+
+
+https://capstone-backend-ny1d.onrender.com
