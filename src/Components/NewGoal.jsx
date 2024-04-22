@@ -106,7 +106,7 @@ const NewGoal = ({ user, token }) => {
           <label htmlFor="description">Goal Description:</label>
           <br />
           <textarea
-            value={`Master python within 10 months starting with basics, learning syntax, data structures, OOP, libraries.Progress will be tracked through completing online courses, tutorials, and monthly projects, with daily dedication to learning and practicing Python. 
+            value={`Master python within 10 months starting with basics, learning syntax, data structures, OOP, libraries. Progress will be tracked through completing online courses, tutorials, and monthly projects, with daily dedication to learning and practicing Python. 
             `||goal.description}
             onChange={handleTextChange}
             id="description"
